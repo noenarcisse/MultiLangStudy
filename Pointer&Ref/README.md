@@ -18,14 +18,20 @@ unsafe
   ```
 
 ## Perl
-References:
+References:<br>
+  ```
 \$var, \@array, \#hash
-Dereferences : 
+  ```
+Dereferences : <br>
+  ```
 $$var, @$array
+  ```
 
 ## C
 Pointer
+  ```
 int variable = 42;
 int *pointer = &variable;
 
 printf("%p", pointer);
+  ```
