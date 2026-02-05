@@ -21,7 +21,7 @@ Peut etre parcouru dans les 2 sens.<br>
   ```
 my @array = (1,"deux",3,"quatre");
 
-say(@array[-1]);  #affchie le dernier elem
+say(@array[-1]);  quatre
   ```
 
 ## JS
