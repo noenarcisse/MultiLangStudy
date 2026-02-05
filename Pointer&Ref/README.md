@@ -14,10 +14,14 @@ unsafe
       int var = 42;
       int* pointer = &var;
       int** doublePointer = &pointer;
+
+      Console.WriteLine((long)pointer); //adresse
+      Console.WriteLine(*pointer); // 42
 }
   ```
 
 ## Perl
+Pas de pointer :> <br>
 References:<br>
   ```
 \$var, \@array, \#hash
