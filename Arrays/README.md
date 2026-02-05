@@ -1,41 +1,37 @@
-# Pointers & Refs
+# Arrays
 ## C#
-  in : entrée par adresse en “readonly”, sert surtout d’opti sur les struc (Vector3 par ex)<br>
-  out : sortie uniquement<br>
-  ref : reference safe (in out), se deref naturellement (Console.Write affiche la valeur)<br>
-  ```
-  public void MaFunc(ref int arg1, in structure, out string texte1)
-  {  }
-  ```
-  int* : pointer a la C, avec tous les problemes classiques, ne fonctionne qu’en unsafe, n’est pas GC
-  ```
-unsafe
-{
-      int var = 42;
-      int* pointer = &var;
-      int** doublePointer = &pointer;
+### spread / range
+[0..4]<br>
+Permet de faire des spreads, des ranges etc.<br>
+### hat
+^1 : permet de se balader en sens inverse dans un array, de maniere exclusive sur le dernier.<br>
+Doit toujours rester dans l'ordre. le plus petit a gauche, le plus grand a droite [1 .. ^1]<br>
 
-      Console.WriteLine((long)pointer); //adresse
-      Console.WriteLine(*pointer); // 42
-}
+  ```
+  int[] array = {1,2,3,4};
+  Console.WriteLine(array[1..3]); // array [2,3]
+
+  string mot = "Hello";
+  char[] spreadString = [..mot];
   ```
 
 ## Perl
-Pas de pointer :> <br>
-References:<br>
+Declaré avec @, on lui passe une list en valeur. Typage dynamique et mixable! Nombre d'entrée non fixes ;><br>
+Peut etre parcouru dans les 2 sens.<br>
   ```
-\$var, \@array, \#hash
-  ```
-Dereferences : <br>
-  ```
-$$var, @$array
+my @array = (1,"deux",3,"quatre");
+
+say(@array[-1]);  #affchie le dernier elem
   ```
 
-## C
-Pointer
+## JS
+[...] <br>
+Le king, remplace les autres types de collections en général<br>
   ```
-int variable = 42;
-int *pointer = &variable;
+  const text = "Salut";
+  const array = [1,2,3,4];
 
-printf("%p", pointer);
+  const arrayStr = [...text];
+  const array2 = [...array, ...arrayStr];
+  
   ```
