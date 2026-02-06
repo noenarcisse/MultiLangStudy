@@ -8,7 +8,7 @@ await bloque et demande une Task a resoudre (passage de null vers T)<br>
 Deux await successifs se mettent en file d'attente dans l’ordre d’appel.<br>
 Changement de thread sans bloquer une recup asyc avec un await : _=Task.Run( async() => {doStuff()});<br>
 
-ne peut pas etre utilisé quand la promise vient d’un meme element ”single thread” comme les DbContext par ex. On doit chain les await pour ouvrir la db, lire, fermer, ouvrir ecrire fermer, ouvrir supprimer, fermer, etc etc.
+
 
 ### Task<T>
 Equivalent de la Promise en JS. Task tient soit null, soit la valeurs chargée en async.
@@ -28,8 +28,10 @@ await Task.Delay(1000);
 
 
 
-### .WhenAll()
+### Task.WhenAll()
 Charge en parallele plusieurs function async.
+
+Ne peut pas etre utilisé quand la Task vient d’un meme element ”single thread” comme les DbContext par ex. On doit chain les await pour ouvrir la db, lire, fermer, ouvrir ecrire fermer, ouvrir supprimer, fermer, etc etc.
   ```
 Task<int> calcTask = Calc(42, 4);
 Task<string> fileTask = File.ReadAllTextAsync("./file.txt");
@@ -42,6 +44,11 @@ string text = await fileTask;
   ```
 ## JS / TS
 
+### async / await
+
+### Promise<T>
+
+### Promise.All()
   ```
 Promise.All();
   ```
