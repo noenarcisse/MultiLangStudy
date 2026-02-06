@@ -17,7 +17,7 @@ Changement de thread : on peut forcer C# a chercher un autre thread dans sa thre
 Utile sur des taches et calculs très lourds.
   ```
 Task<int> task = Task.Run(() => {
-    // Calcul hyper lourd ici
+    // tache lourde
     return 123;
 });
   ```
