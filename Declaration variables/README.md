@@ -5,6 +5,8 @@ type implicite calculé des que possible par le compiler, ca ferme les verrou de
 La valeur de la variable doit etre explicite.
 ### dynamic
 l’equivalent du variable JS de base, accepte tous les type sans jamais bloquer le compiler.
+### Tuple
+blabla
   ```
   var unCharactere = 'A'; 
   var Text = "Du texte"; // string implicite
