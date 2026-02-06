@@ -2,7 +2,7 @@
 ## C#
 ### spread / range
 [0..4]<br>
-Permet de faire des spreads, des ranges etc.<br>
+Permet de faire des spreads, des ranges etc. Ca crée une copie! Pour la vrai version voir > Span<T><br>
 ### hat
 ^1 : permet de se balader en sens inverse dans un array, de maniere exclusive sur le dernier.<br>
 Doit toujours rester dans l'ordre. le plus petit a gauche, le plus grand a droite [1 .. ^1]<br>
@@ -13,6 +13,18 @@ Doit toujours rester dans l'ordre. le plus petit a gauche, le plus grand a droit
 
   string mot = "Hello";
   char[] spreadString = [..mot];
+  ```
+### Span<T>
+Frame sans allocation un elements comme un array (ou string / char[]). 
+  ```
+        string log = "DAMAGE:150|CRIT:TRUE|SOURCE:Orc_Warrior";
+        ReadOnlySpan<char> logSpan = log.AsSpan();
+        
+        int index1 = logSpan.IndexOf(":")+1;
+        int index2 = logSpan.IndexOf("|");
+        ReadOnlySpan<char> dmg = logSpan.Slice(index1, index2-index1);
+
+        Console.WriteLine(dmg);
   ```
 
 ## Perl
