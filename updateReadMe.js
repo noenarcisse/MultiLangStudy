@@ -23,7 +23,7 @@ for(f of files)
 {
     if(!reg.test(f))
     {
-        filesToLog += `[${f}](https://github.com/noenarcisse/MultiLangStudy/tree/main/${f}) \n`;
+        filesToLog += `[${f}](https://github.com/noenarcisse/MultiLangStudy/tree/main/${f.replaceAll(" ", "%20")})  <br> \n`;
     }
 }
 
