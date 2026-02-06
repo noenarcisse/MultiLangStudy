@@ -1,41 +1,47 @@
-# Pointers & Refs
+# Async
+
 ## C#
-  in : entrée par adresse en “readonly”, sert surtout d’opti sur les struc (Vector3 par ex)<br>
-  out : sortie uniquement<br>
-  ref : reference safe (in out), se deref naturellement (Console.Write affiche la valeur)<br>
-  ```
-  public void MaFunc(ref int arg1, in structure, out string texte1)
-  {  }
-  ```
-  int* : pointer a la C, avec tous les problemes classiques, ne fonctionne qu’en unsafe, n’est pas GC
-  ```
-unsafe
-{
-      int var = 42;
-      int* pointer = &var;
-      int** doublePointer = &pointer;
 
-      Console.WriteLine((long)pointer); //adresse
-      Console.WriteLine(*pointer); // 42
-}
-  ```
+### async / await
 
-## Perl
-Pas de pointer :> <br>
-References:<br>
+await bloque et demande une Task a resoudre (passage de null vers T)<br>
+Deux await successifs se mettent en file d'attente dans l’ordre d’appel.<br>
+Changement de thread sans bloquer une recup asyc avec un await : _=Task.Run( async() => {doStuff()});<br>
+
+ne peut pas etre utilisé quand la promise vient d’un meme element ”single thread” comme les DbContext par ex. On doit chain les await pour ouvrir la db, lire, fermer, ouvrir ecrire fermer, ouvrir supprimer, fermer, etc etc.
+
+### Task<T>
+Equivalent de la Promise en JS. Task tient soit null, soit la valeurs chargée en async.
+
+Changement de thread : on peut forcer C# a chercher un autre thread dans sa thread pool pour pas bloquer la suite de l'exec.<br>
+Utile sur des taches et calculs très lourds.
   ```
-\$var, \@array, \#hash
+Task<int> task = Task.Run(() => {
+    // Calcul hyper lourd ici
+    return 123;
+});
   ```
-Dereferences : <br>
+Ca peut aussi servir a créer un délai, pour simuler un setTimeOut en JS.
   ```
-$$var, @$array
+await Task.Delay(1000);
   ```
 
-## C
-Pointer
-  ```
-int variable = 42;
-int *pointer = &variable;
 
-printf("%p", pointer);
+
+### .WhenAll()
+Charge en parallele plusieurs function async.
+  ```
+Task<int> calcTask = Calc(42, 4);
+Task<string> fileTask = File.ReadAllTextAsync("./file.txt");
+
+await Task.WhenAll(calcTask, fileTask);
+
+//on await les Task qui sont déjà finie a la ligne précédente pour recupérer les valeurs
+int result = await calcTask; 
+string text = await fileTask;
+  ```
+## JS / TS
+
+  ```
+Promise.All();
   ```
