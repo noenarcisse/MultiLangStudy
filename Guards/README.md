@@ -6,6 +6,8 @@
 ### is { }
 Objet non spécifié non null.
 
+Correspond a != null ou is not null
+
 ### is T {propertie: 42}
 Objet quelconques qui correspond a la propriété avec la bonne valeur. La valeur peut etre une variable rendue localement.
 
