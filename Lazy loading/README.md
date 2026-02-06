@@ -1,41 +1,29 @@
-# Pointers & Refs
+# Lazy<T>
 ## C#
-  in : entrée par adresse en “readonly”, sert surtout d’opti sur les struc (Vector3 par ex)<br>
-  out : sortie uniquement<br>
-  ref : reference safe (in out), se deref naturellement (Console.Write affiche la valeur)<br>
+Lazy<T>
+System.Lazy > Lazy initialization: on charge reellement que lorsqu’on a besoin. ca nest le T dans Value
   ```
-  public void MaFunc(ref int arg1, in structure, out string texte1)
-  {  }
-  ```
-  int* : pointer a la C, avec tous les problemes classiques, ne fonctionne qu’en unsafe, n’est pas GC
-  ```
-unsafe
-{
-      int var = 42;
-      int* pointer = &var;
-      int** doublePointer = &pointer;
-
-      Console.WriteLine((long)pointer); //adresse
-      Console.WriteLine(*pointer); // 42
-}
+using System;
+// ...
+Lazy<Fruit> lazyFruit = new();
+Fruit fruit = lazyFruit.Value;
   ```
 
-## Perl
-Pas de pointer :> <br>
-References:<br>
+## JS
+Le weirdo, il n'y a pas pas de lazy mais on peut delay le chargement de donnée avec un getter dans un objet littéral :
   ```
-\$var, \@array, \#hash
-  ```
-Dereferences : <br>
-  ```
-$$var, @$array
+const obj = {
+  _data: null,
+  get data() {
+    if (!this._data) {
+      this._data = loadHeavyData();
+    }
+    return this._data;
+  }
+};
+
+// ...
+
+const maVar = obj.data // charge la data ici en tentant de get!
   ```
 
-## C
-Pointer
-  ```
-int variable = 42;
-int *pointer = &variable;
-
-printf("%p", pointer);
-  ```
