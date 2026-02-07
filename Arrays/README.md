@@ -32,8 +32,7 @@ Declaré avec @, on lui passe une list en valeur. Typage dynamique et mixable! N
 Peut etre parcouru dans les 2 sens.<br>
   ```
 my @array = (1,"deux",3,"quatre");
-
-say(@array[-1]);  quatre
+say($array[-1]);  #quatre
   ```
 
 ## JS
@@ -41,7 +40,7 @@ say(@array[-1]);  quatre
 Le king, remplace les autres types de collections en général<br>
   ```
   const text = "Salut";
-  const array = [1,2,3,4];
+  const array = [1,2,"trois", ()=>"Hello", null];
 
   const arrayStr = [...text];
   const array2 = [...array, ...arrayStr];
