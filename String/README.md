@@ -27,7 +27,7 @@ my $var2 = q(comme);
 my $var3 = qq\langage\;
 my $var4 = qq<en vrai ?>;
 
-my $var5 = qq⏩Ils abusent quand meme un peu⏩;
+my $var5 = qq⏩Ils abusent quand meme un peu⏩; #ca marche mais ca fait un warning deprecié ce genre de delimiteurs
 
 
 my $paragraphe = <<"PARAGRAPHE";
