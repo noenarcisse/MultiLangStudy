@@ -1,8 +1,18 @@
 # String
 ## C#
+### Simple string
+Un string est un char[] toujours accessible comme en C mais sans les désavantages<br>
+  ```
+string texte1 = "Hello";
+char lettre = texte1[0]; // H
+char lettre2 = texte1[^1]; // o et pas un fin de char[] comme en C :>
+  ```
 ### Interpollation & verbatim
 Permet d'afficher des vars directement et d'échapper des / automatiquement<br>
   ```
+string texte1 = "Hello";
+char lettre = texte1[0]; // H
+
 $"string blablabla {variable}";
 @"app/chemin/stuff";
 $@"app/chemin/{variable}/cheminEncore";
