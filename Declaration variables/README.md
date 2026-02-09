@@ -35,6 +35,28 @@ variable = await new Promise((res, req) => { ... });
 const monTableau = [1, "deux", { id: 3 }, [4, 5], () => console.log("hello")];
   ```
 
+## Rust
+Fortement typé.
+### let
+Variable constante, valeur figée.
+Scopée dans le bloc courant.
+  ```
+let variable: &str = "Salut";
+  ```
+### const
+Variable constante, valeur figée.
+Scopée dans le bloc courant.
+  ```
+const PI = 3.14159265359;
+const PI_IN_DOOM = 3.141592657;
+  ```
+### let mut
+Vairable variable, scopée.
+  ```
+let mut variable : &str = "Salut"
+variable = "Bonjour";
+  ```
+
 ## Perl
 Faiblement typée, peut être hétérogene dans un array.
 ### $scalar
