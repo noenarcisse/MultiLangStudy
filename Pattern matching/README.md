@@ -13,14 +13,12 @@ if(texte is { } data)
 }
 
 if (texte is string { Length: > 5 } s)
-{
- // blablabla
-}
+{ }
 if( livre1 is Livre {titre: “Harry Potter” } bouquin)
 { }
-
 if( livre1 is Livre {titre: var titleBouquin } bouquin)
 {
+	// titleBouquin existe ici!
 	Console.WriteLine(titleBouquin);
  }
   ```
@@ -33,7 +31,23 @@ if( monTableau is [1,2, .., _, 5, ..]) //verifie le format du tab en 1, 2, {0+},
 ### Pattern matching
   Switch expression par ex<br>
   ```
-  //code
+static int USToBEGrades(string grade) => grade switch
+{
+    "A+"    =>     20,
+    "A"     =>     19,
+    "A-"    =>     18,
+    "B+"    =>     17,
+    "B"     =>     16,
+    "B-"    =>     15,
+    "C+"    =>     14,
+    "C"     =>     13,
+    "C-"    =>     12,
+    "D+"    =>     11,
+    "D"     =>     10,
+    "D-"    =>      9,
+    "F"     =>      8,
+    _       =>      throw new Exception("Unexpected arg found, expected A-F grades")
+};
   ```
 
 
