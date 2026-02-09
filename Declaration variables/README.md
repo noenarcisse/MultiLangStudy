@@ -36,12 +36,13 @@ const monTableau = [1, "deux", { id: 3 }, [4, 5], () => console.log("hello")];
   ```
 
 ## Rust
-Fortement typé.
+Fortement typé. On peut double déclarer une variable.
 ### let
 Variable constante, valeur figée.
 Scopée dans le bloc courant.
   ```
 let variable: &str = "Salut";
+let variable : &str = "Bien le bonjour!";
   ```
 ### const
 Variable constante, valeur figée.
