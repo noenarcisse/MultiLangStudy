@@ -1,6 +1,12 @@
 # Arrays
 ## C#
-### spread / range
+### typage
+Fortement typé de base. On peut les rendre hétérogèe au forcing (object)
+  ```
+int[] array = [1,2,3,4]; // que des int
+object[] arrayBizarre = ["Salut", 'A', 2, new CompteBancaire("Titi", 90)]; 
+  ```
+### spread / range ..
 [0..4]<br>
 Permet de faire des spreads, des ranges etc. Ca crée une copie! Pour la vrai version voir > Span<T><br>
 ### hat
@@ -44,5 +50,4 @@ Le king, remplace les autres types de collections en général<br>
 
   const arrayStr = [...text];
   const array2 = [...array, ...arrayStr];
-  
   ```
