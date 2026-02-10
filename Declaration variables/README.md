@@ -36,13 +36,12 @@ const monTableau = [1, "deux", { id: 3 }, [4, 5], () => console.log("hello")];
   ```
 
 ## Rust
-Fortement typé. On peut double déclarer une variable.
+Fortement typé. Toutes les variables sont toujours scopées. Rust différencie l'immuabilité des adresses et l'immuabilité des valeurs.
 ### let
 Variable constante, valeur figée.
 Scopée dans le bloc courant.
   ```
 let variable: &str = "Salut";
-let variable : &str = "Bien le bonjour!";
   ```
 ### const
 Variable constante, valeur figée.
@@ -56,6 +55,27 @@ Vairable variable, scopée.
   ```
 let mut variable : &str = "Salut"
 variable = "Bonjour";
+  ```
+### Shadowing
+On peut sur-déclarer une variable sans souci.
+  ```
+let variable: &str = "Salut";
+let variable : &str = "Bien le bonjour!";
+let variable : i32 = 256;
+  ```
+### Ownership
+i32, &str, bool, etc. > type simple, ils font un copy auto quand ils sont passés a un owner différent
+String, Vec<T>, struct > ils sont donné a une autre owner quand ils sont passés.
+  ```
+let number : i8 = 52; //owner : ce block, var simple
+let variableSimple : &str = "Salut";  //owner : ce block &str est une ref en soi
+let variableComplexe : String = String::from("Bonjour");  //owner : ce block
+
+maFonction(&number, &variableSimple, &variableComplexe);          // owner ce block, on prete la var par ref
+printlin!("{number}, {variableSimple}, {variableComplexe}");       // resoud
+maFonction(number,  variableSimple, variableComplexe.clone());  // on donne des copies, ca resouds apes sans souci
+maFonction(number,  variableSimple, variableComplexe);          // on donne une des vars a maFonction les simples sont "copy"
+printlin!("{number}, {variableSimple}, {variableComplexe}");       // numer resouc, sar simple resoud, var complexe plante le compiler (borrowed)
   ```
 
 ## Perl
