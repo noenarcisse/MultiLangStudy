@@ -75,10 +75,10 @@ let variableSimple : &str = "Salut";  //owner : ce block &str est une ref en soi
 let variableComplexe : String = String::from("Bonjour");  //owner : ce block
 
 maFonction(&number, &variableSimple, &variableComplexe);          // owner ce block, on prete la var par ref
-printlin!("{number}, {variableSimple}, {variableComplexe}");       // resoud
+println!("{number}, {variableSimple}, {variableComplexe}");       // resoud
 maFonction(number,  variableSimple, variableComplexe.clone());  // on donne des copies, ca resouds apes sans souci
 maFonction(number,  variableSimple, variableComplexe);          // on donne une des vars a maFonction les simples sont "copy"
-printlin!("{number}, {variableSimple}, {variableComplexe}");       // numer resouc, sar simple resoud, var complexe plante le compiler (borrowed)
+println!("{number}, {variableSimple}, {variableComplexe}");       // numer resouc, sar simple resoud, var complexe plante le compiler (borrowed)
   ```
 
 ## Perl
