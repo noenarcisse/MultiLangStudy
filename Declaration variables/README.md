@@ -54,7 +54,10 @@ const PI_IN_DOOM = 3.141592657;
 Vairable variable, scopée.
   ```
 let mut variable : &str = "Salut"
-variable = "Bonjour";
+let autreVar = "Yo";
+variable = "Hey!" //implicitement redeviens non mut ici
+variabke = autreVar // okay, peut pointer sur l'adresse d'un let simple sans le modifier
+autreVar = "Salut" // Non, pas mut
   ```
 ### Shadowing
 On peut sur-déclarer une variable sans souci.
