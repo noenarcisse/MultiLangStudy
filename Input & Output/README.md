@@ -38,12 +38,12 @@ Redirige la sortie d'une autre process en entrée du prog<br>
 use strict;
 use warnings;
 
-# my $n1, my $n2; 
+my $n1, my $n2; 
 
-# say "Number 1";
-# $n1 = <STDIN>;
-# say "Number 2";
-# $n2 = <STDIN>;
+say "Number 1";
+$n1 = <STDIN>;
+say "Number 2";
+$n2 = <STDIN>;
 
-# say $n1 + $n2; 
+say $n1 + $n2; 
   ```
