@@ -33,6 +33,11 @@ if( livre1 is Livre {titre: var titleBouquin } bouquin)
 	Console.WriteLine("TITRE : "+titleBouquin);
 }
   ```
+### where
+blabla
+  ```
+code
+  ```
 
 ## JS / TS
   TDB<br>
