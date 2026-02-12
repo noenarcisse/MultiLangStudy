@@ -29,12 +29,12 @@ foreach(var tuple in query5)
 } 
   ```
 ### .OrderBy() / .OrderByDescending()
-  text)<br>
   ```
-  //code
+var deluxe = produits   .Where(p => p.Prix > 50)
+                        .OrderByDescending(p=> p.Prix)
+                        .Select(p=> p.Nom);
   ```
 ### .GroupBy()
-  text)<br>
   ```
 var query6 = livres.Join(
                             auteurs,
@@ -48,14 +48,25 @@ var query6 = livres.Join(
                             });
   ```
 ### .ThenBy() / ThenByDescending()
-  text)<br>
+  Ordonne secondairement<br>
   ```
-  //code
+IEnumerable<string> query1 = _customers
+                                .OrderBy(n => n.Value)
+                                .ThenByDescending(n => n.Key)
+                                .Select(n => $"{n.Key} {n.Value}");
   ```
 ### .Contains() .Any()
-  text)<br>
+Contains() verifie en acces direct si un element existe<br>
+Enumerable > Any : Effectue un parcours et return true a la premiere correspondance<br>
   ```
-  //code
+if(uneListe.Any()) // = .Count() > 0 mais en plus lourd
+{
+  //liste qui contient des trucs
+}
+if(uneListe.Any(Item stuff))
+{
+  // une liste qui contient stuff
+}
   ```
 ### .Skip(<int>)		
   passe les x premiers resultats	(OFFSET x)<br>
