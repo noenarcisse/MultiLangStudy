@@ -1,18 +1,39 @@
 # Queries
 ## C# LINQ
-Query sql en c# appliqué a des enumerator / ables en général :>
+Query sql en c# appliqué a des enumerables en général :>
 Y’a 2 ecritures, en "sequence" et en chainage.
 ### .Select()
-  text)<br>
+  Selectionne la donnée equivalent de select<br>
   ```
-  //code
+ IEnumerable <string> query1 = livres
+                                 .Select(l => l.Titre = "Harry Potter");
   ```
 ### .Where()
+  litteralement where, filtre<br>
+  ```
+ IEnumerable <string> query1 = livres
+                                 .Where(p => p.Pages > 400)
+                                 .Select(t => t.Titre);
+  ```
+### .Join()
+  ```
+var query5 = livres.Join(
+                            auteurs,
+                            a => a.AuteurId,
+                            b => b.Id,
+                            (a, b) => new {b.Nom, a.Titre});
+
+foreach(var tuple in query5)
+{
+    Console.WriteLine($"{tuple.Nom} a écrit {tuple.Titre}");
+} 
+  ```
+### .OrderBy() / .OrderByDescending()
   text)<br>
   ```
   //code
   ```
-### .OrderBy() / .OrderByDescending()
+### .GroupBy()
   text)<br>
   ```
   //code
