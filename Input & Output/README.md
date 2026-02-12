@@ -2,7 +2,7 @@
 ## C#
 ### Console. ReadLine(), Read(), ReadKey()
   classic stdin<br>
-  ```
+  ```C#
     while(true)
     {
         var interrupt = Console.ReadKey(true);
