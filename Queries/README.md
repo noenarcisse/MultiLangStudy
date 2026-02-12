@@ -36,7 +36,16 @@ foreach(var tuple in query5)
 ### .GroupBy()
   text)<br>
   ```
-  //code
+var query6 = livres.Join(
+                            auteurs,
+                            a => a.AuteurId,
+                            b => b.Id,
+                            (a, b) => new {b.Nom, a.Note})
+                            .GroupBy(auteur => auteur.Nom)
+                            .Select(g => new {  
+                                Auteur = g.Key, 
+                                NoteMoy = g.Average(n => n.Note)
+                            });
   ```
 ### .ThenBy() / ThenByDescending()
   text)<br>
