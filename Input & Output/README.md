@@ -11,7 +11,7 @@
   ```
 ### Process RedirectStandardOutput
 Redirige la sortie d'une autre process en entrée du prog<br>
-  ```
+  ```C#
     System.Text.Encoding.RegisterProvider(System.Text.CodePagesEncodingProvider.Instance);
 
     using(Process proc = new())
@@ -34,7 +34,7 @@ Redirige la sortie d'une autre process en entrée du prog<br>
 ## Perl
 ### <STDIN>
   classico classics<br>
-  ```
+  ```Perl
 use strict;
 use warnings;
 
