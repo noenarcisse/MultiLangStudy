@@ -4,7 +4,6 @@
   { } variable > pattern matching de n’importe quel objet instancié (ne rejette que null)<br>
   On peut lui donner un type {} ou des propriété internes {Length: 5, Name: "Johnny"}
   ```
-
 string? texte = chargerUnTruc();
 
 if(texte is { } data)
@@ -21,6 +20,25 @@ if( livre1 is Livre {titre: var titleBouquin } bouquin)
 	// titleBouquin existe ici!
 	Console.WriteLine(titleBouquin);
  }
+  ```
+
+  ```
+public void EnchantLoot()
+    {
+        foreach(Item item in Items)
+        {
+            if(item is Item {IsBroken: false, Durability: > .5f, PowerLevel: > 80 and var power } selectedItem)
+            {
+                Console.WriteLine(selectedItem.Name+" "+power);
+
+                if(selectedItem is {Name:"Excalibur"})
+                {
+                    Console.WriteLine(selectedItem.Name+" trouvée");
+                }
+            }
+        }
+
+    }
   ```
 ### List Pattern
   Pattern de liste ou array possibles<br>
