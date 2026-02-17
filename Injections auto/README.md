@@ -13,8 +13,8 @@ IOptions<T>, IOptionsSnapshot<T>, IOptionsMonitor<T>
   ```cs
   //code
   ```
-## JS / TS (Angular)
-### @Injectable()
+## JS / TS 
+### @Injectable() - Angular
 Injecte et singletonify souvent aussi les class ciblée par le decorateur.
   ```ts
 @Injectable({
@@ -52,4 +52,19 @@ export class MyComponent {
   }
 }
   ```
+### inject - Vue
+Injecte et singletonify souvent aussi les class ciblée par le decorateur.
+  ```ts
+<script setup>
+import { inject, onMounted } from 'vue';
+
+const stats = inject('analyticsService');
+
+const doStuff = () => {
+  stats.saveLog();
+};
+</script>
+  ```
+
+
 
