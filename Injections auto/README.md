@@ -13,3 +13,37 @@ IOptions<T>, IOptionsSnapshot<T>, IOptionsMonitor<T>
   ```cs
   //code
   ```
+## JS / TS (Angular)
+### @Injectable()
+Injecte et singletonify souvent aussi les class ciblée par le decorateur.
+  ```ts
+@Injectable({
+  providedIn: 'root' // global singleton with DI
+})
+export class AnalyticsService {
+//do stuff
+}
+  ```
+  ```ts
+//avec injection en constructor
+export class MyComponent {
+
+  constructor(private stats: AnalyticsService) {}
+
+  doStuff() {
+    this.stats.saveLog(); 
+  }
+}
+  ```
+  ```ts
+//sans
+export class MyComponent {
+
+//injection en live dans la methode
+  doStuff() {
+    const stats = inject(AnalyticsService); 
+    stats.saveLog();
+  }
+}
+  ```
+
