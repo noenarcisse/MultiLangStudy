@@ -45,8 +45,15 @@ say($array[-1]);  #quatre
   ```
 
 ## JS
-[...] <br>
-Le king, remplace les autres types de collections en général<br>
+L'array c'est le roi ici, il remplace les autres types de collections en général sauf si on cherche a faire vraiment des trucs spécifiques comme des valeurs unique etc.<br>
+### .at(index)
+Ciblage direct d'index, mieux que [index] car on peut aussi le parcourir a l'envers avec le at(-1)<br>
+  ```js
+  const array = [1,2,3,4,5];
+array[0] // 1
+array.at(-1) // 5
+  ```
+### spread [...]
   ```js
   const text = "Salut";
   const array = [1,2,"trois", ()=>"Hello", null];
