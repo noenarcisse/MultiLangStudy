@@ -13,7 +13,7 @@ Objet quelconques qui correspond a la propriété avec la bonne valeur. La valeu
 
 ### is [.., 1, 2, _, 4]
 Array avec une range de valeur inconnu avant 1, 2, x, 4 dans l'ordre specifié. 4 est le dernier element ici.
-  ```
+  ```cs
 string? texte = chargerUnTruc();
 if(texte is { } data)
 {
@@ -41,7 +41,7 @@ code
 
 ## JS / TS
   base types<br>
-  ```
+  ```js
   const monTexte = "Salut";
 
   if(typeof monTexte === 'string'){
@@ -49,7 +49,7 @@ code
   }
   ```
   type : keyof, typeof, in<br>
-  ```
+  ```ts
 	type Produit = {
     nom:string,
     prix:number
@@ -64,7 +64,7 @@ type Service = {
       // c'est un produit
   }
   ```
-  ```
+  ```ts
 const config = { port: 3000, host: "localhost" };
 type ConfigType = typeof config; // type > { port: number, host: string }
 const autreConfig: ConfigType = { port: 8080, host: "127.0.0.1" };
@@ -75,6 +75,6 @@ type UserKeys = keyof User;
 // "id" | "nom" | "email"
   ```
   interface : ducktyping complet<br>
-  ```
+  ```ts
 code here
   ```
