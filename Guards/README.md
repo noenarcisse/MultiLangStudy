@@ -40,11 +40,41 @@ code
   ```
 
 ## JS / TS
-  TDB<br>
+  base types<br>
   ```
   const monTexte = "Salut";
 
   if(typeof monTexte === 'string'){
       // do stuff
   }
+  ```
+  type : keyof, typeof, in<br>
+  ```
+	type Produit = {
+    nom:string,
+    prix:number
+};
+type Service = {
+    tauxHoraire:number,
+    duree:number
+};
+	produit1 : Produit = {nom:"Chaussure", prix: 50 };
+
+  if("prix" in produit1){
+      // c'est un produit
+  }
+  ```
+  ```
+const config = { port: 3000, host: "localhost" };
+type ConfigType = typeof config; // type > { port: number, host: string }
+const autreConfig: ConfigType = { port: 8080, host: "127.0.0.1" };
+  ```
+  ```
+type User = { id: number; nom: string; email: string };
+type UserKeys = keyof User; 
+// "id" | "nom" | "email"
+  ```
+  interface : ducktyping complet<br>
+  ```
+code here
   ```
