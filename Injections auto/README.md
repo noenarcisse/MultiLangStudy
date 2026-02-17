@@ -36,6 +36,12 @@ export class MyComponent {
 }
   ```
   ```ts
+//aussi possible sans le constructor en assignant le default de la prop et en gardant le constructeur par defaut
+export class MyComponent {
+  private stats = inject(AnalyticsService);
+}
+  ```
+  ```ts
 //sans
 export class MyComponent {
 
