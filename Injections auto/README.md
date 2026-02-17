@@ -1,4 +1,4 @@
-# Injections
+# Dependencies Injections
 ## C#
 ### Option
 Neste des objets dans un options. Ca permet de singleton par defaut et rendre injectable certains elements pour asp.net.
