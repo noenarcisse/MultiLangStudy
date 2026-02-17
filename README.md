@@ -2,9 +2,9 @@
 [Arrays](https://github.com/noenarcisse/MultiLangStudy/tree/main/Arrays)  <br> 
 [Async](https://github.com/noenarcisse/MultiLangStudy/tree/main/Async)  <br> 
 [Declaration variables](https://github.com/noenarcisse/MultiLangStudy/tree/main/Declaration%20variables)  <br> 
+[Dependencies injections](https://github.com/noenarcisse/MultiLangStudy/tree/main/Dependencies%20injections)  <br> 
 [Guards](https://github.com/noenarcisse/MultiLangStudy/tree/main/Guards)  <br> 
 [Heritage & Implementation](https://github.com/noenarcisse/MultiLangStudy/tree/main/Heritage%20&%20Implementation)  <br> 
-[Injections auto](https://github.com/noenarcisse/MultiLangStudy/tree/main/Injections%20auto)  <br> 
 [Input & Output](https://github.com/noenarcisse/MultiLangStudy/tree/main/Input%20&%20Output)  <br> 
 [Iterateurs](https://github.com/noenarcisse/MultiLangStudy/tree/main/Iterateurs)  <br> 
 [Jumps](https://github.com/noenarcisse/MultiLangStudy/tree/main/Jumps)  <br> 
