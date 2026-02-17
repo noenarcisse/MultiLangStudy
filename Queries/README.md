@@ -84,6 +84,13 @@ if(uneListe.Any(Item stuff))
   //code
   ```
 
+## JS / TS
+### .filter()
+  Equivalent de where en linq. Ca return une copie sans modifier le preceent<br>
+  ```
+  articles.filter(article => article.price > 100);
+  ```
+
 ## SQL
 ### SELECT
   text)<br>
