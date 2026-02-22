@@ -1,9 +1,18 @@
 # Typage
 ## TS
 ### type
-  Typage immuable<br>
+  Typage non mergeable<br>
+  Il est le seul a pouvoir faire quelques trucs specifiques comme :<br>
+  Il peut etre du typage ou de l'impémentation comme un interface
   ```ts
-  //code
+// Union → impossible en interface
+type StringOuNumber = string | number
+
+// Simple alias → impossible en interface
+type ID = string
+
+// Tuple → impossible en interface
+type Point = [number, number]
   ```
 ### interface
   Lorsqu'utilisé pour du typage :
