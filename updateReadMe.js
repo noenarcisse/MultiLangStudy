@@ -1,35 +1,38 @@
-const fs = require('fs');
-const path = require('path');
+	const fs = require('fs');
+	const path = require('path');
 
-const fileName = path.basename(__filename);
+	const fileName = path.basename(__filename);
 
-const ignoreList = [
-fileName,
-".git",
-"_template",
-"README.md"
-];
+	const ignoreList = [
+	fileName,
+	".git",
+	"_template",
+	"README.md"
+	];
 
-const reg = new RegExp(ignoreList.join("|"), "i");
+	const reg = new RegExp(ignoreList.join("|"), "i");
 
-let filesToLog = "";
+	let filesToLog = "";
 
-let fileContent = "";
+	let fileContent = "";
 
-fileContent += "# Index \n"; 
+	fileContent += "# Index \n"; 
 
-files = fs.readdirSync("./");
-for(f of files)
-{
-    if(!reg.test(f))
-    {
-        filesToLog += `[${f}](https://github.com/noenarcisse/MultiLangStudy/tree/main/${f.replaceAll(" ", "%20")})  <br> \n`;
-    }
-}
+	files = fs.readdirSync("./", {withFileTypes:true});
+	for(f of files)
+	{
+		if(!f.isDirectory())
+			continue;
+		
+		if(!reg.test(f.name))
+		{
+			filesToLog += `[${f.name}](https://github.com/noenarcisse/MultiLangStudy/tree/main/${f.name.replaceAll(" ", "%20")})  <br> \n`;
+		}
+	}
 
-fileContent += filesToLog;
+	fileContent += filesToLog;
 
-console.log(fileContent);
+	console.log(fileContent);
 
 
-fs.writeFileSync("./README.md", fileContent);
+	fs.writeFileSync("./README.md", fileContent);

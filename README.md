@@ -4,7 +4,6 @@
 [Declaration variables](https://github.com/noenarcisse/MultiLangStudy/tree/main/Declaration%20variables)  <br> 
 [Decorators](https://github.com/noenarcisse/MultiLangStudy/tree/main/Decorators)  <br> 
 [Dependencies injections](https://github.com/noenarcisse/MultiLangStudy/tree/main/Dependencies%20injections)  <br> 
-[dotnet_aspnet_recap.md](https://github.com/noenarcisse/MultiLangStudy/tree/main/dotnet_aspnet_recap.md)  <br> 
 [Guards](https://github.com/noenarcisse/MultiLangStudy/tree/main/Guards)  <br> 
 [Heritage & Implementation](https://github.com/noenarcisse/MultiLangStudy/tree/main/Heritage%20&%20Implementation)  <br> 
 [Input & Output](https://github.com/noenarcisse/MultiLangStudy/tree/main/Input%20&%20Output)  <br> 
@@ -16,4 +15,3 @@
 [Queries](https://github.com/noenarcisse/MultiLangStudy/tree/main/Queries)  <br> 
 [String](https://github.com/noenarcisse/MultiLangStudy/tree/main/String)  <br> 
 [Typage](https://github.com/noenarcisse/MultiLangStudy/tree/main/Typage)  <br> 
-[typescript_recap.md](https://github.com/noenarcisse/MultiLangStudy/tree/main/typescript_recap.md)  <br> 
