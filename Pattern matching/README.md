@@ -3,6 +3,7 @@
 ### Property Pattern
   { } variable > pattern matching de n’importe quel objet instancié (ne rejette que null)<br>
   On peut lui donner un type {} ou des propriété internes {Length: 5, Name: "Johnny"}
+  Ne fonctionne qu'avec des valeurs constantes, hardcodées ou déclarées en const
   ```
 string? texte = chargerUnTruc();
 
