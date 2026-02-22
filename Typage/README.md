@@ -14,6 +14,24 @@ type ID = string
 // Tuple → impossible en interface
 type Point = [number, number]
   ```
+Les fonctions sont aussi des objets comme en JS mais avec leur propre typage et leur patterns pour etre reconnnues.
+  ```ts
+//on peut aussi stocker des functions anonymes avec des metadonnees
+type MonCallback = Function & {
+    timeout: number;
+    retry: boolean;
+}
+// ou meme identifier une fonction par rapport a ses args et son return
+type MonCallback2 = ((error: Error | null, result: string) => void)
+  ```
+On peut passer des conditions, uniquement en ternaire
+  ```ts
+type MonType<T> = T extends string ? number : string;
+
+function maFonction<T>(arg: T): MonType<T> {
+    // ...
+}
+  ```
 ### interface
   Lorsqu'utilisé pour du typage :
   Typage, extensible et mergeable<br>
@@ -22,7 +40,7 @@ interface Animal { nom: string }
 interface Animal { age: number }
   ```
   ```ts
-type Animal = { nom: string } & { age: number }
+type Animal = { nom: string } & { age: number } // un type peut recombiner 2 concepts mais sans les modifier plus tard.
   ```
 
 ### Duck typing
