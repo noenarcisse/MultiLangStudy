@@ -1,8 +1,8 @@
-# titre1
+# Decorator
 ## C#
-### titre
+### [decorator]
   text)<br>
-  ```
+  ```cs
   //code
   ```
 
@@ -40,7 +40,7 @@ class MaClass
     unField : string = "Hey!";
 }
   ```
-### class decorator
+### method decorator
   permet d'intercepter une methode<br>
   ```ts
 function LogSpeed(originalMethod : any, context:ClassMethodDecoratorContext)
