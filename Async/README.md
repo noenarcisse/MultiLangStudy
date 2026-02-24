@@ -3,6 +3,7 @@
 ## C#
 
 ### async / await
+Passage de stack > heap pour geler la ressources a resoudre
 
 await bloque et demande une Task a resoudre (passage de null vers T)<br>
 Deux await successifs se mettent en file d'attente dans l’ordre d’appel.<br>
