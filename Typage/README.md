@@ -1,4 +1,14 @@
 # Typage
+
+## C#
+### typeof()
+Renvoie un objet Type avec les métadonnées accrochées à ce qu'on tente de recupérer. Pas de string comme en JS. <br>
+C'est assez proche dans le principe de la récupération de fonction en JS ou on a acces au data. Ici on récupère jamais le body par contre.
+Ca implique de la Reflection.
+  ```ts
+code
+  ```
+
 ## TS
 ### type
   Typage non mergeable<br>
