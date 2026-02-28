@@ -1,4 +1,5 @@
 # Index 
+[Algorithm patterns](https://github.com/noenarcisse/MultiLangStudy/tree/main/Algorithm%20patterns)  <br> 
 [Arrays](https://github.com/noenarcisse/MultiLangStudy/tree/main/Arrays)  <br> 
 [Async](https://github.com/noenarcisse/MultiLangStudy/tree/main/Async)  <br> 
 [Declaration variables](https://github.com/noenarcisse/MultiLangStudy/tree/main/Declaration%20variables)  <br> 
