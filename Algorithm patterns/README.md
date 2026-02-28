@@ -2,22 +2,22 @@
 
 ## Two pointers classic
   text)<br>
-  ```
+  ```cs
   //code
   ```
 ## Sliding window
   text)<br>
-  ```
+  ```cs
   //code
   ```
 ## fast and slow pointers
   text)<br>
-  ```
+  ```cs
   //code
   ```
 ## Backtracking
-  Arbre décisionnel, on parcourre les possibilités avec du recurring et on remonte pour rententer les solutions suivantes<br>
-  ```
+  Arbre décisionnel, on parcourt les possibilités avec du recurring et on remonte pour rententer les solutions suivantes<br>
+  ```cs
     public static IList<string> Solve(int number)
     {
         List<string> results = [];
@@ -43,7 +43,7 @@
   Principe de Hashtable<br>
   Construction d'une data recursive ou on connait deja les réponses precedentes<br>
   On brute force a l'aide d'une table par ex dans laquelle on peut chercher les valeurs calculées précédemment en acces direct <br>
-  ```
+  ```cs
   foreach (int c in coins)
     {
         for (int i = 1; i <= amount; i++)
@@ -60,6 +60,6 @@
 ## Bit manipulations
 ### XOR not found filter
   text)<br>
-  ```
+  ```cs
   //code
   ```
