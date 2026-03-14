@@ -27,5 +27,35 @@ dotnet add package ClosedXML
   ```
 dotnet add package UglyToad.PdfPig
   ```
+## Automation IA
+
+### Microsoft.ML (ML.NET)
+Y'a trop a dire dessus. Ca permet de lancer des modeles de base de MS ou de charger des modeles extérieur en plus.
+
+Détection d'email spam, Catégoriser automatiquement des tickets de support, Détecter la langue d'un texte, Analyser le sentiment (positif / négatif / neutre) d'un avis client
+Prédire un prix immobilier selon des critères, Estimer une durée de livraison, Prévoir un chiffre de vente
+Détecter des transactions bancaires frauduleuses, Repérer des pics anormaux dans des logs, Surveiller des métriques serveur
+"Les utilisateurs qui ont aimé X ont aussi aimé Y", Suggérer des produits dans un catalogue, Vision par ordinateur (avec ONNX)
+Classer des images, Détecter des objets dans une image, En important des modèles entraînés ailleurs (Python, etc.)
+  ```
+dotnet add package Microsoft.ML
+dotnet add package Microsoft.ML.OnnxRuntime
+  ```
 
 
+
+## Hooks
+Permet d'acceder à des hooks windows simplifiés sans devoir faire du low level et approcher l'OS avec des risques de lock ou ralentissement.
+### SharpHook
+Elle permet de surveiller et de simuler des inputs très facilement.
+### MouseKeyHook
+Une librairie très populaire et simple pour .NET qui encapsule toute la complexité des API Windows.
+
+
+## Reseau
+
+### Polly
+Rinse and repeat, retries reseaux
+  ```
+dotnet add package Polly
+  ```
