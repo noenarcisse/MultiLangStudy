@@ -2,23 +2,23 @@
 
 ## Classic
 ### Middlewares
-#### UseExceptionHandler
+  #### UseExceptionHandler
   text)<br>
-#### UseHsts
+  #### UseHsts
   Obligation de respecter le https et de ne jamais permettre le http<br>
-#### UseHttpsRedirection()
+  #### UseHttpsRedirection()
   Redirection de http vers https si possible<br>
 
   
 ## Blazor 
 
 ### Services
-#### AddRazorComponents()
+  #### AddRazorComponents()
 
 ### Middlewares
-### UseExceptionHandler
+  #### UseExceptionHandler
   text)<br>
-### UseHsts
+  #### UseHsts
   Obligation de respecter le https et de ne jamais permettre le http<br>
-### UseHttpsRedirection()
+  #### UseHttpsRedirection()
   Redirection de http vers https si possible<br>
