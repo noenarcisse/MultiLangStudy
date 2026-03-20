@@ -61,3 +61,27 @@ array.at(-1) // 5
   const arrayStr = [...text];
   const array2 = [...array, ...arrayStr];
   ```
+
+# TS 
+Hérite du JS avec du typage mais se fait saboter par le bon ducktyping de JS
+```ts
+type Chien = {
+    name: string;
+}
+type Chat ={
+    name:string;
+    nombresDePattounes : number;
+}
+
+const chien1 : Chien = {name:"Poupette"};
+const chat1 : Chat = {name : "Pisspouce", nombresDePattounes: 4};
+const canard : {name : string} = {name: "Daffy"}
+
+const arrayTypée : Chien[] = [
+    {name : "Rocky"},
+    chien1,
+    chat1,
+    canard
+];
+  ```
+
