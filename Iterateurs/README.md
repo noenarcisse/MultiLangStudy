@@ -2,7 +2,7 @@
 ## C#
 ### yield return + Enumerable<T>
 yield return un Enumerable<T> ca cree un itérateur, ca permet de parcourir des données lourdes voire infinies en ne bloquant qu’une petite adresse mémoire (stream, large file a lire ligne par ligne)<br>
-  ```
+  ```cs
 Enumerable<int> GenererSuite()
 {
       int i=0;
