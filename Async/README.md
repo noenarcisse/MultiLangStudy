@@ -43,6 +43,14 @@ await Task.WhenAll(calcTask, fileTask);
 int result = await calcTask; 
 string text = await fileTask;
   ```
+
+### Channel<T>
+https://learn.microsoft.com/en-us/dotnet/core/extensions/channels
+Permet de creer un pattern de produce/consume, qui permet de consommer de la donnée produite en async pour revenir vers du sync
+  ```
+code
+  ```
+
 ## JS / TS
 
 ### async / await
