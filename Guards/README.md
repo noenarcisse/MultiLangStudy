@@ -78,3 +78,8 @@ type UserKeys = keyof User;
   ```ts
 code here
   ```
+  ### <T extends ...> <br>
+  equivalent de where en C#, ca force un type a respecter un pattern
+  ```ts
+function returnUnTrucAvecUnNom() : T extends {name:string}
+  ```
