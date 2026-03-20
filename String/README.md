@@ -24,6 +24,15 @@ string texte = “”” du texte
 sur plusieur lignes “””;
   ```
 
+### Incrementation et decrementation
+Contrairement a du Perl, on peut pas incrémenter un string. Par contre les chars récupèrent quand meme les opérateurs et déplacent en fonction des valeurs ASCII<br>
+  ```
+char test = 'z';
+test--; // y
+test++; // z
+test++; // {
+  ```
+
 ## Perl
 Le true king.
 ### string en général
