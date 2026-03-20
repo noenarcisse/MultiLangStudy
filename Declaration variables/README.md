@@ -18,7 +18,7 @@ blabla
 
   ```
 
-## JS
+## JS / TS
 Faiblement typées, peut être hétérogene dans un array.
 ### const
 Adresse constante, scoped
@@ -27,7 +27,7 @@ Adresse variable, scoped
 ### var
 Adresse variable, globale
 ### (rien)
-Adresse varible, scopé a window. Nice breach, lourd, etc.
+Adresse variable, scopé a window. Nice breach accessibles a tous les scripts, lourd, etc.
   ```
 let variable = 2;
 variable = "Salut";
