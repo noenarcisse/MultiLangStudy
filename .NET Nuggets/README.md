@@ -48,6 +48,11 @@ dotnet add package Microsoft.ML.OnnxRuntime
 Permet d'acceder à des hooks windows simplifiés sans devoir faire du low level et approcher l'OS avec des risques de lock ou ralentissement.
 ### SharpHook
 Elle permet de surveiller et de simuler des inputs très facilement.
+https://sharphook.tolik.io/articles/native.html
+  ```
+dotnet add package SharpHook
+  ```
+
 ### MouseKeyHook
 Une librairie très populaire et simple pour .NET qui encapsule toute la complexité des API Windows.
 
