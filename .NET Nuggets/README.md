@@ -54,7 +54,17 @@ Une librairie très populaire et simple pour .NET qui encapsule toute la complex
 
 ## Reseau
 
-### Polly
+### InTheHand
+Bluetooth classic et LE
+https://inthehand.com/2023/07/07/bluetooth-classic-and-low-energy-different-approaches/
+https://github.com/inthehand/32feet
+https://inthehand.github.io/html/N_InTheHand_Net_Bluetooth.htm
+  ```
+dotnet add package InTheHand.Net.Bluetooth --version 4.2.3
+dotnet add package InTheHand.BluetoothLE --version 4.0.44
+  ```
+
+### Polly ?
 Rinse and repeat, retries reseaux
   ```
 dotnet add package Polly
