@@ -36,7 +36,7 @@ const monTableau = [1, "deux", { id: 3 }, [4, 5], () => console.log("hello")];
   ```
 
 ## F#
-bla
+Fortement typé, déduit. Par défaut immuable si non précisé.
 ### let
 Identifier de déclaration de variable ou fn
 
