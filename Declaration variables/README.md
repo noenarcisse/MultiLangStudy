@@ -35,6 +35,32 @@ variable = await new Promise((res, req) => { ... });
 const monTableau = [1, "deux", { id: 3 }, [4, 5], () => console.log("hello")];
   ```
 
+## F#
+bla
+### let
+Identifier de déclaration de variable ou fn
+
+### let mutable
+var mutable (valeur). Typage strict a l'init (=). Mutation avec <-
+  ```fs
+let mutable var = "Salut"
+printfn $"{var}"
+var <- "Ca va ?"
+printfn $"{var}"
+var <- 42 //NON ne peut pas changer de type!
+  ```
+### Tuple
+  ```fs
+let tuple = "ceci", "est", "un" , "tuple"
+let tuple2 = ("Pareil", "mais avec des parenthèses")
+  ```
+### Shadowing
+Shadowing possible au calme
+  ```fs
+let var = "Salut"
+let var = 42
+  ```
+
 ## Rust
 Fortement typé. Toutes les variables sont toujours scopées. Rust différencie l'immuabilité des adresses et l'immuabilité des valeurs.
 ### let
