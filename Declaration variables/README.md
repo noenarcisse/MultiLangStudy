@@ -1,12 +1,11 @@
 # Declaration variables
 ## C#
 ### var
-type implicite calculé des que possible par le compiler, ca ferme les verrou des que le compiler “sais” (meme pour les Task).<br>
+Type implicite calculé des que possible par le compiler, ca ferme les verrou des que le compiler “sait” (meme pour les Task).<br>
 La valeur de la variable doit etre explicite.
 ### dynamic
-l’equivalent du variable JS de base, accepte tous les type sans jamais bloquer le compiler.
+L’equivalent du variable JS de base, accepte tous les type sans jamais bloquer le compiler.
 ### Tuple
-blabla
   ```
   var unCharactere = 'A'; 
   var Text = "Du texte"; // string implicite
@@ -39,7 +38,6 @@ const monTableau = [1, "deux", { id: 3 }, [4, 5], () => console.log("hello")];
 Fortement typé, déduit. Par défaut immuable si non précisé.
 ### let
 Identifier de déclaration de variable ou fn
-
 ### let mutable
 var mutable (valeur). Typage strict a l'init (=). Mutation avec <-
   ```fs
