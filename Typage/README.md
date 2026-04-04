@@ -72,3 +72,28 @@ function faireVoler(animal: Volant) {
 const canard = new Canard()
 faireVoler(canard) // ca compile, ca ressemble a un Volant donc c'est un Volant
   ```
+
+## F#
+### type
+Forte ressemblance au TS. On peut pas type union ici, on doit discriminer avec un systeme proche du swtch expr / match with.
+Les cas doivent être gérés, le compiler est strict!
+En cas de 2 types similaire, le dernier écrit gagne (philo linéaire toujours)
+  ```fs
+type Guerrier = {
+    armor : int
+}
+
+type Magicien = {
+    mutable MP : int
+}
+
+type Classe = 
+    | Guerrier of Guerrier
+    | Magicien of Magicien
+
+type Personnage = {
+    name : string
+    mutable HP : int
+    classe : Classe
+}
+  ```
