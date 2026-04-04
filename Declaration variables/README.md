@@ -55,8 +55,10 @@ let tuple2 = ("Pareil", "mais avec des parenthèses")
 ### Shadowing
 Shadowing possible au calme
   ```fs
-let var = "Salut"
-let var = 42
+let maFonction = 
+    let var = "Salut"
+    let var = 42
+    var // return 42
   ```
 
 ## Rust
