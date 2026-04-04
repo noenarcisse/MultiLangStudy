@@ -1,6 +1,6 @@
 # .NET
 Framework
-## Compilation
+## C# - Compilation
 Framework-Dependent
 
 ### publish
@@ -27,5 +27,11 @@ exe de 5-15 mo
 Tres strict refuse certains principe ou le srend difficile a debug (full warning) avec tout ce qui fait de la reflection (EF par ex, LINQ complexe)
   ```
   dotnet publish -c Release -r win-x64 /p:PublishAot=true
+  ```
+
+## F#
+Compilation à la volée, similaire a npx tsx ou bun run sur du TS
+  ```
+  dotnet fsi ./fichier.fsx
   ```
 
