@@ -53,7 +53,7 @@ let tuple = "ceci", "est", "un" , "tuple"
 let tuple2 = ("Pareil", "mais avec des parenthèses")
   ```
 ### Shadowing
-Shadowing possible au calme
+Shadowing possible localement. Interdit en top level.
   ```fs
 let maFonction = 
     let var = "Salut"
