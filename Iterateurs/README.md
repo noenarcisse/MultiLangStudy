@@ -19,3 +19,10 @@ var resultat = suiteInfinie
                         .Skip(5)
                         .Take(10); 
   ```
+
+## F#
+### seq{}
+bla
+  ```fs
+code
+  ```
