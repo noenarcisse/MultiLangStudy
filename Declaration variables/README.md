@@ -19,6 +19,7 @@ L’equivalent du variable JS de base, accepte tous les type sans jamais bloquer
 
 ## JS / TS
 Faiblement typées, peut être hétérogene dans un array.
+Peut tout stocker car tout est un object. Ca comprend aussi des body de function par exemple.
 ### const
 Adresse constante, scoped
 ### let
@@ -35,9 +36,15 @@ const monTableau = [1, "deux", { id: 3 }, [4, 5], () => console.log("hello")];
   ```
 
 ## F#
-Fortement typé, déduit. Par défaut immuable si non précisé.
+Fortement typé, déduit. Par défaut immuable si non précisé. Peut stocker des éléments de base, des objets complexes ou des functions (qu'on peut invoker avec () comme en JS)
 ### let
 Identifier / sigil de déclaration de variable (ou de fonction)
+  ```fs
+let var = "Salut"
+let read = System.Console.ReadLine
+let input = read()
+printfn $"{input}"
+  ```
 ### let mutable
 var mutable (valeur). Typage strict a l'init (=). Mutation avec <-
   ```fs
