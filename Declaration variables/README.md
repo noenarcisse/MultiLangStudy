@@ -37,7 +37,7 @@ const monTableau = [1, "deux", { id: 3 }, [4, 5], () => console.log("hello")];
 ## F#
 Fortement typé, déduit. Par défaut immuable si non précisé.
 ### let
-Identifier de déclaration de variable ou fn
+Identifier / sigil de déclaration de variable (ou de fonction)
 ### let mutable
 var mutable (valeur). Typage strict a l'init (=). Mutation avec <-
   ```fs
