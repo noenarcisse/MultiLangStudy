@@ -4,7 +4,7 @@
   { } variable > pattern matching de n’importe quel objet instancié (ne rejette que null)<br>
   On peut lui donner un type {} ou des propriété internes {Length: 5, Name: "Johnny"} <br>
   Ne fonctionne qu'avec des valeurs constantes, hardcodées ou déclarées en const
-  ```
+  ```cs
 string? texte = chargerUnTruc();
 
 if(texte is { } data)
@@ -32,13 +32,13 @@ foreach(Item item in Items)
   ```
 ### List Pattern
   Pattern de liste ou array possibles<br>
-  ```
+  ```cs
 if( monTableau is [1,2, .., _, 5, ..]) //verifie le format du tab en 1, 2, {0+}, {1}, 5, {0+}
 { }
   ```
 ### Pattern matching
   Switch expression par ex<br>
-  ```
+  ```cs
 static int USToBEGrades(string grade) => grade switch
 {
     "A+"    =>     20,
@@ -57,7 +57,21 @@ static int USToBEGrades(string grade) => grade switch
     _       =>      throw new Exception("Unexpected arg found, expected A-F grades")
 };
   ```
+## F#
+### match
 
+  ```fs
+let useMana (chara : Personnage) mana =
+    match chara.classe with
+    | Magicien m -> m.MP <- m.MP - mana
+    | Guerrier g -> ()
+	| _ -> printfn "Default case is a nop"
+
+let getMana (chara : Personnage) =
+    match chara.classe with
+    | Magicien m -> m.MP
+    | Guerrier g -> 0
+  ```
 
 
 
