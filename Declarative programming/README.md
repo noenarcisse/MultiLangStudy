@@ -4,7 +4,7 @@
 ### filter
  Selectionne sur base d'une condition equivalent du filter JS ou select C#
   ```fs
-let list = [1;20;18;10;0;100;]
+let list = [1;20;18;10;0;100]
 list |> List.filter(fun x -> x > 10)
   ```
 ###  iter
@@ -25,8 +25,7 @@ list |> List.sort
   ```
 ### find
   ```fs
-let list = [1;20;18;10;0;100;]
-list |> List.filter(fun x -> x > 10)
+
   ```
 ## C# LINQ
 Query sql en c# appliqué a des enumerables en général :>
