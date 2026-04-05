@@ -1,4 +1,4 @@
-# Queries
+# Declarative programming
 ## C# LINQ
 Query sql en c# appliqué a des enumerables en général :>
 Y’a 2 ecritures, en "sequence" et en chainage.
