@@ -10,6 +10,11 @@ let ignoreList = [
 ]
 let readme =  @"README.md"
 
+let header = [
+    "# Index" ; 
+    "Liste des catégories : <br>"
+]
+
 let  display dirNames=
     dirNames |> List.iter(fun x -> printfn "%s" x)
     dirNames
@@ -23,7 +28,7 @@ let toMarkdown (list: string list) =
 
 let write file (list:string list) =
     let content = list |> toMarkdown
-    File.WriteAllLines( file, content)
+    File.WriteAllLines( file, header @ content)
         
 
 
