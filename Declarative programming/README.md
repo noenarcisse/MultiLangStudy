@@ -13,9 +13,11 @@ list |> List.filter(fun x -> x > 10)
 code
   ```
 ### map
-map les elements vers une autre val
+Mappe les valeurs vers une nouvelles valeurs correspondante. Exact bro de .map() en JS
   ```fs
-
+let name = "Ihllx"
+let obnf = name.ToCharArray() |> Array.map(fun x -> char (int x+1) ) |> System.String
+printfn $"Salut {obnf}" //Salut Jimmy
   ```
 ### sort
 Copie correctement en FP, pas comme JS
