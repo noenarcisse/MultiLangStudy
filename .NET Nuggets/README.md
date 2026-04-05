@@ -74,3 +74,30 @@ Rinse and repeat, retries reseaux
   ```
 dotnet add package Polly
   ```
+
+## unsorted
+
+### OpenCVSharp4
+"Usage : Suivre un objet par couleur (CamShift), par flux optique (Lucas-Kanade) ou via des algorithmes de tracking dédiés (MOSSE, CSRT, KCF).
+Idéal pour : Projets desktop (WPF, WinForms, Console) nécessitant une analyse image par image."
+  ```
+OpenCvSharp4.Windows
+OpenCvSharp4.Extensions
+  ```
+
+### MediaPipe.NET 
+Usage : Tracking de points d'intérêt (landmarks) sur le corps humain en temps réel.
+
+### Wappers communautaires comme Hands.Net
+
+## Diagnostics
+### LibreHardwareMonitor
+Surveille l'os et le materiel
+  ```
+dotnet add package LibreHardwareMonitor
+  ```
+### System.Diagnostics.PerformanceCounter
+Lib windows externe, surveille le materiel, complexe, comme d'hab avec MS
+  ```
+dotnet add package System.Diagnostics.PerformanceCounter
+  ```
