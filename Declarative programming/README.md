@@ -1,4 +1,33 @@
 # Declarative programming
+## F#
+
+### filter
+ Selectionne sur base d'une condition equivalent du filter JS ou select C#
+  ```fs
+let list = [1;20;18;10;0;100;]
+list |> List.filter(fun x -> x > 10)
+  ```
+###  iter
+ similaire a forEach()
+  ```fs
+code
+  ```
+### map
+map les elements vers une autre val
+  ```fs
+
+  ```
+### sort
+Copie correctement en FP, pas comme JS
+  ```fs
+let list = [9 ; 0 ; 19 ; 5]
+list |> List.sort
+  ```
+### find
+  ```fs
+let list = [1;20;18;10;0;100;]
+list |> List.filter(fun x -> x > 10)
+  ```
 ## C# LINQ
 Query sql en c# appliqué a des enumerables en général :>
 Y’a 2 ecritures, en "sequence" et en chainage.
@@ -127,6 +156,7 @@ if(uneListe.Any(Item stuff))
 
 
 ## JS / TS
+Attention chez eux, certaines fonctions sont inplace comme sort
 ### .filter()
   Equivalent de where en linq. Ca return une copie sans modifier le preceent<br>
   ```
