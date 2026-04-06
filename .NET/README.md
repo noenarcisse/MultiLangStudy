@@ -39,9 +39,9 @@ Compilation à la volée, similaire a npx tsx ou bun run sur du TS
   ```
   dotnet fsi ./fichier.fsx
   ```
-### Fable
+### Fable (.net 8/9)
 Tranpile et compile en autres langages (JS, TS, Python, Rust ou Beam)
-Permet aussi d'interop avec les autres languages
+Permet aussi d'interop avec les autres languages. 
   ```
 dotnet add package Fable.Core
   ```
