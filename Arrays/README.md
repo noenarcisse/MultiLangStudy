@@ -85,3 +85,9 @@ const arrayTypée : Chien[] = [
 ];
   ```
 
+
+# F# 
+Non naturel > list or seq. Taille fixe
+```ts
+let array = [|1;2;3|]
+  ```
