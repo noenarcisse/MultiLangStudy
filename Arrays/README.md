@@ -2,7 +2,7 @@
 ## C#
 ### typage
 Fortement typé de base. On peut les rendre hétérogèe au forcing (object)
-  ```c#
+  ```cs
 int[] array = [1,2,3,4]; // que des int
 object[] arrayBizarre = ["Salut", 'A', 2, new CompteBancaire("Titi", 90)]; 
   ```
@@ -88,6 +88,6 @@ const arrayTypée : Chien[] = [
 
 # F# 
 Non naturel > list or seq. Taille fixe
-```ts
+```fs
 let array = [|1;2;3|]
   ```
