@@ -61,3 +61,26 @@ code
   ```
 Promise.All();
   ```
+## F#
+
+### let!
+equivalent de await
+  ```
+code
+  ```
+
+### async
+equivalent de await
+  ```
+async { }
+  ```
+### return
+Result
+  ```
+code
+  ```
+### return!
+Result + deballage
+  ```
+code
+  ```
