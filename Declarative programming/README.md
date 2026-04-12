@@ -1,6 +1,11 @@
 # Declarative programming
 ## F#
 
+### pipe
+|>
+  ```fs
+code pipe
+  ```
 ### filter
  Selectionne sur base d'une condition equivalent du filter JS ou select C#
   ```fs
@@ -28,6 +33,21 @@ list |> List.sort
 ### find
   ```fs
 
+  ```
+## C#
+### this
+Permet de chainer. On passe this sur un des args pour cibler l'arg en premier contrairement a F#
+  ```cs
+static int Additionner(this int value, int add)
+{
+    return value+add;
+}
+static int Multiplier(this int value, int mul)
+{
+    return value*mul;
+}
+int val = 5;
+Console.WriteLine(val.Additionner(1).Multiplier(2)); //12
   ```
 ## C# LINQ
 Query sql en c# appliqué a des enumerables en général :>
