@@ -1,10 +1,13 @@
 # Declarative programming
 ## F#
 
-### pipe
-|>
+### pipe |>
+Permet de chainer des fonctions. Par défaut, c'est toujours le dernier arg qui est ciblé comme entrée du pipe.
   ```fs
-code pipe
+let valeur : int = 5
+let add x y = x+y
+let mul x y = x*y
+printfn $"%i" valeur |> add 4 |> mul 2 // 5 => 4+5 => 2 * 9 = 18
   ```
 ### filter
  Selectionne sur base d'une condition equivalent du filter JS ou select C#
