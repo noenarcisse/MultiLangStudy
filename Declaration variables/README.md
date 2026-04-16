@@ -88,19 +88,19 @@ Fortement typé. Toutes les variables sont toujours scopées. Rust différencie 
 ### let
 Variable constante, valeur figée.
 Scopée dans le bloc courant.
-  ```
+  ```rust
 let variable: &str = "Salut";
   ```
 ### const
 Variable constante, valeur figée.
 Scopée dans le bloc courant.
-  ```
+  ```rust
 const PI = 3.14159265359;
 const PI_IN_DOOM = 3.141592657;
   ```
 ### let mut
 Vairable variable, scopée.
-  ```
+  ```rust
 let mut variable : &str = "Salut"
 let autreVar = "Yo";
 variable = "Hey!" //implicitement redeviens non mut ici
@@ -109,7 +109,7 @@ autreVar = "Salut" // Non, pas mut
   ```
 ### Shadowing
 On peut sur-déclarer une variable sans souci.
-  ```
+  ```rust
 let variable: &str = "Salut";
 let variable : &str = "Bien le bonjour!";
 let variable : i32 = 256;
@@ -117,7 +117,7 @@ let variable : i32 = 256;
 ### Ownership
 i32, &str, bool, etc. > type simple, ils font un copy auto quand ils sont passés a un owner différent
 String, Vec<T>, struct > ils sont donné a une autre owner quand ils sont passés.
-  ```
+  ```rust
 let number : i8 = 52; //owner : ce block, var simple
 let variableSimple : &str = "Salut";  //owner : ce block &str est une ref en soi
 let variableComplexe : String = String::from("Bonjour");  //owner : ce block
@@ -130,7 +130,8 @@ println!("{number}, {variableSimple}, {variableComplexe}");       // numer resou
   ```
 
 ## Perl
-Faiblement typée, peut être hétérogene dans un array.
+Faiblement typée, peut être hétérogene dans un array. Peut etre scopé. <br>
+Utilise des sigils pour le type de valeurs pour chaque variable.
 ### $scalar
 Scalaire
 ### @array
@@ -139,14 +140,18 @@ blabla
 blabla
 ### (list)
 Pas d'assignation en mémoire, c'est un objet temp (similaire a un tuple en quelque sorte). Elle peut etre manipulée quand meme.
+### my
+Scopé localement (let de JS)
+### our
+Scopé globalement. (var de JS)
 
-  ```
+  ```perl
 #inversion de list
 ($a, $b) = ($b, $a);
 
   ```
 
-  ```
+  ```perl
 my $scalar = 4;
 my @array = (4, "quatre");
 my %hash =  (
