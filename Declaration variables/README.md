@@ -1,12 +1,13 @@
 # Declaration variables
 ## C#
 ### var
-Type implicite calculé des que possible par le compiler, ca ferme les verrou des que le compiler “sait” (meme pour les Task).<br>
+Type implicite calculé des que possible par le compiler, ca ferme les verrous dès que le compiler a pu déduire un type (meme pour les Task).<br>
 La valeur de la variable doit etre explicite.
 ### dynamic
 L’equivalent du variable JS de base, accepte tous les type sans jamais bloquer le compiler.
 ### Tuple
-  ```
+Principe de base d'un tuple, typage hétérogène. Peut etre déconstruit à la volée.
+  ```cs
   var unCharactere = 'A'; 
   var Text = "Du texte"; // string implicite
   String Text2; // string explicite
@@ -14,6 +15,10 @@ L’equivalent du variable JS de base, accepte tous les type sans jamais bloquer
   var array = new List<int>();
   List<int> array2 = new();
   List<int> array3 = [];
+
+  var tuple = ("string", 1);
+  var (text, num) = tuple;
+  Console.WriteLine(text+ " / "+ num);
 
   ```
 
