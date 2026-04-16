@@ -46,6 +46,14 @@ static int Multiplier(this int value, int mul) => value*mul;
 int val = 5;
 Console.WriteLine(val.Additionner(1).Multiplier(2)); //12
   ```
+### Lambda 
+Func<argT, returnT> = (args) => { body };
+Ca s'accroche pas au top level statement "Program.cs" comme une static qui serait declaré "a la volée". Ici C# crée un objet dummy poir l'accrocher comme une méthode de cette classe et l'exec. Surtout utilisé pour le coté procédural ou fonctionnel.
+  ```cs
+Func<int, int, int> multiplier = (x,y) => x * y;
+Console.WriteLine(multiplier(2,3)); //6
+  ```
+
 ## C# LINQ
 Query sql en c# appliqué a des enumerables en général :>
 Y’a 2 ecritures, en "sequence" et en chainage.
