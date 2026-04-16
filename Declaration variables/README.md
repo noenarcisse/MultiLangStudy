@@ -84,7 +84,7 @@ let maFonction =
   ```
 
 ## Rust
-Fortement typé. Toutes les variables sont toujours scopées. Rust différencie l'immuabilité des adresses et l'immuabilité des valeurs.
+Fortement typé. Typage déduit. Toutes les variables sont toujours scopées. Rust différencie l'immuabilité des adresses et l'immuabilité des valeurs.
 ### let
 Variable constante, valeur figée.
 Scopée dans le bloc courant.
