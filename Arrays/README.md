@@ -8,7 +8,8 @@ object[] arrayBizarre = ["Salut", 'A', 2, new CompteBancaire("Titi", 90)];
   ```
 ### spread / range ..
 [0..4]<br>
-Permet de faire des spreads, des ranges etc. Ca crée une copie! Pour la vrai version voir > Span<T><br>
+Permet de faire des spreads, des ranges etc. <br>
+Ca crée une copie! Pour la version sans copie voir > Span<T><br>
 ### hat
 ^1 : permet de se balader en sens inverse dans un array, de maniere exclusive sur le dernier.<br>
 Doit toujours rester dans l'ordre. le plus petit a gauche, le plus grand a droite [1 .. ^1]<br>
@@ -21,7 +22,8 @@ Doit toujours rester dans l'ordre. le plus petit a gauche, le plus grand a droit
   char[] spreadString = [..mot];
   ```
 ### Span<T>
-Frame sans allocation un elements comme un array (ou string / char[]).<br>
+struct <br>
+Frame sans allocation d'un element comme un array (ou string / char[]).<br>
 C’est une struc qui permet de faire un ciblage direct des données equivalent a un .Take(5) en LinQ ou un [..array] mais extremement plus leger et sans copie en memoire
 Span<T> .Slice(0,5) fait en 10x mieux un array[0 .. 5];<br>
 
@@ -87,7 +89,7 @@ const arrayTypée : Chien[] = [
 
 
 # F# 
-Non naturel > list or seq. Taille fixe
+Non naturel dans ce langage, on lui préfère list ou seq. Taille fixe a la C.
 ```fs
 let array = [|1;2;3|]
   ```
