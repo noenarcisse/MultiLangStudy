@@ -1,5 +1,6 @@
 # Declaration variables
 ## C#
+Scopé par bloc, mutable par défaut, fortement typé, déduit.
 ### var
 Type implicite calculé des que possible par le compiler, ca ferme les verrous dès que le compiler a pu déduire un type (meme pour les Task).<br>
 La valeur de la variable doit etre explicite.
@@ -10,7 +11,7 @@ Principe de base d'un tuple, typage hétérogène. Peut etre déconstruit à la 
   ```cs
   var unCharactere = 'A'; 
   var Text = "Du texte"; // string implicite
-  String Text2; // string explicite
+  string Text2; // string explicite
 
   var array = new List<int>();
   List<int> array2 = new();
@@ -24,26 +25,35 @@ Principe de base d'un tuple, typage hétérogène. Peut etre déconstruit à la 
 
 ## JS / TS
 Faiblement typées, peut être hétérogene dans un array.
-Peut tout stocker car tout est un object. Ca comprend aussi des body de function par exemple.
+Peut tout stocker car tout est un object. Ca comprend aussi des body de function par exemple. Peut etre marqué avec des attributes/metadata.
+TOUT est un objet.
 ### const
-Adresse constante, scoped
+Adresse imutable, scoped. La valeur pourrait changer.
 ### let
 Adresse variable, scoped
 ### var
-Adresse variable, globale
+Adresse variable, globale. La norme précédemment dans le JS, n'est plus vraiment utile > use const/let
 ### (rien)
 Adresse variable, scopé a window. Nice breach accessibles a tous les scripts, lourd, etc.
-  ```
+  ```js
 let variable = 2;
 variable = "Salut";
 variable = await new Promise((res, req) => { ... });
 const monTableau = [1, "deux", { id: 3 }, [4, 5], () => console.log("hello")];
   ```
+### imutability
+En TS, as const force freeze deep des valeurs et imite plus  du rust ou F# <br>
+En JS Object.freeze() permet de bloquer les valeurs MAIS en shallow uniquement, il n'y a aucune forme de récursivité.
+  ```ts
+code
+  ```
 
 ## F#
-Fortement typé, déduit. Par défaut immuable si non précisé. Peut stocker des éléments de base, des objets complexes ou des functions (qu'on peut invoker avec () comme en JS)
+Fortement typé, déduit. Par défaut immuable si non précisé. Peut stocker des éléments de base, des objets complexes ou des functions (qu'on peut invoker avec () comme en JS) <br>
+TOUT est une fonction !
+
 ### let
-Identifier / sigil de déclaration de variable (ou de fonction)
+Mot clé de déclaration de variable (ou de fonction)
   ```fs
 let var = "Salut"
 let read = System.Console.ReadLine
