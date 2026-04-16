@@ -41,14 +41,8 @@ list |> List.sort
 ### this
 Permet de chainer. On passe this sur un des args pour cibler l'arg en premier contrairement a F#
   ```cs
-static int Additionner(this int value, int add)
-{
-    return value+add;
-}
-static int Multiplier(this int value, int mul)
-{
-    return value*mul;
-}
+static int Additionner(this int value, int add) => value + add;
+static int Multiplier(this int value, int mul) => value*mul;
 int val = 5;
 Console.WriteLine(val.Additionner(1).Multiplier(2)); //12
   ```
