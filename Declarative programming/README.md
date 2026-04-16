@@ -54,6 +54,24 @@ Func<int, int, int> multiplier = (x,y) => x * y;
 Console.WriteLine(multiplier(2,3)); //6
   ```
 
+### using static
+Casse l'OO de C# pour revenir sur de la fonction pure, très utile pour du procédural ou fonctionnel.
+Ca recrée une style C, avec des import. Faut encore creer des static class et static method en amont. On ne peut evidemment pas avoir de doublons de nom.
+  ```cs
+//fichier 1
+namespace Projet;
+public static class UneClasse {
+    public static int Doubler(int n) => n * 2;
+}
+  ```
+  ```cs
+//fichier 2
+using static Projet.UneClasse;
+var res = Doubler(5); //10
+  ```
+
+
+
 ## C# LINQ
 Query sql en c# appliqué a des enumerables en général :>
 Y’a 2 ecritures, en "sequence" et en chainage.
