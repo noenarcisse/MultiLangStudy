@@ -7,6 +7,7 @@ Liste des catégories : <br>
 [ASP.NET](https://github.com/noenarcisse/MultiLangStudy/tree/main/ASP.NET)  <br>
 [Async](https://github.com/noenarcisse/MultiLangStudy/tree/main/Async)  <br>
 [Declaration variables](https://github.com/noenarcisse/MultiLangStudy/tree/main/Declaration%20variables)  <br>
+[Declarative programming](https://github.com/noenarcisse/MultiLangStudy/tree/main/Declarative%20programming)  <br>
 [Decorators](https://github.com/noenarcisse/MultiLangStudy/tree/main/Decorators)  <br>
 [Dependencies injections](https://github.com/noenarcisse/MultiLangStudy/tree/main/Dependencies%20injections)  <br>
 [Guards](https://github.com/noenarcisse/MultiLangStudy/tree/main/Guards)  <br>
@@ -17,6 +18,5 @@ Liste des catégories : <br>
 [Lazy loading](https://github.com/noenarcisse/MultiLangStudy/tree/main/Lazy%20loading)  <br>
 [Pattern matching](https://github.com/noenarcisse/MultiLangStudy/tree/main/Pattern%20matching)  <br>
 [Pointer & Ref](https://github.com/noenarcisse/MultiLangStudy/tree/main/Pointer%20%26%20Ref)  <br>
-[Queries](https://github.com/noenarcisse/MultiLangStudy/tree/main/Queries)  <br>
 [String](https://github.com/noenarcisse/MultiLangStudy/tree/main/String)  <br>
 [Typage](https://github.com/noenarcisse/MultiLangStudy/tree/main/Typage)  <br>
