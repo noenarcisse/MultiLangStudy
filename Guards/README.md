@@ -138,7 +138,7 @@ code here
 function returnUnTrucAvecUnNom() : T extends {name:string}
   ```
 ## F#
-match guard, ca remplacement meme le principe du "if error throw" en 1 ligne 
+match guard, ca remplace meme le principe du "if error throw" en 1 ligne 
 Ca permet de gerer les valeurs directement et de renvoyer le traitement reel sur les vrais cas a gérer.
   ```fs
 let capitalize str =
