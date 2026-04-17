@@ -72,6 +72,26 @@ blabla
   ```
 code
   ```
+ ### when
+ blablabla
+  ```
+code
+  ```
+### static ArgumentException
+Hack de lisibilité sur les guards d'entrée.
+Permet de reduire une instruction de guard d'entrée en if par un raccourci lisible "a la Perl"
+  ```
+using static System.ArgumentNullException;
+using static System.ArgumentOutOfRangeException;
+
+public void Traiter(string? nom, int age)
+{
+	// on récupère les fns des System.Argument... en static pour les appeler direct avec un nom court et lisibile
+	// au lieu de faire if(nom is null) throw new Exception("nom est nul");
+    ThrowIfNull(nom);
+    ThrowIfNegative(age);
+}
+  ```
 
 ## JS / TS
   base types<br>
