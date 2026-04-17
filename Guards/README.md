@@ -1,5 +1,39 @@
 # Guards, Nullchecks etc.
 ## C#
+
+### switch expression guard
+Principe hérité du FP, permet de guard facilement sur base de la valeur ou meme du type d'obj en combinant avec du pattern matching
+```cs
+public string GetDescription(Animal animal) => animal switch
+{
+    Chien 	=> 	"C'est un chien",
+    Chat 	=> 	"C'est un chat",
+    _ => throw new AnimalException("Non");
+};
+  ```
+  ```cs
+public string GetErrorMessage(int errorCode) => errorCode switch
+{
+    404 => "Not Found",
+    500 => "Internal Server Error",
+    401 or 403 => "Authentication Error",
+    _ => "Unknown Error"
+};
+  ```
+  ```cs
+public void Handle(Exception ex)
+{
+    var message = ex switch
+    {
+        ArgumentNullException _ => "Il manque un paramètre !",
+        HttpRequestException { StatusCode: System.Net.HttpStatusCode.NotFound } => "Site web introuvable",
+        TaskCanceledException => "Le délai est dépassé",
+        _ => "Une erreur imprévue est survenue"
+    };
+   Console.Error.WriteLine(message);
+}
+  ```
+
 ### is
   On peut faire des guards de types, instances, héritages, le tout en copiant en variables locales les éléments ou leur propriétés<br>
 
@@ -83,3 +117,14 @@ code here
   ```ts
 function returnUnTrucAvecUnNom() : T extends {name:string}
   ```
+## F#
+match guard, ca remplacement meme le principe du "if error throw" en 1 ligne 
+Ca permet de gerer les valeurs directement et de renvoyer le traitement reel sur les vrais cas a gérer.
+  ```fs
+let capitalize str =
+    match str with
+    |    "" -> ""
+    |    _ -> str[0].ToString().ToUpper() + str[1..]
+       
+  ```
+
