@@ -80,7 +80,7 @@ code
 ### static ArgumentException
 Hack de lisibilité sur les guards d'entrée.
 Permet de reduire une instruction de guard d'entrée en if par un raccourci lisible "a la Perl"
-  ```
+  ```cs
 using static System.ArgumentNullException;
 using static System.ArgumentOutOfRangeException;
 
