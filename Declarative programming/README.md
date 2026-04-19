@@ -46,13 +46,41 @@ static int Multiplier(this int value, int mul) => value*mul;
 int val = 5;
 Console.WriteLine(val.Additionner(1).Multiplier(2)); //12
   ```
-### Lambda 
+### Lambda / delegates
 Func<argT, returnT> = (args) => { body };
 Ca s'accroche pas au top level statement "Program.cs" comme une static qui serait declaré "a la volée". Ici C# crée un objet dummy poir l'accrocher comme une méthode de cette classe et l'exec. Surtout utilisé pour le coté procédural ou fonctionnel.
+C'est la meme mécanique qui est utilisée sur les events pour faire de la prog reactive : on a une liste de delegate qu'on parcourre en .ForEach() et on resout de la FP sous le capot.
   ```cs
 Func<int, int, int> multiplier = (x,y) => x * y;
 Console.WriteLine(multiplier(2,3)); //6
   ```
+  ```cs
+//de maniere grossiere, en realité c'est des Action<> pour servir de Func<strig,void>
+List <Func<args, bool>> = []
+List.ForEach(f=>f(args));
+  ```
+Pas d'imut et les scopes sont a surveiller: 
+  ```cs
+int threshold = 5;
+
+Func<int, bool> f = x => x > threshold; // threshold est "capturé"
+
+threshold = 10;
+f(7); // retourne true ! car il capture la référence, pas la valeur
+  ```
+
+  ```cs
+  var funcs = new List<Func<int>>();
+
+for (int i = 0; i < 3; i++)
+{
+    funcs.Add(() => i); // ca stocke l'adresse de i qui est mutable dans le scope et va etre préservée dehors + modifiée
+}
+funcs[0](); // 3 aled
+funcs[1](); // 3 au secour
+funcs[2](); // 3 oskour !
+  ```
+
 
 ### using static
 Casse l'OO de C# pour revenir sur de la fonction pure, très utile pour du procédural ou fonctionnel.
