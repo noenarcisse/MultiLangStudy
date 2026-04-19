@@ -4,6 +4,12 @@
 ### OneOf
 Type discrimination en C#
 https://github.com/mcintyre321/OneOf
+  ```
+dotnet add package OneOf --version 3.0.271
+  ```
+### Reversed Interpolation
+https://github.com/AntonBergaker/InterpolatedParser
+https://github.com/AntonBergaker/OutParser
 
 ## Automation
 
