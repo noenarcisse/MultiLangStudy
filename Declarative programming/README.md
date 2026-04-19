@@ -103,6 +103,15 @@ var res = Doubler(5); //10
 ## C# LINQ
 Query sql en c# appliqué a des enumerables en général :>
 Y’a 2 ecritures, en "sequence" et en chainage.
+```cs
+    List<int> maListe = [1,2,3,4];
+    
+    var query1 =    from num in maListe
+                    where num > 2
+                    select num;
+
+    var query2 = maListe.Where(x => x > 2);
+```
 ### .Select()
   Selectionne la donnée equivalent de select<br>
   ```cs
