@@ -5,8 +5,20 @@
 Renvoie un objet Type avec les métadonnées accrochées à ce qu'on tente de recupérer. Pas de string comme en JS. <br>
 C'est assez proche dans le principe de la récupération de fonction en JS ou on a acces au data. Ici on récupère jamais le body par contre.
 Ca implique de la Reflection.
-  ```ts
+  ```cs
 code
+  ```
+
+### using alias
+Le using permet d'écrire des alias (facon import as en JS). Ca permet un abus qui autorise a creer n'importe quoi, y compris un tuple. <br>
+Ca imite un peu le type de TS sans avoir a faire un struc, record ou class<br>
+Ca peut aussi est destruct du coup.
+  ```cs
+using UnTruc = (int, string);
+public static void Truquer(UnTruc truc) => Console.WriteLine(truc.Item1+" "+truc.Item2);
+Truquer((1, "Hey ca va ?"));
+UnTruc truc = (2, "Pas trop j'ai mal au ventre");
+Truquer(truc);
   ```
 
 ## TS
