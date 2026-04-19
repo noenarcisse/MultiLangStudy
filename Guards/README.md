@@ -1,6 +1,13 @@
 # Guards, Nullchecks etc.
 ## C#
 
+### OneOf
+Nuget externe : https://github.com/mcintyre321/OneOf <br>
+Permet de passer le contrat explicite en entrée ou sortie. <br>
+a completer
+```cs
+code
+  ```
 ### switch expression guard
 Principe hérité du FP, permet de guard facilement sur base de la valeur ou meme du type d'obj en combinant avec du pattern matching
 ```cs
