@@ -1,5 +1,10 @@
 # .NET NugGets
 
+## Good stuff
+### OneOf
+Type discrimination en C#
+https://github.com/mcintyre321/OneOf
+
 ## Automation
 
 ### FlaUI
