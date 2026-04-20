@@ -17,10 +17,8 @@ On doit traiter l'erreur volontairement sans _ malheureusement contrairement à 
             _ => new UnknownDocument(inputs, "Le type de fichier n'est pas accepté")
         };
     }
-    public static async Task SendToTranslation(UserInputValues inputInfos)
+    public static async Task SendToTranslation(OneOf<WordDocument, ExcelDocument, UnknownDocument> file)
     {
-        var file = GetDocumentType(inputInfos);
-
         await file.Match(
                 word => SendToWordService(word),
                 excel => SendToExcelService(excel),
