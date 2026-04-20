@@ -1,12 +1,32 @@
 # Guards, Nullchecks etc.
 ## C#
 
-### OneOf
+### OneOf<T0 .. Tn>
 Nuget externe : https://github.com/mcintyre321/OneOf <br>
 Permet de passer le contrat explicite en entrée ou sortie. <br>
-a completer
+On doit traiter l'erreur volontairement sans _ malheureusement contrairement à F# :<
 ```cs
-code
+    public static OneOf<WordDocument, ExcelDocument, UnknownDocument> GetDocumentType(UserInputValues inputs)
+    {
+        var extension = Path.GetExtension(inputs.FilePath).ToLower();
+        return extension switch
+        {
+            ".xslx" => new ExcelDocument(inputs),
+            ".doc" => new WordDocument(inputs),
+            ".docx" => new WordDocument(inputs),
+            _ => new UnknownDocument(inputs, "Le type de fichier n'est pas accepté")
+        };
+    }
+    public static async Task SendToTranslation(UserInputValues inputInfos)
+    {
+        var file = GetDocumentType(inputInfos);
+
+        await file.Match(
+                word => SendToWordService(word),
+                excel => SendToExcelService(excel),
+                unknown => SendToError(unknown)
+            );
+    }
   ```
 ### switch expression guard
 Principe hérité du FP, permet de guard facilement sur base de la valeur ou meme du type d'obj en combinant avec du pattern matching
