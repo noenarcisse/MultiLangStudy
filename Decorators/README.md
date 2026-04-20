@@ -1,9 +1,15 @@
 # Decorator
 ## C#
-### [decorator]
-  text)<br>
+### [Attributes]
+  Différence de nom, meme principe, wrappe la classe pour lui donner des comportement bonus.<br>
+  Courament vu chez ASP en MVC.
   ```cs
-  //code
+[ApiController]
+[Route("[controller]")]
+public class WeatherForecastController : ControllerBase
+{
+  //blablabla
+}
   ```
 
 ## TS
