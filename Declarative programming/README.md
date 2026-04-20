@@ -48,7 +48,8 @@ Console.WriteLine(val.Additionner(1).Multiplier(2)); //12
   ```
 ### Lambda / delegates
 Func<argT, returnT> = (args) => { body };
-Ca s'accroche pas au top level statement "Program.cs" comme une static qui serait declaré "a la volée". Ici C# crée un objet dummy poir l'accrocher comme une méthode de cette classe et l'exec. Surtout utilisé pour le coté procédural ou fonctionnel.
+Ca s'accroche pas au top level statement "Program.cs" comme une static qui serait declaré "a la volée". <br>
+Ici C# crée un objet dummy pour l'accrocher comme une méthode de cette classe et l'exec. Surtout utilisé pour le coté procédural ou fonctionnel.<br>
 C'est la meme mécanique qui est utilisée sur les events pour faire de la prog reactive : on a une liste de delegate qu'on parcourre en .ForEach() et on resout de la FP sous le capot.
   ```cs
 Func<int, int, int> multiplier = (x,y) => x * y;
