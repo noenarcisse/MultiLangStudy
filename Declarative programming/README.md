@@ -57,8 +57,8 @@ Console.WriteLine(multiplier(2,3)); //6
   ```
   ```cs
 //de maniere grossiere, en realité c'est des Action<> pour servir de Func<strig,void>
-List <Func<args, bool>> = []
-List.ForEach(f=>f(args));
+List <Func<args, bool>> funcs = []
+funcs.ForEach(f=>f(args));
   ```
 Pas d'imut et les scopes sont a surveiller: 
   ```cs
