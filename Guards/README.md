@@ -163,6 +163,7 @@ code here
 function returnUnTrucAvecUnNom() : T extends {name:string}
   ```
 ## F#
+Le roi de la guard <br>
 match guard, ca remplace meme le principe du "if error throw" en 1 ligne 
 Ca permet de gerer les valeurs directement et de renvoyer le traitement reel sur les vrais cas a gérer.
   ```fs
@@ -171,5 +172,25 @@ let capitalize str =
     |    "" -> ""
     |    _ -> str[0].ToString().ToUpper() + str[1..]
        
+  ```
+## Kotlin
+Le prince de la guard <br>
+when guard 
+Ca permet de gerer les valeurs directement et de renvoyer le traitement reel sur les vrais cas a gérer. C'est le petit frère du F# la dessus
+  ```kot
+    open class Character (val name : String, var health : Int)
+    class Mage (name:String, health:Int, var mana: Int) : Character(name, health)
+    class Warrior(name:String, health:Int, armor:Int) : Character(name, health)
+    class Rogue(name:String, health:Int, energy:Int) : Character(name, health)
+
+    fun printClass(chara: Any) {
+        when(chara)
+        {
+            is Rogue -> println("Rogue")
+            is Warrior -> println("Warrior")
+            is Mage -> println("Mage")
+            else -> println("Unknown")
+        }
+    } 
   ```
 
