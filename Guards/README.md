@@ -177,7 +177,7 @@ let capitalize str =
 Le prince de la guard <br>
 when guard 
 Ca permet de gerer les valeurs directement et de renvoyer le traitement reel sur les vrais cas a gérer. C'est le petit frère du F# la dessus
-  ```kot
+  ```kt
     open class Character (val name : String, var health : Int)
     class Mage (name:String, health:Int, var mana: Int) : Character(name, health)
     class Warrior(name:String, health:Int, armor:Int) : Character(name, health)
