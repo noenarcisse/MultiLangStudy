@@ -1,9 +1,7 @@
 # ASP.NET
 
-## Classic
-
-### Verbes
-  #### GET [HttpGet]
+## Verbes
+  ### GET [HttpGet]
   ```
 200 : OK
 204 : NoContent()
@@ -13,31 +11,31 @@
 
 500 : Interal server error
   ```
-  #### POST [HttpPost]
+  ### POST [HttpPost]
   ```
 201 : CreatedAtAction()
 400 : BadRequest()
   ```
-  #### PUT [HttpPut("{id}")]
+  ### PUT [HttpPut("{id}")]
   ```
 204 : NoContent()
 400 : BadRequest()
 404 : NotFound()
   ```
-  #### DELETE [HttpDelete("{id}")]
+  ### DELETE [HttpDelete("{id}")]
   ```
 204 : NoContent()
 404 : NotFound()
   ```
 
-### Middlewares
-  #### UseExceptionHandler
+## Middlewares
+  ### UseExceptionHandler
   Gere les erreurs pour afficher une page plutot qu'un code d'erreur<br>
-  #### UseHsts
+  ### UseHsts
   Obligation de respecter le https et de ne jamais permettre le http<br>
-  #### UseHttpsRedirection()
+  ### UseHttpsRedirection()
   Redirection de http vers https si possible<br>
-  #### UseStatusCodePagesWithReExecute
+  ### UseStatusCodePagesWithReExecute
   Intercepte les 404 pour afficher une page specifique
 
   
