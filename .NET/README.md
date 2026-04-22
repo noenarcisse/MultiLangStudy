@@ -1,5 +1,20 @@
 # .NET
 Framework
+
+## Project structure
+Incitation forte a découper comme ca :
+´´´
+Solution
+|
+|  Projet/
+|  |       Projet.csproj
+|  Testing/
+|  |       Testing.csproj
+|  Projet2/
+|  |      Projet2.fsproj
+´´´
+Facile à structurer en vertical ou horizontal avec des Features/ ou Models/, API/, Domain/ etc
+
 ## C# - Compilation
 Framework-Dependent
 
