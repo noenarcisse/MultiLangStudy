@@ -11,6 +11,30 @@ public class WeatherForecastController : ControllerBase
   //blablabla
 }
   ```
+  ```cs
+[Required] // evite de devoir string.EmptyOrNull()
+[StringLength(100)] // evite le string.Length <= 100
+[MinLength(5)] / [MaxLength(50)] //array, list etc
+[Range(1, 100)] //range d'un int par ex
+[RegularExpression(@"pattern")] // format a respecter de regex
+[Compare("Password")] //comparaison de password et confirm password
+
+[EmailAddress]
+[Phone]
+[Url]
+[DataType(DataType.Password)]
+[DataType(DataType.Date)]
+[CreditCard]
+
+[Display(Name = "Nom d'utilisateur")]
+[DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
+[ScaffoldColumn(false)]
+
+//entity
+[Key] // prim key
+[ForeignKey("NomPropriete")] // foreign key
+[NotMapped] // ignoré, ne fait pas de column en DB
+  ```
 
 ## TS
  @maFonction qui vient décorer une class, une methode ou un champs.
