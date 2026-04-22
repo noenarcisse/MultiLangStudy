@@ -8,6 +8,12 @@ Le T nesté est récupérable par un .Value
   ```cs
 IOptions<T>, IOptionsSnapshot<T>, IOptionsMonitor<T>
   ```
+### Blazor/Razor
+  ```cs
+@inject UserService userService
+...
+<p>@userService.GetStuff</p>
+  ```
 ### Entity
   text)<br>
   ```cs
