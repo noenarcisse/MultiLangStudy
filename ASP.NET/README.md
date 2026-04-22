@@ -3,7 +3,7 @@
 ## Verbes
   ### GET [HttpGet]
   ```
-200 : OK
+200 : Ok(data)
 204 : NoContent()
 401 : Unauthorized()
 403 : Forbid()
