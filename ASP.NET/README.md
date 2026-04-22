@@ -1,6 +1,35 @@
 # ASP.NET
 
 ## Classic
+
+### Verbes
+  #### GET [HttpGet]
+  ```
+200 : OK
+204 : NoContent()
+401 : Unauthorized()
+403 : Forbid()
+404 : NotFound()
+
+500 : Interal server error
+  ```
+  #### POST [HttpPost]
+  ```
+201 : CreatedAtAction()
+400 : BadRequest()
+  ```
+  #### PUT [HttpPut]
+  ```
+204 : NoContent()
+400 : BadRequest()
+404 : NotFound()
+  ```
+  #### DELETE [HttpDelete]
+  ```
+204 : NoContent()
+404 : NotFound()
+  ```
+
 ### Middlewares
   #### UseExceptionHandler
   Gere les erreurs pour afficher une page plutot qu'un code d'erreur<br>
