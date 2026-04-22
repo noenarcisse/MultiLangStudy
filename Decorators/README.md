@@ -34,6 +34,15 @@ public class WeatherForecastController : ControllerBase
 [Key] // prim key
 [ForeignKey("NomPropriete")] // foreign key
 [NotMapped] // ignoré, ne fait pas de column en DB
+
+//razor MVC / blazor
+[Authorize] // test si une session existe sous une forme quelconque avec au moins un JWT
+
+[Authorize(Roles = "Admin")] // page razor uniquement pour un admin
+public class ModelTruc
+
+//blazor
+@attribute [Authorize(Roles = "Admin")] //page blazor uniquement pour un admin
   ```
 
 ## TS
