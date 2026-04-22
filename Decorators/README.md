@@ -42,7 +42,17 @@ public class WeatherForecastController : ControllerBase
 public class ModelTruc
 
 //blazor
+@attribute [Authorize] //page blazor inaccessible sans identity
+
 @attribute [Authorize(Roles = "Admin")] //page blazor uniquement pour un admin
+<AuthorizeView Roles="Admin">
+    <Authorized>
+        //code admin
+    </Authorized>
+    <NotAuthorized>
+       // les autres
+    </NotAuthorized>
+</AuthorizeView>
   ```
 
 ## TS
