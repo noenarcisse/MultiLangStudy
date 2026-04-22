@@ -1,6 +1,53 @@
 # Typage
 
+## Kotlin
+Fort, différencie le typage de base du typage nullable. Permet le mut(var) et imut (val) shallow :<
+### inférence
+Fortement typé, déduit par le compiler. Peut être explicité.
+  ```kt
+val texte = "Du texte" //String deduit
+val texte2 : String = "Encore du texte en plus" // string affirmé
+  ```
+### class & data class
+Heap ! <br>
+class minimale peut servir de structure de données <br>
+data class est le sous record, il est mut ou imut au choix
+  ```kt
+    open class Character (val name : String, var health : Int)
+    class Mage (name:String, health:Int, var mana: Int) : Character(name, health)
+    class Warrior(name:String, health:Int, armor:Int) : Character(name, health)
+    class Rogue(name:String, health:Int, energy:Int) : Character(name, health)
+
+    data class CommeUnRecordMaisMoinsBien(val name : String) //ne peut pas hérité ou etre hérité
+    data class unAutreMutable(var name : String) //ne peut pas hérité ou etre hérité
+  ```
+###  nullable?
+Le null est une valeur parmis d'autres. Un peu comme le undefined de JS mais sans qu'il soit une valeur reel, juste un état qui empeche la compile. <br>
+Fonctionne comme un readonly {get;init;} <br>
+Il est pas aussi absurde que le const en JS qui demande une valeur immédiate mais il doit etre init à un moment pour quitter le "undefined". <br>
+  ```kt
+    val texte : String?
+    texte = "Salut" //Ok, premiere init
+    texte = null // non
+    texte = "Non" // non
+
+    val texte2 : String? = null
+    texte2 = "J'ai changé d'avis" // non init null précédemment, il bouge plus
+  ```
+
 ## C#
+### struct, class & record
+struct > stack, imut
+record > heap, imut
+class minimale > heap, mutable
+  ```cs
+code
+  ```
+###  nullable?
+  ```cs
+string? texte; // okay
+  ```
+
 ### typeof()
 Renvoie un objet Type avec les métadonnées accrochées à ce qu'on tente de recupérer. Pas de string comme en JS. <br>
 C'est assez proche dans le principe de la récupération de fonction en JS ou on a acces au data. Ici on récupère jamais le body par contre.
@@ -86,6 +133,7 @@ faireVoler(canard) // ca compile, ca ressemble a un Volant donc c'est un Volant
   ```
 
 ## F#
+Typage inféré, avec les overload, le compiler sait parfois pas et le type doit être explicité.
 ### type
 Forte ressemblance au TS. On peut pas type union ici, on doit discriminer avec un systeme proche du swtch expr / match with.
 Les cas doivent être gérés, le compiler est strict!
