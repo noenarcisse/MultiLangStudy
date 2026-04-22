@@ -18,13 +18,13 @@
 201 : CreatedAtAction()
 400 : BadRequest()
   ```
-  #### PUT [HttpPut]
+  #### PUT [HttpPut("{id}")]
   ```
 204 : NoContent()
 400 : BadRequest()
 404 : NotFound()
   ```
-  #### DELETE [HttpDelete]
+  #### DELETE [HttpDelete("{id}")]
   ```
 204 : NoContent()
 404 : NotFound()
