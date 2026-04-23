@@ -62,13 +62,29 @@ var valeur = Request.Cookies["maCle"];
 Response.Cookies.Delete("maCle");
 ```
   ### UseRouting()
-  stuff<br>
-  ### UseAhentication()
-  stuff<br>
+  Gere le routing local, apres le domain. Il ne voit que [domain]/page/id <br>
+  ### UseAuthentication()
+  Identity, permet de marquer un utilisateur pour le reconnaitre.<br>
+  La méthode utilisée dépend du service configuré avant de App.Build()
+  ```
+// Cookie (classique web, comme $_SESSION mais géré par ASP.NET)
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+    .AddCookie();
+
+// JWT (pour API, mobile, SPA)
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer();
+
+// Google, Facebook, etc.
+builder.Services.AddAuthentication()
+    .AddGoogle(...)
+    .AddFacebook(...);
+```
   ### UseAuthorization()
-  stuff<br>
+  Auth, permet d'identifier les permissions pour les differentes pages qu'on visite et les droits de l'utilisateur<br>
   ### UseAntiforgery()
-  stuff<br>
+  Protection POST contre des Cross-Site Request<br>
+  Ca permet d'identifier qu'un POST viennent bien d'un formulaire de notre popre site.
   ### UseSession()
   Uniquement dans le cas d'utilisation de Session. Equivalent de $_SESSION de php en soi<br>
 
