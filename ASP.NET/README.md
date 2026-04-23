@@ -63,6 +63,10 @@ Response.Cookies.Delete("maCle");
 ```
   ### UseRouting()
   Gere le routing local, apres le domain. Il ne voit que [domain]/page/id <br>
+
+  ### UseCors()
+  Gere les regles CORS une fois que la route est étalblie.<br>
+  
   ### UseAuthentication()
   Identity, permet de marquer un utilisateur pour le reconnaitre.<br>
   La méthode utilisée dépend du service configuré avant de App.Build()
