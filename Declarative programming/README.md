@@ -1,6 +1,29 @@
 # Declarative programming
 ## F#
 
+### currying
+Tout est une function, n'importe quel l'arg l'est donc forcément ou le retour peut en renvoyer une aussi.
+  ```fs
+let add x y = x + y
+// =
+let add = fun x -> fun y -> x + y
+// =
+let add = fun x -> (fun y -> (x + y))
+
+En C# ca donnerait une abomination de ce genre
+// cs
+Func<int, Func<int, int>> add = x => y => x + y
+var add5 = add(5);           
+var add5and3 = add(5)(3);    
+var result = add(5)(3)(2);   
+  ```
+
+### tee
+Emballe une fun et ses arg
+  ```fs
+let tee f x = f x; x
+  ```
+
 ### pipe |>
 Permet de chainer des fonctions. Par défaut, c'est toujours le dernier arg qui est ciblé comme entrée du pipe.
   ```fs
