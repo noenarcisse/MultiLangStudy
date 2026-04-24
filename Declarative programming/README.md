@@ -19,7 +19,8 @@ var result = add(5)(3)(2);
   ```
 
 ### tee
-Emballe une fun et ses arg
+Emballe une fun et ses args. Permet d'effectuer une action et de chainer proprement sans casser la pureté de f. <br>
+Mecaniquement similaire à ce qu'on trouve dans des middlewares, des décorateurs etc. mais dans sa forme la plus générique et FP pur.
   ```fs
 let tee f x = f x; x
   ```
