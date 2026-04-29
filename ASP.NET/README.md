@@ -45,8 +45,10 @@ Exception → HTTPS → Static → Routing → Auth → Endpoints
   ### UseHttpsRedirection()
   Redirection de http vers https si possible<br>
   ### UseStaticFiles()
+  Voir MapStaticAssets() <br>
   Sert les fichiers static. Par défaut c'est public donc lors de sa résolution pour un fichier, le pipeline saute le reste des fonctions.<br>
-  Il n'y a pas d'auth par exemple d'appliquer ici. Si une image privée doit être gérée, il faut la servir par un endpoint special qui lui est couvert par [Authentication]
+  Il n'y a pas d'auth par exemple d'appliquer ici. Si une image privée doit être gérée, il faut la servir par un endpoint special qui lui est couvert par [Authentication] <br>
+  Il est le moyen de base de donner acces aux fichier static en .NET 8-. Il sert éventuellement à servir en acces direct des fichiers généré non vu en build par Voir MapStaticAssets().
   ### UseCookiesPolicy()
   Pur RGPD, permet de gerer les droits de cookie entre les essentiels et le reste.<br>
   Les cookies peuvent être volontairement taggé isEssential=true. 
@@ -94,6 +96,8 @@ builder.Services.AddAuthentication()
 
 
   ### app.MapStaticAssets();
+  Sert les fichiers static par endpoints, ils sont générés au BUILD.
+  Il se place en map apres les autres middleware, ce qui fait qu'il est sous les antiforgery, auth etc. On peut donc plus facilement sécuriser les fichiers static. Il remplace facilement UseStaticFiles dans les versions .NET plus moderne (9+), il est strcitement meilleur.
   ### app.MapControllerRoute(...); // For MVC controllers
   ### app.MapRazorPages(); // For Razor Pages pages
   ### app.MapControllers(); // With authentication in a Razor Pages app
