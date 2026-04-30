@@ -87,23 +87,24 @@ funcs.ForEach(f=>f(args));
 Pas d'imut et les scopes sont a surveiller: 
   ```cs
 int threshold = 5;
-
 Func<int, bool> f = x => x > threshold; // threshold est "capturé"
-
 threshold = 10;
-f(7); // retourne true ! car il capture la référence, pas la valeur
+f(7); // retourne false ! car il capture la référence, pas la valeur
   ```
 
   ```cs
-  var funcs = new List<Func<int>>();
+var funcs = new List<Func<int>>();
 
 for (int i = 0; i < 3; i++)
 {
     funcs.Add(() => i); // ca stocke l'adresse de i qui est mutable dans le scope et va etre préservée dehors + modifiée
 }
+
+//i est maintenu en mémoire ici!
 funcs[0](); // 3 aled
 funcs[1](); // 3 au secour
 funcs[2](); // 3 oskour !
+// i est relaché ici
   ```
 
 
