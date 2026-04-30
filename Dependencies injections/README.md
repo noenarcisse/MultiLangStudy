@@ -1,8 +1,9 @@
 # Dependencies Injections
 ## C#
 ### Microsoft.Extensions.DependencyInjection
-DI de services / implémentations.
-Il va chercher comme dans un Dico geant.
+DI de services / implémentations. <br>
+On injecte dans un objet et toute sa chaine de services/func recoit les dépendances accrochées avec.
+Il va chercher comme dans un Dico geant. <br>
   ```cs
 using Microsoft.Extensions.DependencyInjection;
 //   [...]
