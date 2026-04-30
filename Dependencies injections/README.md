@@ -1,7 +1,31 @@
 # Dependencies Injections
 ## C#
-### Option
-Neste des objets dans un options. Ca permet de singleton par defaut et rendre injectable certains elements pour asp.net.
+### Microsoft.Extensions.DependencyInjection
+DI de services / implémentations.
+Il va chercher comme dans un Dico geant.
+  ```cs
+using Microsoft.Extensions.DependencyInjection;
+//   [...]
+      var services = new ServiceCollection();
+      ConfigureServices(services);
+
+      using (var serviceProvider = services.BuildServiceProvider())
+      {
+          Form1 form = serviceProvider.GetRequiredService<Form1>();
+          Application.Run(form);
+      }
+//   [...]
+    static void ConfigureServices(IServiceCollection services)
+    {
+        services.AddSingleton<IWordTranslator, DocXTranslator>();
+        services.AddSingleton<Form1>();
+    }
+
+  ```
+
+
+### Option (Microsoft.Extensions.Options)
+DI de data. Neste des objets dans un options. Ca permet de singleton par defaut et rendre injectable certains elements pour asp.net.
 Snapshot prend une image a un moment t, avec une requete http
 Monitor est un observer en temps reel qui reagit aux changement de valeurs.
 Le T nesté est récupérable par un .Value
