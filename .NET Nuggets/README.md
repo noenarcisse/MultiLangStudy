@@ -11,6 +11,25 @@ dotnet add package OneOf --version 3.0.271
 https://github.com/AntonBergaker/InterpolatedParser
 https://github.com/AntonBergaker/OutParser
 
+
+## MAUI (+ Blazor Hybrid)
+
+### ImageSharp
+Manipulation d'image, permet de crop correctement et offreun systeme plus proche des canvass JS et pas juste les resize et downsize() de MAUI.Graphics.IImage. <br>
+https://www.nuget.org/packages/sixlabors.imagesharp/ <br>
+https://docs.sixlabors.com/
+  ```
+dotnet add package SixLabors.ImageSharp --version 3.1.12
+  ```
+
+
+### OCR wrapper MAUI
+Gere les OCR de base et offre une interface commune mutli support
+https://www.nuget.org/packages/Plugin.Maui.OCR
+  ```
+dotnet add package Plugin.Maui.OCR --version 1.1.1
+  ```
+
 ## Automation
 
 ### FlaUI
