@@ -38,6 +38,43 @@ Span<T> .Slice(0,5) fait en 10x mieux un array[0 .. 5];<br>
         Console.WriteLine(dmg);
   ```
 
+## Go
+typé, longueur fixe, tres proche du C dans son fonctionnement<br>
+Go file len() et cap() pour connaitre les tailles d'un array/slice
+  ```go
+var array = [3]int{1,2,3}
+  ```
+Slices (=Span) file une struct de stack qui frame un array en heap. Taille variable, connait sa length ET la capacité de l'array<br>
+Go fait sous le capot le truc de C de creer et copier un array plus grand si nécéssaire (les pointeurs changent si changement de taille)
+  ```go
+  var array = [4]int{1, 2, 3, 4}
+	slice := array[1:3]
+
+	for i := 0; i < len(slice); i++ {
+		fmt.Printf("%p - %v \n", &slice[i], slice[i])
+	}
+  ```
+
+  ```go
+	slice2 := []int{1, 2}
+	for i := 0; i < len(slice2); i++ {
+		fmt.Printf("%p - %v \n", &slice2[i], slice2[i])
+	}
+// array[2]
+//0x21d3d81440f0 - 1 
+//0x21d3d81440f8 - 2 
+
+	slice2 = []int{1, 2, 3}
+	for i := 0; i < len(slice2); i++ {
+		fmt.Printf("%p - %v \n", &slice2[i], slice2[i])
+	}
+
+//copie d'un new array[3] -> changement d'adresses
+//0x21d3d8146168 - 1 
+//0x21d3d8146170 - 2 
+//0x21d3d8146178 - 3 
+  ```
+
 ## Perl
 Declaré avec @, on lui passe une list en valeur. Typage dynamique et mixable! Nombre d'entrée non fixes ;><br>
 Peut etre parcouru dans les 2 sens.<br>
