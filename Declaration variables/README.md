@@ -35,6 +35,28 @@ Go laisse passer une déclaration multiple, ca permet de swap sans tuple :>
 a,b := 1,2
 a,b = b,a
   ```
+### scope
+On peut déclarer à la volée dans des blocs (if, switch, for)
+  ```go
+//localVar 1, local a ce if else
+	if localVar := 1; localVar > 2 {
+		fmt.Println(localVar, "> 2")
+	} else {
+		fmt.Println(localVar, "< 2")
+	}
+//localVar 2, local a ce switch
+	switch localVar := 0; localVar {
+	case 0:
+		fmt.Println("C'est nul")
+		fmt.Println("Un autre texte ici aussi ?")
+	case 1:
+		fmt.Printf("C'est un")
+	case 2:
+		fmt.Printf("C'est deux")
+	default:
+		fmt.Printf("Oops")
+	}
+  ```
 
 ## JS / TS
 Faiblement typées, peut être hétérogene dans un array.
