@@ -20,7 +20,20 @@ Principe de base d'un tuple, typage hétérogène. Peut etre déconstruit à la 
   var tuple = ("string", 1);
   var (text, num) = tuple;
   Console.WriteLine(text+ " / "+ num);
-
+  ```
+## Go
+Blablabla
+### const
+Imut
+### var
+Mut, type déduit
+### :=
+Init équivalent à var, déduit le type
+### multiple vars
+Go laisse passer une déclaration multiple, ca permet de swap sans tuple :>
+  ```go
+a,b := 1,2
+a,b = b,a
   ```
 
 ## JS / TS
