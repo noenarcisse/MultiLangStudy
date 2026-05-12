@@ -22,7 +22,8 @@ Principe de base d'un tuple, typage hétérogène. Peut etre déconstruit à la 
   Console.WriteLine(text+ " / "+ num);
   ```
 ## Go
-Blablabla
+Typé, statique. Si vide, utilise des principes de zero value / default. <br>
+int > 0, string > "", bool > false, &pointer > nil
 ### const
 Imut
 ### var
