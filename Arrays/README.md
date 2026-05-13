@@ -75,6 +75,19 @@ Go fait sous le capot le truc de C de creer et copier un array plus grand si né
 //0x21d3d8146178 - 3 
   ```
 
+## Python
+List, typage mixable, mutable<br>
+C'est des margoulins de compet. Leur list case un "array" dynamique et extensible en mémoire. Ils mélangent le principe d'un array avec des slices à la Go pour faire des shallow copies sur les modifications sur une list de départ pour jamais copier entièrement une info deja dans la RAM (heap)<br>
+utilise len() mais pas de cap() a la Go (on maintient pas d'array vu les shallow copies)
+  ```py
+maList = [1,2,3,4] # *[ptr1, ptr2, ptr3, ptr4]
+maDeuxiemeList = maList[:] # copie same addresses de ref
+maDeuxiemeList[-1] = 5 # *[ptr1, ptr2, ptr3, ptr5] < tient les memes adresse + un nouveau qui remplace la derniere
+
+maDeuxiexeList = maList # copie du ptr direct de la List 1, ca ecrase, c'est plus du shallow copy!
+  ```
+
+
 ## Perl
 Declaré avec @, on lui passe une list en valeur. Typage dynamique et mixable! Nombre d'entrée non fixes ;><br>
 Peut etre parcouru dans les 2 sens.<br>
