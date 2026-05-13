@@ -22,6 +22,22 @@
 		fmt.Println(counter)
 	}
   ```
+
+## Python
+### for
+  Aie aie aie<br>
+  C'est un foreach / for in par defaut, il prend ce qu'il a dans un iterateur ou un collection et déballe la valeur.
+  ```py
+ienum = range(1,6,2)
+for i in ienum:
+    print("Je compte mal jusqu'a 5: ", i)
+  ```
+Pour simuler un for classique il faut itérer sur la longueur de la collection et passer en index direct
+```
+a = ['Mary', 'had', 'a', 'little', 'lamb']
+for i in range(len(a)):
+    print(i, a[i])
+```
 ## Kotlin
 ### repeat
   Noice<br>
