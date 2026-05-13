@@ -46,10 +46,10 @@ for index, fruit in enumerate(fruits):
   Tres similaire un un catch chez try/catch mais dans un cas qui se passe bien plutot qu'une sortie forcée<br>
   ```py
 for i in range(10):
-    if i == 5 :
-		break
+    if i == 11 :
+        break
 else :
-	print("Y'a un 5)
+    print("Boucle finie sans accroc tout s'est bien passé mon capitaine")
   ```
 ## Kotlin
 ### repeat
