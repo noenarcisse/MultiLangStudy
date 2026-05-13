@@ -41,6 +41,16 @@ for i in range(len(a)):
 for index, fruit in enumerate(fruits):
     print(index, fruit)
 ```
+### for: else:
+  Sortie de loop jusqu'au bout, sans interruption par un break. C'est attaché a la loop (for ou while)<br>
+  Tres similaire un un catch chez try/catch mais dans un cas qui se passe bien plutot qu'une sortie forcée<br>
+  ```py
+for i in range(10):
+    if i == 5 :
+		break
+else :
+	print("Y'a un 5)
+  ```
 ## Kotlin
 ### repeat
   Noice<br>
