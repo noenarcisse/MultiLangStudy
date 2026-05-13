@@ -86,6 +86,25 @@ maDeuxiemeList[-1] = 5 # *[ptr1, ptr2, ptr3, ptr5] < tient les memes adresse + u
 
 maDeuxiexeList = maList # copie du ptr direct de la List 1, ca ecrase, c'est plus du shallow copy!
   ```
+### *reste
+Le * dans les list permet de faire entre autre, un deballage (spread de JS), un tail plus fort (a la F#), un head aussi !
+  ```py
+uneListe = [2,3,4,5,6,7]
+uneAutre = [0, 1, *uneListe] #spread a la JS ...array + reconstruct
+
+x, y, z, *tail = uneListe #tail avec deconstruct des val en var a la volée
+*head, a, b = uneAutre #pareil dans l'autre sens
+
+print("X = ",x) #2
+print("Y = ",y) #3
+print("Z = ",z) #4
+print("Tail = ", tail) # [5,6,7]
+
+print(uneAutre)
+print(head) # [0,1,2,3,4,5]
+print("A = ",a) #6
+print("B = ",b) #7
+  ```
 
 
 ## Perl
