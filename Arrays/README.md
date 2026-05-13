@@ -104,6 +104,11 @@ print(uneAutre)
 print(head) # [0,1,2,3,4,5]
 print("A = ",a) #6
 print("B = ",b) #7
+
+first, *middle, last = [1, 2, 3, 4, 5, 6]
+# first = 1
+# middle = [2, 3, 4, 5]
+# last = 6
   ```
 
 
