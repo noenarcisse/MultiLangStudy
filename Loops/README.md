@@ -32,11 +32,14 @@ ienum = range(1,6,2)
 for i in ienum:
     print("Je compte mal jusqu'a 5: ", i)
   ```
-Pour simuler un for classique il faut itérer sur la longueur de la collection et passer en index direct
+Pour simuler un for classique il faut itérer sur la longueur de la collection et passer en index direct ou en enumerate qui sort un tuple (i,v)
 ```
 a = ['Mary', 'had', 'a', 'little', 'lamb']
 for i in range(len(a)):
     print(i, a[i])
+# OU
+for index, fruit in enumerate(fruits):
+    print(index, fruit)
 ```
 ## Kotlin
 ### repeat
