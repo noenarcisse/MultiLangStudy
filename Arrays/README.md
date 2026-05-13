@@ -44,7 +44,7 @@ Go file len() et cap() pour connaitre les tailles d'un array/slice
   ```go
 var array = [3]int{1,2,3}
   ```
-Slices (=Span) file une struct de stack qui frame un array en heap. Taille variable, connait sa length ET la capacité de l'array<br>
+Slices (=Span de luxe) file une struct qui frame un array en heap. Taille variable (l'array en dessous est réattribué si elle doit etre étendue), connait sa length ET la capacité de l'array<br>
 Go fait sous le capot le truc de C de creer et copier un array plus grand si nécéssaire (les pointeurs changent si changement de taille)
   ```go
   var array = [4]int{1, 2, 3, 4}
