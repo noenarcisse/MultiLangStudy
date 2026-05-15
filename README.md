@@ -3,7 +3,7 @@ Liste des catégories : <br>
 [.NET](https://github.com/noenarcisse/MultiLangStudy/tree/main/.NET)  <br>
 [.NET Nuggets](https://github.com/noenarcisse/MultiLangStudy/tree/main/.NET%20Nuggets)  <br>
 [Algorithm patterns](https://github.com/noenarcisse/MultiLangStudy/tree/main/Algorithm%20patterns)  <br>
-[Arrays](https://github.com/noenarcisse/MultiLangStudy/tree/main/Arrays)  <br>
+[Arrays & Collections](https://github.com/noenarcisse/MultiLangStudy/tree/main/Arrays%20%26%20Collections)  <br>
 [ASP.NET](https://github.com/noenarcisse/MultiLangStudy/tree/main/ASP.NET)  <br>
 [Async](https://github.com/noenarcisse/MultiLangStudy/tree/main/Async)  <br>
 [Declaration variables](https://github.com/noenarcisse/MultiLangStudy/tree/main/Declaration%20variables)  <br>
