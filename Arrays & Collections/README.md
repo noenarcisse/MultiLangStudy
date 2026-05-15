@@ -1,5 +1,6 @@
-# Arrays
+# Arrays & Collections
 ## C#
+Il y a de tout: arrays, list, arraylist, hashset, ienum/seq, dictionnary, orderedlist/dict, etc.
 ### typage
 Fortement typé de base. On peut les rendre hétérogèe au forcing (object)
   ```cs
