@@ -58,32 +58,6 @@ On peut déclarer à la volée dans des blocs (if, switch, for)
 		fmt.Printf("Oops")
 	}
   ```
-
-## JS / TS
-Faiblement typées, peut être hétérogene dans un array.
-Peut tout stocker car tout est un object. Ca comprend aussi des body de function par exemple. Peut etre marqué avec des attributes/metadata.
-TOUT est un objet.
-### const
-Adresse imutable, scoped. La valeur pourrait changer.
-### let
-Adresse variable, scoped
-### var
-Adresse variable, globale. La norme précédemment dans le JS, n'est plus vraiment utile > use const/let
-### (rien)
-Adresse variable, scopé a window. Nice breach accessibles a tous les scripts, lourd, etc.
-  ```js
-let variable = 2;
-variable = "Salut";
-variable = await new Promise((res, req) => { ... });
-const monTableau = [1, "deux", { id: 3 }, [4, 5], () => console.log("hello")];
-  ```
-### imutability
-En TS, as const force freeze deep des valeurs et imite plus  du rust ou F# <br>
-En JS Object.freeze() permet de bloquer les valeurs MAIS en shallow uniquement, il n'y a aucune forme de récursivité.
-  ```ts
-code
-  ```
-
 ## F#
 Fortement typé, déduit. Par défaut immuable si non précisé. Peut stocker des éléments de base, des objets complexes ou des functions (qu'on peut invoker avec () comme en JS) <br>
 TOUT est une fonction !
@@ -117,6 +91,56 @@ let maFonction =
     let var = "Salut"
     let var = 42
     var // return 42
+  ```
+
+## Python
+Typées, mutables. TOUT est un objet, les objets liés à des type primitif se comporte comme tel (copie et pas transfert d'addresse comme un array ou un obj).<br>
+Maintiens pas seulement une valeur mais aussi les références qui maintiennent une variable en RAM. Tout part en heap. <br>
+A tendance a echapper des blocs autres que les fonctions (def)!
+
+### (rien)
+  ```py
+truc = 42
+afficher = print
+afficher(42)
+
+afficher(hex(id(truc))) # addr 42
+truc2 = truc
+afficher(hex(id(truc2))) # addr 42 aussi
+truc = "Salut"
+afficher(hex(id(truc))) # nouvelle addr : Salut
+afficher(hex(id(truc2))) # ancienne addr : 42
+  ```
+  ```py
+if True:
+    secret = "oups"
+print(secret) # affiche oups
+  ```
+
+
+## JS / TS
+Faiblement typées, peut être hétérogene dans un array.
+Peut tout stocker car tout est un object. Ca comprend aussi des body de function par exemple. Peut etre marqué avec des attributes/metadata.
+TOUT est un objet.
+### const
+Adresse imutable, scoped. La valeur pourrait changer.
+### let
+Adresse variable, scoped
+### var
+Adresse variable, globale. La norme précédemment dans le JS, n'est plus vraiment utile > use const/let
+### (rien)
+Adresse variable, scopé a window. Nice breach accessibles a tous les scripts, lourd, etc.
+  ```js
+let variable = 2;
+variable = "Salut";
+variable = await new Promise((res, req) => { ... });
+const monTableau = [1, "deux", { id: 3 }, [4, 5], () => console.log("hello")];
+  ```
+### imutability
+En TS, as const force freeze deep des valeurs et imite plus  du rust ou F# <br>
+En JS Object.freeze() permet de bloquer les valeurs MAIS en shallow uniquement, il n'y a aucune forme de récursivité.
+  ```ts
+code
   ```
 
 ## Rust
