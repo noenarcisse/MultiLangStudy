@@ -92,6 +92,19 @@ slice = append(slice, 3) // [1,2,3]
 slice = slice[1:len(slice)-1]
 slice = append(slice, 4) // 1,2,4
   ```
+
+### map
+  ```go
+m := map[int]string{
+	1:"Un",
+	2:"Deux"
+}
+
+fmt.Println(m[1]) //Un
+value, ok := m[2] // Deux, true
+_,ok = m[3] // false > fait un .Contains()
+value, ok = m[3] // "", false > fait un .TryGet()
+  ```
 ## Python
 List, typage mixable, mutable<br>
 C'est des margoulins de compet. Leur list case un "array" dynamique et extensible en mémoire. Ils mélangent le principe d'un array avec des slices à la Go pour faire des shallow copies sur les modifications sur une list de départ pour jamais copier entièrement une info deja dans la RAM (heap)<br>
