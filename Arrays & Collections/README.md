@@ -75,7 +75,23 @@ Go fait sous le capot le truc de C de creer et copier un array plus grand si né
 //0x21d3d8146170 - 2 
 //0x21d3d8146178 - 3 
   ```
+### [:]
+ranges sur les slices
+  ```go
+slice := []int{1,2,3,4,5}
+slice = uneSlice[3:] // 4,5
+array := [4]int{1, 2, 3, 4}
+slice = array[:3] // 1,2
+slice = array[:] // tout
+  ```
+### append()
+  ```go
+slice := []int  {1,2}
+slice = append(slice, 3) // [1,2,3]
 
+slice = slice[1:len(slice)-1]
+slice = append(slice, 4) // 1,2,4
+  ```
 ## Python
 List, typage mixable, mutable<br>
 C'est des margoulins de compet. Leur list case un "array" dynamique et extensible en mémoire. Ils mélangent le principe d'un array avec des slices à la Go pour faire des shallow copies sur les modifications sur une list de départ pour jamais copier entièrement une info deja dans la RAM (heap)<br>
