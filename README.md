@@ -19,5 +19,6 @@ Liste des catégories : <br>
 [Loops](https://github.com/noenarcisse/MultiLangStudy/tree/main/Loops)  <br>
 [Pattern matching](https://github.com/noenarcisse/MultiLangStudy/tree/main/Pattern%20matching)  <br>
 [Pointer & Ref](https://github.com/noenarcisse/MultiLangStudy/tree/main/Pointer%20%26%20Ref)  <br>
+[Return](https://github.com/noenarcisse/MultiLangStudy/tree/main/Return)  <br>
 [String](https://github.com/noenarcisse/MultiLangStudy/tree/main/String)  <br>
 [Typage](https://github.com/noenarcisse/MultiLangStudy/tree/main/Typage)  <br>
