@@ -22,8 +22,10 @@ Principe de base d'un tuple, typage hétérogène. Peut etre déconstruit à la 
   Console.WriteLine(text+ " / "+ num);
   ```
 ## Go
-Typé, statique. Si vide, utilise des principes de zero value / default. <br>
-int > 0, string > "", bool > false, &pointer > nil
+Typé, statique.<br>
+Pas d'ownership, les passages de variables entre fonctiosn crée une copie. Pour passer un objet on envoie la ref explicite (ptr)<br>
+Lors d'une extension, les variables font de "l'indirection". Les valeur et pointeur deviennent interchangealb et Go gere automatiquement le passage de l'un ou l'autre. Ne fonctionne jamais en args.<br>
+Utilise un principe de zero value : int > 0, string > "", bool > false, &pointer > nil et evite les null/undefined<br>
 ### const
 Imut
 ### var
