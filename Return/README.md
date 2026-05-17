@@ -2,8 +2,14 @@
 ## F#
 ### implicit return
   La dernière ligne d'un fonction est retournée automatiquement<br>
+  Sans return ca fait un retour Unit
   ```fs
-  //code
+  let tee f x =
+	f(x) //renvoie le retour de f
+
+  let sink f x =
+	f(x)
+	
   ```
 ## Go
 ### multiple returns
