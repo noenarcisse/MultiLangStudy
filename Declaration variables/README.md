@@ -21,8 +21,8 @@ Principe de base d'un tuple, typage hétérogène. Peut etre déconstruit à la 
   var (text, num) = tuple;
   Console.WriteLine(text+ " / "+ num);
 
-  var (a,b) = (1,2)
-  (a,b) = (b,a) // swap avec tuple + deconstr
+  var (a,b) = (1,2);
+  (a,b) = (b,a); // swap avec tuple + deconstr
   ```
 ## Go
 Typé, statique.<br>
