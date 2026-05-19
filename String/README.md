@@ -33,6 +33,13 @@ test++; // z
 test++; // {
   ```
 
+## Go
+Les string c'est lourd ici, un string c'est un rune[]. Chaque rune = int32 pour représenter les chars en UTF8 plutot qu'en ASCII. <br>
+Faire un len(string) ca compte les nombres de bytes utilisée (et 1 char != 1 byte en UTF8 donc sale suprise en approche) <br>
+Comme d'hab c'est imut, sur des modification on passe en rune[] ou StringBuilder.
+  ```go
+//code
+  ```
 ## Perl
 Le true king.
 ### string en général
