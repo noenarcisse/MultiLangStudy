@@ -4,13 +4,13 @@
   in : entrée par adresse en “readonly”, sert surtout d’opti sur les struc (Vector3 par ex)<br>
   out : sortie uniquement<br>
   ref : reference safe (in out), se deref naturellement (Console.Write affiche la valeur)<br>
-  ```
+  ```cs
   public void MaFunc(ref int arg1, in structure, out string texte1)
   {  }
   ```
 ### Pointeurs
   int* : pointer à la C, avec tous les problemes classiques, ne fonctionne qu’en unsafe, n’est pas GC
-  ```
+  ```cs
 unsafe
 {
       int var = 42;
@@ -27,7 +27,7 @@ C'est une ref struct. Elle vit sur la stack comme n'importe quelle struct mais u
 C'est tres utilisé dans les tableaux pour "framer" une zone specifique. <br>
 Voir array pour son utilisation dans ce cas-là.
 
-  ```C#
+  ```cs
         string log = "DAMAGE:150|CRIT:TRUE|SOURCE:Orc_Warrior";
         ReadOnlySpan<char> logSpan = log.AsSpan();
         
@@ -37,6 +37,29 @@ Voir array pour son utilisation dans ce cas-là.
 
         Console.WriteLine(dmg);
   ```
+## Go
+Pointers classico classiques avec les &val, *ptr etc. <br>
+Go autorise les nil ptr. Ca crée un délire assez horrible avec les struct et interface vu que ca passe en principe "d'impl duck typée". 
+  ```go
+package main
+
+type Robot struct {
+	Nom string
+}
+
+func (r *Robot) Saluer() string {
+	if r == nil {
+		return "Je suis un robot fantôme"
+	}
+	return "Bonjour, je suis " + r.Nom
+}
+
+func main() {
+	var pr *Robot = nil
+	pr.Saluer() //ooof
+}
+  ```
+
 
 ## Perl
 Pas de pointer :> <br>
