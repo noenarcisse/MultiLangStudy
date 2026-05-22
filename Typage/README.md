@@ -68,6 +68,55 @@ UnTruc truc = (2, "Pas trop j'ai mal au ventre");
 Truquer(truc);
   ```
 
+## Go
+Fort, déduit
+### T génériques
+Surtout orienté sur les interface et le principe de l'implémentation
+  ```go
+type NamedStuff interface {
+	Name() string
+}
+type AgedStuff interface {
+	Age() int
+}
+// and on cumule les précédent
+type NamedAndAgedStuff interface {
+	NamedStuff
+	AgedStuff
+}
+func showName[T NamedStuff](obj T) {
+	fmt.Println(obj.Name())
+}
+  ```
+### interface union
+Ca permet de faire des union sur des T génériques
+  ```go
+// l'enfer a éviter
+type Cat struct {
+	Name string
+}
+type Dog struct {
+	Name string
+}
+// on peut le faire mais c'est
+// vraiment nul, faut forcer un cast any, puis checker le type en switch ET il est meme pas exhaustif
+type Animal interface { 
+	Cat | Dog
+}
+
+type Euro float64
+type Dollar float64
+
+// l'interface qui accepte du float64 et equivalent
+type Money interface {
+	~float64
+}
+
+func Calc[T Money](m T) {
+	fmt.Printf("%f\n", m)
+}
+  ```
+
 ## TS
 ### type
   Typage non mergeable<br>
