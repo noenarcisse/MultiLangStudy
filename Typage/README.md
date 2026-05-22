@@ -1,39 +1,5 @@
 # Typage
 
-## Kotlin
-Fort, différencie le typage de base du typage nullable. Permet le mut(var) et imut (val) shallow :<
-### inférence
-Fortement typé, déduit par le compiler. Peut être explicité.
-  ```kt
-val texte = "Du texte" //String deduit
-val texte2 : String = "Encore du texte en plus" // string affirmé
-  ```
-### class & data class
-Heap ! <br>
-class minimale peut servir de structure de données <br>
-data class est le sous record, il est mut ou imut au choix
-  ```kt
-    open class Character (val name : String, var health : Int)
-    class Mage (name:String, health:Int, var mana: Int) : Character(name, health)
-    class Warrior(name:String, health:Int, armor:Int) : Character(name, health)
-    class Rogue(name:String, health:Int, energy:Int) : Character(name, health)
-
-    data class CommeUnRecordMaisMoinsBien(val name : String) //ne peut pas hérité ou etre hérité
-    data class unAutreMutable(var name : String) //ne peut pas hérité ou etre hérité
-  ```
-###  nullable?
-Le null est une valeur parmis d'autres. Un peu comme le undefined de JS mais sans qu'il soit une valeur reel, juste un état qui empeche la compile. <br>
-Fonctionne comme un readonly {get;init;} <br>
-Il est pas aussi absurde que le const en JS qui demande une valeur immédiate mais il doit etre init à un moment pour quitter le "undefined". <br>
-  ```kt
-    val texte : String?
-    texte = "Salut" //Ok, premiere init
-    texte = null // non
-    texte = "Non" // non
-
-    val texte2 : String? = null
-    texte2 = "J'ai changé d'avis" // non init null précédemment, il bouge plus
-  ```
 
 ## C#
 ### struct, class & record
@@ -205,4 +171,38 @@ type Personnage = {
     mutable HP : int
     classe : Classe
 }
+  ```
+## Kotlin
+Fort, différencie le typage de base du typage nullable. Permet le mut(var) et imut (val) shallow :<
+### inférence
+Fortement typé, déduit par le compiler. Peut être explicité.
+  ```kt
+val texte = "Du texte" //String deduit
+val texte2 : String = "Encore du texte en plus" // string affirmé
+  ```
+### class & data class
+Heap ! <br>
+class minimale peut servir de structure de données <br>
+data class est le sous record, il est mut ou imut au choix
+  ```kt
+    open class Character (val name : String, var health : Int)
+    class Mage (name:String, health:Int, var mana: Int) : Character(name, health)
+    class Warrior(name:String, health:Int, armor:Int) : Character(name, health)
+    class Rogue(name:String, health:Int, energy:Int) : Character(name, health)
+
+    data class CommeUnRecordMaisMoinsBien(val name : String) //ne peut pas hérité ou etre hérité
+    data class unAutreMutable(var name : String) //ne peut pas hérité ou etre hérité
+  ```
+###  nullable?
+Le null est une valeur parmis d'autres. Un peu comme le undefined de JS mais sans qu'il soit une valeur reel, juste un état qui empeche la compile. <br>
+Fonctionne comme un readonly {get;init;} <br>
+Il est pas aussi absurde que le const en JS qui demande une valeur immédiate mais il doit etre init à un moment pour quitter le "undefined". <br>
+  ```kt
+    val texte : String?
+    texte = "Salut" //Ok, premiere init
+    texte = null // non
+    texte = "Non" // non
+
+    val texte2 : String? = null
+    texte2 = "J'ai changé d'avis" // non init null précédemment, il bouge plus
   ```
