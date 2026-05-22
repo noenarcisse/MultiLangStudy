@@ -52,6 +52,16 @@ Permet de creer un pattern de produce/consume, qui permet de consommer de la don
   ```cs
 code
   ```
+## Go
+
+### channel
+
+### <-
+C'est l'equivalent d'un await ou Task.WhenAll(), ca force a refiler les results des go routines
+  ```go
+//code
+  ```
+
 
 ## JS / TS
 
