@@ -34,12 +34,38 @@ test++; // {
   ```
 
 ## Go
+UTF8 land ici, faut penser en array ou slice pour le reste, C style<br>
 Les string c'est lourd ici, un string c'est un rune[]. Chaque rune = int32 pour représenter les chars en UTF8 plutot qu'en ASCII. <br>
 Faire un len(string) ca compte les nombres de bytes utilisée (et 1 char != 1 byte en UTF8 donc sale suprise en approche) <br>
 Comme d'hab c'est imut, sur des modification on passe en rune[] ou StringBuilder.
   ```go
-//code
+	text := "mon petit roman illustré"
+
+	b := len(text)
+	fmt.Println(b) //25 = nb de bytes!, é = 2 bytes
+
+  chars := []rune(text)
+	fmt.Println(len(chars)) //24 !
   ```
+### rune
+C'est un int32 (4 bytes) pour représenter des chars en UTF8. Ca inclut le chinois, les smileys etc. <br>
+Ca se manipule comme un nomre car c'en est un. On a donc les opérateurs ++, -- etc. <br>
+Ils ont pas l'opérateur "x" mais c'est remplacé par des utils dans la std lib "strings"
+  ```go
+	first := chars[0]
+	first--
+	fmt.Println(string(first)) // l
+
+  // string x 5
+	jar := "jar"
+	fmt.Println(strings.Repeat(jar, 5)) // jar x 5
+
+  //reverse
+	newChars := slices.Clone(chars)
+	slices.Reverse(newChars)
+	fmt.Println(string(newChars))
+  ```
+
 ## Perl
 Le true king.
 ### string en général
