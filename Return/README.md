@@ -9,6 +9,7 @@
 
   let sink f x =
 	f(x)
+	()
 	
   ```
 ## Go
