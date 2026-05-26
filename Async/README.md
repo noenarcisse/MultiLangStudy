@@ -46,6 +46,14 @@ int result = await calcTask;
 string text = await fileTask;
   ```
 
+
+
+### Task.GetAwaiter().GetResult()
+Permet de repasser en sync, possible de deadlock sur ca
+  ```cs
+code
+  ```
+
 ### Channel<T>
 https://learn.microsoft.com/en-us/dotnet/core/extensions/channels
 Permet de creer un pattern de produce/consume, qui permet de consommer de la donnée produite en async pour revenir vers du sync
