@@ -36,6 +36,27 @@ Truquer(truc);
 
 ## Go
 Fort, déduit
+### type
+  ```go
+	type Text string      //new type
+	type Paragraph string //new type
+
+	type StringVariant = string //alias
+
+	compareType := func(elem1 any, elem2 any) bool {
+		return reflect.TypeOf(elem1) == reflect.TypeOf(elem2)
+	}
+
+	var t1 Text = "Salut"
+	var t2 Paragraph = "Ca chille ?"
+
+	fmt.Println(compareType(t1, t2))
+
+	str := "un string classique"
+	var strVar StringVariant = "un string variant"
+
+	fmt.Println(compareType(str, strVar))
+  ```
 ### T génériques
 Surtout orienté sur les interface et le principe de l'implémentation
   ```go
@@ -56,6 +77,22 @@ func showName[T NamedStuff](obj T) {
   ```
 ### interface union
 Ca permet de faire des union sur des T génériques
+  ```go
+	type Mage struct {
+		Mana int
+	}
+	type Guerrier struct {
+		Armor int
+	}
+
+	type Classe interface {
+		Mage | Guerrier
+	}
+
+	type Personnage[T Classe] struct {
+		Classe T //embeded a la F# mais obligé de passer en générique pour préciser a la construction car y'a pas le meme niveau de DU
+	}
+  ```
   ```go
 // l'enfer a éviter
 type Cat struct {
