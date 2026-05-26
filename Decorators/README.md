@@ -1,5 +1,6 @@
 # Decorator
 ## C#
+Le roi ? Implique de la reflection (et donc aie aie aie l'AOT)
 ### [Attributes]
   Différence de nom, meme principe, wrappe la classe pour lui donner des comportement bonus.<br>
   Courament vu chez ASP en MVC.
