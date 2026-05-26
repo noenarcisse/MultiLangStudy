@@ -26,3 +26,12 @@ bla
   ```fs
 code
   ```
+
+## Python
+### range
+Ca prépare un iterateur de x -> y (exculsif) par step z
+  ```py
+enum = range(10, -1, -2)
+for i in enum :
+    print(i)
+  ```
