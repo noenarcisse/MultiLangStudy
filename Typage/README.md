@@ -50,12 +50,12 @@ Fort, déduit
 	var t1 Text = "Salut"
 	var t2 Paragraph = "Ca chille ?"
 
-	fmt.Println(compareType(t1, t2))
+	fmt.Println(compareType(t1, t2)) //false
 
 	str := "un string classique"
 	var strVar StringVariant = "un string variant"
 
-	fmt.Println(compareType(str, strVar))
+	fmt.Println(compareType(str, strVar)) //true
   ```
 ### T génériques
 Surtout orienté sur les interface et le principe de l'implémentation
