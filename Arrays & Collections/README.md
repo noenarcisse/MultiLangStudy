@@ -75,6 +75,17 @@ Go fait sous le capot le truc de C de creer et copier un array plus grand si né
 //0x21d3d8146170 - 2 
 //0x21d3d8146178 - 3 
   ```
+
+### [...]
+Array de taille fixe mais calculé sur le nomre d'elements donné a la creation
+  ```go
+
+var errorMessages = [...]string{
+    ARGS_ERROR:   "Arguments invalides", // vaut 0
+    AUTH_ERROR:   "Authentification...", // vaut 1
+    SERVER_ERROR: "Une erreur...",       // vaut 2
+}
+  ```
 ### [:]
 ranges sur les slices
   ```go
