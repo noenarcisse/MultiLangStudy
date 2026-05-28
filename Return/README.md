@@ -4,9 +4,8 @@
   La dernière ligne d'un fonction est retournée automatiquement<br>
   Sans return ca fait un retour Unit
   ```fs
-  let tee f x =
-	f(x) //renvoie le retour de f
-
+  let tee f x = f x; x //renvoie x
+	
   let sink f x =
 	f(x)
 	()
