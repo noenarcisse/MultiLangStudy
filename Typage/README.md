@@ -75,7 +75,7 @@ func showName[T NamedStuff](obj T) {
 	fmt.Println(obj.Name())
 }
   ```
-### interface union
+### interface union, | et ~
 Ca permet de faire des union sur des T génériques
   ```go
 	type Mage struct {
@@ -110,7 +110,7 @@ type Animal interface {
 type Euro float64
 type Dollar float64
 
-// l'interface qui accepte du float64 et equivalent
+// l'interface qui accepte du float64 et dérivé
 type Money interface {
 	~float64
 }
