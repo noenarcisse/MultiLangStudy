@@ -1,4 +1,4 @@
-# Iterateurs
+# Iterateurs / Iteratables
 ## C#
 ### yield return + Enumerable<T>
 yield return un Enumerable<T> ca cree un itérateur, ca permet de parcourir des données lourdes voire infinies en ne bloquant qu’une petite adresse mémoire (stream, large file a lire ligne par ligne)<br>
@@ -22,9 +22,17 @@ var resultat = suiteInfinie
 
 ## F#
 ### seq{}
-bla
+Ca permet de faire une liste lazy, des ranges / iterators en tout genre. Les range sont inclusives, si le step fait pas depasser l'itération suivante.
   ```fs
-code
+let test = seq{1;2;3}
+let test2 = seq{1.0..1.5..10}
+let test3 = seq{1..2..9}
+
+for i in test3 do
+    printfn "%i" i // 1 -> 9 inclus par step de 2
+
+for f in test2 do
+    printfn "%.1f" f // 1 -> 10 inclus par step de 1.5
   ```
 
 ## Python
