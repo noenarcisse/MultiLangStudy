@@ -33,6 +33,17 @@ let add x y = x+y
 let mul x y = x*y
 printfn $"%i" valeur |> add 4 |> mul 2 // 5 => 4+5 => 2 * 9 = 18
   ```
+### compo >>
+Permet de chainer des fonctions. L'arg d'entré unique est implicite (currying)
+  ```fs
+let add x y  = x+y
+let mul (x:int) (y:int) = x*y
+
+let compoAddMul (addNum:int) (mulNum:int) = 
+    add addNum  >> mul mulNum
+
+5 |> compoAddMul 1 2 |> printfn "%A"
+  ```
 ### filter
  Selectionne sur base d'une condition equivalent du filter JS ou select C#
   ```fs
@@ -40,12 +51,12 @@ let list = [1;20;18;10;0;100]
 list |> List.filter(fun x -> x > 10)
   ```
 ###  iter
- similaire a forEach()
+ similaire a forEach() -> unit
   ```fs
 code
   ```
 ### map
-Mappe les valeurs vers une nouvelles valeurs correspondante. Exact bro de .map() en JS
+Mappe les valeurs vers une nouvelles valeurs correspondante.
   ```fs
 let name = "Ihllx"
 let obnf = name.ToCharArray() |> Array.map(fun x -> char (int x+1) ) |> System.String
