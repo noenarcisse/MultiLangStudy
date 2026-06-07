@@ -8,3 +8,11 @@ https://github.com/gocolly/colly
   ```
 go get github.com/gocolly/colly/v2
   ```
+
+## Documents
+### pdf
+Très basique et facile, ca recupere du text ou des glyphes + leur position.
+https://pkg.go.dev/github.com/ledongthuc/pdf
+  ```
+go get -u github.com/ledongthuc/pdf
+  ```
