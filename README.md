@@ -1,7 +1,6 @@
 # Index
 Liste des catégories : <br>
 [.NET](https://github.com/noenarcisse/MultiLangStudy/tree/main/.NET)  <br>
-[.NET Nuggets](https://github.com/noenarcisse/MultiLangStudy/tree/main/.NET%20Nuggets)  <br>
 [Algorithm patterns](https://github.com/noenarcisse/MultiLangStudy/tree/main/Algorithm%20patterns)  <br>
 [Arrays & Collections](https://github.com/noenarcisse/MultiLangStudy/tree/main/Arrays%20%26%20Collections)  <br>
 [ASP.NET](https://github.com/noenarcisse/MultiLangStudy/tree/main/ASP.NET)  <br>
@@ -23,3 +22,5 @@ Liste des catégories : <br>
 [String](https://github.com/noenarcisse/MultiLangStudy/tree/main/String)  <br>
 [Struct alignment](https://github.com/noenarcisse/MultiLangStudy/tree/main/Struct%20alignment)  <br>
 [Typage](https://github.com/noenarcisse/MultiLangStudy/tree/main/Typage)  <br>
+[_PKG .NET Nuggets](https://github.com/noenarcisse/MultiLangStudy/tree/main/_PKG%20.NET%20Nuggets)  <br>
+[_PKG Go](https://github.com/noenarcisse/MultiLangStudy/tree/main/_PKG%20Go)  <br>
