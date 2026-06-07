@@ -54,6 +54,9 @@ dotnet add package ClosedXML
 ### LibreOffice
 
 ### PdfPig
+Ouvre les pdf, recupere les différentes infos dedans. Recupères les mots et leur positions dans les pages (un peu comme un OCR sans passer par des phrases).<br>
+Permet aussi de cropper pour ne cibler que des zones spécifiques de la page. <br>
+Peut aussi générer un document PDF :D
   ```
 dotnet add package UglyToad.PdfPig
   ```
