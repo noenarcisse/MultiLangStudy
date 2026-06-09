@@ -9,6 +9,14 @@ https://github.com/gocolly/colly
 go get github.com/gocolly/colly/v2
   ```
 
+## Navigateur
+### chromedp
+https://github.com/chromedp <br>
+Gere un navigateur, passe par du chromium mais directement sur un navigateur present sur la machine, pas besoin de stocker une instance dediée.
+  ```
+code
+  ```
+
 ## Documents
 ### pdf
 Très basique et facile, ca recupere du text ou des glyphes + leur position.
