@@ -24,6 +24,18 @@
   ```
 
 ## F#
+
+### for _
+ca imite le repeat de Kotlin, on peut drop la valeur et juste utiliser la range pour compter
+  ```fs
+for _ in 1..10 do
+    printfn "Salut"
+
+let a, n = 1, 10
+for _ in a..n do
+    printfn "Salut"
+  ```
+
 ### comprension list
  comme python le grand frere
   ```fs
