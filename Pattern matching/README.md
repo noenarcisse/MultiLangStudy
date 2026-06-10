@@ -72,6 +72,19 @@ let getMana (chara : Personnage) =
     | Magicien m -> m.MP
     | Guerrier g -> 0
   ```
+## Kotlin
+### when
 
+  ```kt
+    fun test(x : Int) : String {
+        when(x){
+            in 1..10 -> return "Yes"
+            else -> return "No"
+        }
+    }
+    println(test(1)) //yes
+    println(test(10)) //yes
+    println(test(20)) //no
+  ```
 
 
