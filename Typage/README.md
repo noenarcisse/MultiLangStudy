@@ -35,7 +35,8 @@ Truquer(truc);
   ```
 
 ## Go
-Fort, déduit
+Fort, déduit <br>
+Embedding possible
 ### type
   ```go
 	type Text string      //new type
@@ -209,6 +210,17 @@ type Personnage = {
     classe : Classe
 }
   ```
+
+## py
+Faible, requiert une lib pour forcer le typage, il est stippé (commen en transpile TS>JS) et verifie rien apres, c'est plus de la doc pour les dev)<br>
+Fort dependance de duck typing (js like)
+### typage
+```py
+code
+```
+### interface
+Aucune interface possible, on reconnait purement en duck typing, ca casse en runtime
+
 ## Kotlin
 Fort, différencie le typage de base du typage nullable. Permet le mut(var) et imut (val) shallow :<
 ### inférence
