@@ -204,7 +204,13 @@ const arrayTypée : Chien[] = [
 
 
 # F# 
-Non naturel dans ce langage, on lui préfère list ou seq. Taille fixe a la C.
+Non naturel dans ce langage, on lui préfère list ou seq. Taille fixe a la C. <br>
+Souvent utile pour l'interop
 ```fs
 let array = [|1;2;3|]
+  ```
+## list
+C'est une linked list en vrai, imut, tres naturel pour le langage.
+```fs
+let list = [1;2;3]
   ```
