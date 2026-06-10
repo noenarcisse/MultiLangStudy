@@ -110,6 +110,12 @@ dotnet add package Polly
 
 ## unsorted
 
+### HtmlAgilityPack
+Parsing de html
+  ```
+dotnet add package HtmlAgilityPack --version 1.12.4
+  ```
+
 ### OpenCVSharp4
 "Usage : Suivre un objet par couleur (CamShift), par flux optique (Lucas-Kanade) ou via des algorithmes de tracking dédiés (MOSSE, CSRT, KCF).
 Idéal pour : Projets desktop (WPF, WinForms, Console) nécessitant une analyse image par image."
