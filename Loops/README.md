@@ -23,7 +23,21 @@
 	}
   ```
 
+## F#
+### comprension list
+ comme python le grand frere
+  ```fs
+let list1 = [1;2;3;4;5]
+let list2 = [ for res in list1 do if res % 2 <> 0 then yield res ] // yield peut etre enlevé en vrai mais c'est plus explicite comme "yield return" d'iterator
+  ```
+
 ## Python
+### comprension list
+ blablabla
+  ```py
+list1 = [1,2,3,4,5]
+list2 = [res for res in list1 if res%2 != 0] # liste d'impair
+  ```
 ### for
   Aie aie aie<br>
   C'est un foreach / for in par defaut, il prend ce qu'il a dans un iterateur ou un collection et déballe la valeur.
