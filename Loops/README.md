@@ -45,10 +45,15 @@ let list2 = [ for res in list1 do if res % 2 <> 0 then yield res ] // yield peut
 
 ## Python
 ### comprension list
- blablabla
+ c'est un for mais ca retourne speicifiquement une liste. Ca n'est pas comparable a la version F# qui elle abuse d'un iterator passé dans une liste.
   ```py
 list1 = [1,2,3,4,5]
 list2 = [res for res in list1 if res%2 != 0] # liste d'impair
+  ```
+### generator
+ blablabla
+  ```py
+ma_liste = list(i * 2 for i in range(1, 4))
   ```
 ### for
   Aie aie aie<br>
