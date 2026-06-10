@@ -22,9 +22,15 @@ public Constructeur(int arg, int arg2) : base(int arg)
 ## py
 ### Héritage
   class (baseclass)<br>
-  héritage mutliple
+  héritage mutliple <br>
+  utilise des décorateurs pour specifier
   ```
+@final
 class Enfant (Parent1, Parent2, Parent3) :
   def __init__(self) :
     self.name=""
+  @abstractmethod
+  def marcher(self) :
+    pass
   ```
+Pas de virtual ou d'override c'est la fete a la saucisse on peut deja reecrire les mots clé du langage, donc les methodes on est plus a ca pret.
