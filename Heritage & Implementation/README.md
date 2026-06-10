@@ -19,4 +19,12 @@ public class Chien : IAboyeur
 public Constructeur(int arg, int arg2) : base(int arg)
   ```
 
-
+## py
+### Héritage
+  class (baseclass)<br>
+  héritage mutliple
+  ```
+class Enfant (Parent1, Parent2, Parent3) :
+  def __init__(self) :
+    self.name=""
+  ```
