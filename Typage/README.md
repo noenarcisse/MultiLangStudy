@@ -210,8 +210,33 @@ type Personnage = {
     classe : Classe
 }
   ```
+### Type providers
+F# peut générer a la compilation des type sur base d'une structure de données externes. C'est le code generation de Roslyn mais en godlike.
+  ```fs
+#r "nuget: FSharp.Data"
+open FSharp.Data
 
-## py
+type Cards = JsonProvider<"sample.json">
+let cards = Cards.Load(@"https://api.magicthegathering.io/v1/cards?name=brainstorm") //sur url, il get tout seul, sur un fichier il open/read etc. o_o
+if cards.Cards.Length > 0 then
+    printfn "%A" cards.Cards[0] //ici on a acces a cards.Cards[0].Name, cards.Cards[0].ManaCost, cards.Cards[0].Cmc
+  ```
+On peut lui donner un fichier sample.json ici avec une structure meme partielle, il va recreer tout seul les type et structure du json en type F# <br>
+Si le json d'exemple est incomplet, ca revient a faire un DTO partiel qui drop une partie des données envoyée par l'api. <br>
+La structure doit etre correcte, les infos peuvent varier sans probleme, il a juste besoin de pouvoir lire le squelette des données :>
+  ```json
+{
+    "cards": [
+        {
+            "name": "Imoti, Celebrant of Bounty",
+            "manaCost": "{3}{G}{U}",
+            "cmc": 5.0,
+		}
+	]
+}
+  ```
+
+## Python
 Faible, requiert une lib pour forcer le typage, il est stippé (commen en transpile TS>JS) et verifie rien apres, c'est plus de la doc pour les dev)<br>
 Fort dependance de duck typing (js like)
 ### typage
