@@ -16,6 +16,7 @@ Liste des catégories : <br>
 [Jumps](https://github.com/noenarcisse/MultiLangStudy/tree/main/Jumps)  <br>
 [Lazy loading](https://github.com/noenarcisse/MultiLangStudy/tree/main/Lazy%20loading)  <br>
 [Loops](https://github.com/noenarcisse/MultiLangStudy/tree/main/Loops)  <br>
+[Parrallelisme](https://github.com/noenarcisse/MultiLangStudy/tree/main/Parrallelisme)  <br>
 [Pattern matching](https://github.com/noenarcisse/MultiLangStudy/tree/main/Pattern%20matching)  <br>
 [Pointer & Ref](https://github.com/noenarcisse/MultiLangStudy/tree/main/Pointer%20%26%20Ref)  <br>
 [Return](https://github.com/noenarcisse/MultiLangStudy/tree/main/Return)  <br>
