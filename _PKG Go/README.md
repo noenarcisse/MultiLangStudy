@@ -12,7 +12,16 @@ go get github.com/gocolly/colly/v2
 ## Navigateur
 ### chromedp
 https://github.com/chromedp <br>
-Gere un navigateur, passe par du chromium mais directement sur un navigateur present sur la machine, pas besoin de stocker une instance dediée.
+Gere un navigateur, passe par du chromium mais directement sur un navigateur present sur la machine, pas besoin de stocker une instance dediée. <br>
+Il est documenté mais entre deux entre du facile et du difficile, beaucoup de trucs a savoir (.text().do(ctx)), des callbacks en cascades
+  ```
+code
+  ```
+
+### rod
+https://github.com/go-rod/rod <br>
+https://pkg.go.dev/github.com/go-rod/rod <br>
+Plus facile au vu de la doc avec de OOP tres classique
   ```
 code
   ```
