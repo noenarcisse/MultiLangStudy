@@ -2,23 +2,26 @@
 
 ## DB
 ### go sqlite
-Implementation pure Go de sqlite<br>
+Implementation du driver sqlite en pur Go<br>
+Vibe tres classique a l'ancienne PHP sans orm qui marche bien pour du petit projet fixe.
 https://pkg.go.dev/modernc.org/sqlite
   ```
-code
-  ```
-### gORM
-ORM<br>
-https://pkg.go.dev/gorm.io/driver/sqlite
-  ```
-code
+go get gitlab.com/cznic/sqlite
   ```
 ### go sqlite3
-driver sqlite, requiert cgo<br>
+Driver sqlite wrapper de C, requiert cgo<br>
+Dependance externe a cause du C, apparement plus performant ?
 https://github.com/mattn/go-sqlite3
   ```
 code
   ```
+### gORM
+ORM classico classique, pas de SQL, migration, alignement de la DB avec des structs<br>
+https://pkg.go.dev/gorm.io/driver/sqlite
+  ```
+code
+  ```
+
 
 ## Scraping
 ### (bro)Colly
