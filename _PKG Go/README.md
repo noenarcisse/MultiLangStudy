@@ -1,5 +1,25 @@
 # Go packages
 
+## DB
+### go sqlite
+Implementation pure Go de sqlite<br>
+https://pkg.go.dev/modernc.org/sqlite
+  ```
+code
+  ```
+### gORM
+ORM<br>
+https://pkg.go.dev/gorm.io/driver/sqlite
+  ```
+code
+  ```
+### go sqlite3
+driver sqlite, requiert cgo<br>
+https://github.com/mattn/go-sqlite3
+  ```
+code
+  ```
+
 ## Scraping
 ### (bro)Colly
 Scraping + permet d'ouvrir les liens pour explorer, de garder ceux deja vu pour pas relancer x fois la memepages etc.<br>
