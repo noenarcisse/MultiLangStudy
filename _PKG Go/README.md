@@ -6,7 +6,7 @@ Implementation du driver sqlite en pur Go<br>
 Vibe tres classique a l'ancienne PHP sans orm qui marche bien pour du petit projet fixe.
 https://pkg.go.dev/modernc.org/sqlite
   ```
-go get gitlab.com/cznic/sqlite
+go get 	modernc.org/sqlite
   ```
 ### go sqlite3
 Driver sqlite wrapper de C, requiert cgo<br>
