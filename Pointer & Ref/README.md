@@ -59,6 +59,9 @@ func main() {
 	pr.Saluer() //ooof
 }
   ```
+### Interfaces
+En go les interfaces sont en soit des fat pointeurs deguisés. Elles tiennent la valeur de l'element et le type concret. Afficher %v ou %T donne donc deux résultats différents.
+Une interface remplit la demainde d'un *Truc sans préciser la ref avec & car elles sont le ptr.
 
 
 ## Perl
