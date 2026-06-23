@@ -47,15 +47,11 @@ func main() {
 
 	delay := time.Now().Add(time.Second * 5)
 	ctx1 := context.Background()
-	ctx2 := context.WithValue(ctx1, "truc", "lavaleurdetruc") //value qui peut etre recup par tous les enfants aussi
-	ctx3, cancel := context.WithDeadline(ctx2, delay)
-	ctx4, cancel := context.WithCancel(ctx3)
-	defer cancel()
-
-	context.AfterFunc(ctx3, func() {
-		fmt.Println("Je dois vraiment afficher ce message")
-		fmt.Println(ctx3.Err())
-	})
+	ctx2 := context.WithValue(ctx1, "truc", "lavaleurdetruc")
+	ctx3, cancel3 := context.WithDeadline(ctx2, delay)
+	defer cancel3()
+	ctx4, cancel4 := context.WithCancel(ctx3)
+	defer cancel4()
 
 	wg := sync.WaitGroup{}
 	wg.Go(func() {
@@ -65,7 +61,6 @@ func main() {
 		test2(ctx4)
 	})
 	wg.Wait()
-
 }
 
 func test(ctx context.Context) {
@@ -88,6 +83,7 @@ func test(ctx context.Context) {
 func test2(ctx context.Context) {
 
 	fmt.Println("test2 value:", ctx.Value("truc"))
+
 	done := make(chan struct{})
 
 	go func() {
@@ -104,5 +100,6 @@ func test2(ctx context.Context) {
 	case <-done:
 		fmt.Println("test2 terminé sans souci")
 	}
+
 }
   ```
