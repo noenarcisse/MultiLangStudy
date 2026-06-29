@@ -2,7 +2,7 @@
 ## F#
 
 ### currying
-Tout est une function, n'importe quel l'arg l'est donc forcément ou le retour peut en renvoyer une aussi.
+Tout est une function, n'importe quel arg l'est, ainsi que les retours. Toutes les lignes sont une expression et retournent une valeur si possible (faut fun -> Unit ou () explicite)
   ```fs
 let add x y = x + y
 // =
@@ -33,7 +33,7 @@ let add x y = x+y
 let mul x y = x*y
 printfn $"%i" valeur |> add 4 |> mul 2 // 5 => 4+5 => 2 * 9 = 18
   ```
-### compo >>
+### composition >>
 Permet de chainer des fonctions. L'arg d'entré unique est implicite (currying)
   ```fs
 let add x y  = x+y
