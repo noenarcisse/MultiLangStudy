@@ -36,8 +36,7 @@ for _ in a..n do
     printfn "Salut"
   ```
 
-### comprension list
- comme python le grand frere
+### expression list
   ```fs
 let list1 = [1;2;3;4;5]
 let list2 = [ for res in list1 do if res % 2 <> 0 then yield res ] // yield peut etre enlevé en vrai mais c'est plus explicite comme "yield return" d'iterator
