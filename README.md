@@ -23,5 +23,6 @@ Liste des catégories : <br>
 [String](https://github.com/noenarcisse/MultiLangStudy/tree/main/String)  <br>
 [Struct alignment](https://github.com/noenarcisse/MultiLangStudy/tree/main/Struct%20alignment)  <br>
 [Typage](https://github.com/noenarcisse/MultiLangStudy/tree/main/Typage)  <br>
+[_Go](https://github.com/noenarcisse/MultiLangStudy/tree/main/_Go)  <br>
 [_PKG .NET Nuggets](https://github.com/noenarcisse/MultiLangStudy/tree/main/_PKG%20.NET%20Nuggets)  <br>
 [_PKG Go](https://github.com/noenarcisse/MultiLangStudy/tree/main/_PKG%20Go)  <br>
