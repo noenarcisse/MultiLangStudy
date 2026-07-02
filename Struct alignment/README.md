@@ -3,7 +3,7 @@
 ### Struct alignment et padding
  int est un in32 par defaut<br>
  Ca compte surtout sur les record struct et struct. Les classes sont réorganisées plus intelligement.
-  ```
+  ```cs
 public struct GoodStruct(){
     byte b1 = 0;
     byte b2 = 0;
@@ -26,7 +26,7 @@ public class StructAligementTest{
   Les struct en go font la meme chose qu'en C : elles s'alignent en mémoire et font du padding pour occuper des blocs complets dont la taille depend de la l'archi<br>
   Pour diminuer la taille occupée, il faut grouper correctement les elements les plus petits pour qu'ils evitent de creer des padding a vide enormes.<br>
   Go deduit le int sur base de l'archi du pc tout seul si non précisé
-  ```
+  ```go
 // x64, int32 non explicité -> int64 par defaut
   type memAlignTest struct {
 	a byte //1 |
