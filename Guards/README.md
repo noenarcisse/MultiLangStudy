@@ -118,6 +118,47 @@ public void Traiter(string? nom, int age)
 }
   ```
 
+## Go
+### (type)
+element.(type) permet d'extraire et de comparer le type concret d'un obj qui passait pas une interface. <br>
+Ca permet d'ensuite savoir si on peut acceder a des fields specifique que l'interface ne promet pas <br>
+Go permet aussi un if elemstr , ok := element.(string); ok pour verifier un type concret directement et recupérer une versions afe de l'element confirmé
+  ```go
+type FileNotFoundErr struct {
+	errMsg string
+}
+type MalformedFileErr struct {
+	errMsg string
+}
+func (e FileNotFoundErr) Error() string {
+	return e.errMsg
+}
+func (e MalformedFileErr) Error() string {
+	return e.errMsg
+}
+
+func DealWithErr(e error) {
+	switch e.(type) {
+	case FileNotFoundErr:
+		fmt.Println("File not found")
+	case MalformedFileErr:
+		fmt.Println("File has errors in it")
+	default:
+		fmt.Println("Unknown error")
+	}
+}
+  ```
+  ```go
+elem := 2
+if elemstr , ok := element.(string); ok {
+	fmt.Printf("%s\n", elemstr)
+}
+if elemint, ok := element.(int); ok {
+	total := 2 + elemint
+}
+  ```
+
+
 ## JS / TS
   base types<br>
   ```js
