@@ -66,6 +66,39 @@ Ils ont pas l'opérateur "x" mais c'est remplacé par des utils dans la std lib 
 	fmt.Println(string(newChars))
   ```
 
+## py
+### Simple string
+string imutable classique, acceissible en chars[] seulement a la lecture<br>
+Concat automatique plusieurs string qui se suivent. 
+  ```py
+mavariable = "Sa" "lut"
+print (mavariable) # "Salut"
+
+text = "Salus"
+textArr = list(text)
+textArr[-1] = "t"
+text = "".join(textArr)
+  ```
+### f"" format
+Permet de passer directement des elements comme un printf, assez proche de C#
+  ```py
+name = "Bob"
+fstring = f"Salut {name}"
+  ```
+### r"str" raw string
+Annonce du texte pur, les \ ne servent plus a escape quoi que ce soit
+  ```py
+with open(r"C:\monpath\monfichier.csv", encoding="utf8") as file :
+    reader = csv.DictReader(file, delimiter=",")
+    for elem in reader :
+        print(elem['id'],elem['content'])
+  ```
+### str*int
+Similaire a str x num de Perl
+  ```py
+code
+  ```
+
 ## Perl
 Le true king.
 ### string en général
