@@ -55,6 +55,63 @@ public class ModelTruc
     </NotAuthorized>
 </AuthorizeView>
   ```
+## Go
+### reflect
+ Dans le principe on peut intercepter n'importe quoi<br>
+ On peut le faire principal avec relfect. Ca cree des codes peu goesque car les errs sortent de la compile pour se retrouver au runtime :/
+  ```go
+func (di *DI) Inject(f any, args ...any) {
+	t := reflect.TypeOf(f)
+	if t.Kind() != reflect.Func {
+		panic("non")
+	}
+
+	values := []reflect.Value{}
+
+	argsLen := t.NumIn()
+	argsManuels := len(args)
+
+	for i := 0; i < argsLen; i++ {
+
+		if i < argsManuels {
+			values = append(values, reflect.ValueOf(args[i]))
+			continue
+		}
+		at := t.In(i)
+		if at.Kind() != reflect.Interface {
+			errMsg := fmt.Sprintf("Only interfaces are injectables, found %s", at.Kind())
+			panic(errMsg)
+		}
+		fmt.Printf("%s - %s\n", at, at.Kind())
+		if _, ok := di.register[at]; ok {
+			values = append(values, reflect.ValueOf(di.register[at]))
+		}
+	}
+	reflect.ValueOf(f).Call(values)
+}
+  ```
+### closures
+La manière Go plus respecteuse de la philo du language serait plutot une utilisation de closure
+  ```go
+type HandlerFunc func() int
+
+func main() {
+	res := LogMaFunc("Je fais des maths très compliquées", FaireDesMath)
+	addition := res()
+	fmt.Println(addition)
+}
+
+func LogMaFunc(msg string, f HandlerFunc) HandlerFunc {
+	return func() int {
+		fmt.Printf("LOG: %s\n", msg)
+		return f()
+	}
+}
+
+func FaireDesMath() int {
+	return 2 + 2
+}
+  ```
 
 ## TS
  @maFonction qui vient décorer une class, une methode ou un champs.
