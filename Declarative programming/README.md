@@ -65,12 +65,18 @@ printfn $"Salut {obnf}" //Salut Jimmy
 ### sort
 Copie correctement en FP, pas comme JS
   ```fs
-let list = [9 ; 0 ; 19 ; 5]
-list |> List.sort
+open System
+let strJoin (list : int list) = String.Join(",", list)
+[1;2;6;5;3;7;12;865;1] |> List.sort |> strJoin |> printfn "%s"
   ```
 ### find
   ```fs
+let test a  =
+    match a with
+    | None -> printfn "oops"
+    | Some value -> printfn "nice found %A" value
 
+[1;2;6;5;3;7;12;865;1] |> List.tryFind (fun e -> e = 7) |> test
   ```
 ## C#
 ### this
