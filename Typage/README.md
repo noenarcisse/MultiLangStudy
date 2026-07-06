@@ -239,11 +239,31 @@ faireVoler(canard) // ca compile, ca ressemble a un Volant donc c'est un Volant
 
 
 ## Python
-Faible, requiert une lib pour forcer le typage, il est stippé (commen en transpile TS>JS) et verifie rien apres, c'est plus de la doc pour les dev)<br>
+La syntaxe des types en py ressemble completement a Rust. <br>
+Le trick c'est qu'ici il faut une version specifique de python pour y avoir acces et importer les packages de typing de la std lib. <br>
+Faible, requiert une lib pour forcer le typage, il est stippé (commen en transpile TS>JS) et verifie rien apres, c'est plus de la doc pour les dev.<br>
 Fort dependance de duck typing (js like)
 ### typage
 ```py
-code
+from typing import Callable
+import inspect
+
+def add(a : int, b : int) -> int :
+    return a+b
+
+def func2(f:Callable[[int, int], int], a : int, b : int) -> Callable[[], int] :
+    print(inspect.getsource(f))
+    print("ARGS:", a , b)
+    return lambda : f(a,b)
+
+print(func2(add, 1,2)())
+```
+Rien n'empeche de casser le code et que ca marche. 
+```py
+def add(a : int, b : str) -> int :
+    return a+b
+# ...
+print(func2(add, 1,2)()) #ca passe meme si b est annoncé en string et qu'on a quand meme rentré un int
 ```
 ### interface
 Aucune interface possible, on reconnait purement en duck typing, ca casse en runtime
