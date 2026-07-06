@@ -1,4 +1,4 @@
-# Guards, Nullchecks etc.
+# Guards, Nullchecks & Default values
 ## C#
 
 ### OneOf<T0 .. Tn>
@@ -102,6 +102,18 @@ code
   ```
 code
   ```
+ ### default
+ blablabla
+  ```
+code
+  ```
+ ### ??
+ nullcheck permet de passer une valeur par defaut si la valeur actuelle est null. Ca permet pas seulement de return une val du meme type mais de throw une exception aussi, le compiler déduit alors forcément un type au lieu de type?.
+  ```
+// avec public string? GetText() déclaré
+string montexte = GetText() ?? "Le texte est vide";
+string monautreTexteImportant = GetText() ?? throw new Exception("On va s'écraser mon capitaine");
+  ```
 ### static ArgumentException
 Hack de lisibilité sur les guards d'entrée.
 Permet de reduire une instruction de guard d'entrée en if par un raccourci lisible "a la Perl"
@@ -157,7 +169,13 @@ if elemint, ok := element.(int); ok {
 	total := 2 + elemint
 }
   ```
-
+ ### Zero value
+ N'importe quel élement en Go passe toujours par une zero value par default qui dépend de ce qu'on manipule en tant que tel. Ca permet plus de certitude sur ce qu'on manipule.
+  ```
+var str string //zero val = ""
+var structure maStruct // zero val = nil
+// ...
+  ```
 
 ## JS / TS
   base types<br>
@@ -214,9 +232,16 @@ let capitalize str =
     |    _ -> str[0].ToString().ToUpper() + str[1..]
        
   ```
+## Python
+todo <br>
+### or
+Fonctionne come JS en principe de truthy ou falsy values (empty str, None, 0, collection vide, tuple vide etc sont assimilés a False, le reste a True)
+  ```py
+montext = getText() or "C'est vide par ici"
+  ```
 ## Kotlin
 Le prince de la guard <br>
-when guard 
+### when 
 Ca permet de gerer les valeurs directement et de renvoyer le traitement reel sur les vrais cas a gérer. C'est le petit frère du F# la dessus
   ```kt
     open class Character (val name : String, var health : Int)
