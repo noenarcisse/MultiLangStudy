@@ -116,7 +116,7 @@ string monautreTexteImportant = GetText() ?? throw new Exception("On va s'écras
   ```
 ### static ArgumentException
 Hack de lisibilité sur les guards d'entrée.
-Permet de reduire une instruction de guard d'entrée en if par un raccourci lisible "a la Perl"
+Permet de reduire une instruction de guard d'entrée en if par un raccourci lisible "a la Perl" avec l'erreur affichée avant la condition.
   ```cs
 using static System.ArgumentNullException;
 using static System.ArgumentOutOfRangeException;
@@ -171,7 +171,7 @@ if elemint, ok := element.(int); ok {
   ```
  ### Zero value
  N'importe quel élement en Go passe toujours par une zero value par default qui dépend de ce qu'on manipule en tant que tel. Ca permet plus de certitude sur ce qu'on manipule.
-  ```
+  ```go
 var str string //zero val = ""
 var structure maStruct // zero val = nil
 // ...
