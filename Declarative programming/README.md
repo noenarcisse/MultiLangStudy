@@ -26,12 +26,18 @@ let tee f x = f x; x
   ```
 
 ### pipe |> , <|
-Permet de chainer des fonctions. Par défaut, c'est toujours le dernier arg qui est ciblé comme entrée du pipe.
+Permet de chainer des fonctions. Par défaut, c'est toujours le dernier arg qui est ciblé comme entrée du pipe. Peut aller dans les deux directions.
   ```fs
 let valeur : int = 5
 let add x y = x+y
 let mul x y = x*y
 printfn $"%i" valeur |> add 4 |> mul 2 // 5 => 4+5 => 2 * 9 = 18
+
+//pipe avec entrées multiples
+(x,y) ||> (+) |> printfn "%i"
+
+let print3 a b c = printfn "%A %A %A" a b c
+(x,y,z) |||> print3
   ```
 ### composition >>
 Permet de chainer des fonctions. L'arg d'entré unique est implicite (currying)
