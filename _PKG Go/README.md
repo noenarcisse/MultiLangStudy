@@ -25,7 +25,7 @@ code
 
 ## Scraping
 ### (bro)Colly
-Scraping + permet d'ouvrir les liens pour explorer, de garder ceux deja vu pour pas relancer x fois la memepages etc.<br>
+Scraping + permet d'ouvrir les liens pour explorer, de garder ceux deja vu pour pas relancer x fois la meme page etc.<br>
 [https://go-colly.org/](https://go-colly.org/)<br>
 [https://github.com/gocolly/colly](https://github.com/gocolly/colly)
   ```
@@ -36,7 +36,7 @@ go get github.com/gocolly/colly/v2
 ### chromedp
 https://github.com/chromedp <br>
 Gere un navigateur, passe par du chromium mais directement sur un navigateur present sur la machine, pas besoin de stocker une instance dediée. <br>
-Il est documenté mais entre deux entre du facile et du difficile, beaucoup de trucs a savoir (.text().do(ctx) lorsqu'on est dans un func anonyme et plus directement en callback dans Run(), etc), des callbacks en cascades Ajax-style
+Il est documenté mais entre deux, entre du facile et du difficile, beaucoup de trucs a savoir (.text().do(ctx) lorsqu'on est dans un func anonyme et plus directement en callback dans Run(), etc), des callbacks en cascades Ajax-style
   ```
 code
   ```
