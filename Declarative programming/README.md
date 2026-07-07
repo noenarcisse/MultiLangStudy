@@ -1,6 +1,6 @@
 # Declarative programming
 ## F#
-
+First class, tout est une fonction.
 ### currying
 Tout est une function, n'importe quel arg l'est, ainsi que les retours. Toutes les lignes sont une expression et retournent une valeur si possible (faut fun -> Unit ou () explicite)
   ```fs
@@ -25,7 +25,7 @@ Mecaniquement similaire à ce qu'on trouve dans des middlewares, des décorateur
 let tee f x = f x; x
   ```
 
-### pipe |>
+### pipe |> , <|
 Permet de chainer des fonctions. Par défaut, c'est toujours le dernier arg qui est ciblé comme entrée du pipe.
   ```fs
 let valeur : int = 5
@@ -43,6 +43,20 @@ let compoAddMul (addNum:int) (mulNum:int) =
     add addNum  >> mul mulNum
 
 5 |> compoAddMul 1 2 |> printfn "%A"
+  ```
+### prefix operator
+Les opérateurs peuvent etre transformé du infix en préfix avec ( ). <br>
+Ca les transforme en fun et permet le currying et autres magies noires du F#
+  ```fs
+let x, y, z = 1, 3, 2
+let doubleadd x y = 
+    x+y
+// (=) fait une egalité comme une func
+y |> (=) x |> printfn "%b"
+(=) y <| ((+) x <| (doubleadd <|| (x, x))) |> printfn "%b"
+
+//on peut utiliser ca pour reduire des expr plus complexe comme (fun e -> e = 7) ici
+[1;2;6;5;3;7;12;865;1] |> List.tryFind ((=)7) |> test
   ```
 ### filter
  Selectionne sur base d'une condition equivalent du filter JS ou select C#
