@@ -232,6 +232,36 @@ let capitalize str =
     |    _ -> str[0].ToString().ToUpper() + str[1..]
        
   ```
+### Result<T, TE>
+Emballe les valeurs dans T ou Erreur et permet de deballer pour gerer les errs <br>
+C'est tout automatique et facile avec Ok et Error <br>
+Pour typer une erreur il faut juste definir un type personalisé et passer les différentes valeurs directement dans Error pour toujours povuoir vérifier l'Error et le type passé pus loin.
+  ```fs
+open System.IO
+
+type FileError =
+    | Inexistant
+    | BadExtension
+
+let ouvrirFichier path =
+    if not(File.Exists path) then
+        Error Inexistant
+    elif Path.GetExtension path <> ".json" then
+        Error BadExtension
+    else
+    Ok path
+
+let test path = 
+    match path with
+    | Error Inexistant -> printfn "Le fichier n'existe pas"
+    | Error BadExtension -> printfn "Le fichier n'est pas du jason"
+    | Ok filepath -> printfn "Bien joué voici le contenu du fichier : %s"  (File.ReadAllText filepath)
+
+ouvrirFichier "./fichierbidon" |> test
+ouvrirFichier ".gitignore" |> test
+ouvrirFichier "./sample.json" |> test
+  ```
+
 ## Python
 todo <br>
 ### or
