@@ -249,7 +249,7 @@ let ouvrirFichier path =
     elif Path.GetExtension path <> ".json" then
         Error BadExtension
     else
-    Ok path
+    	Ok path
 
 let test path = 
     match path with
