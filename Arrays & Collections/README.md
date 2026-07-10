@@ -183,15 +183,15 @@ array.at(-1) // 5
 Hérite du JS avec du typage mais se fait saboter par le bon ducktyping de JS
 ```ts
 type Chien = {
-    name: string;
+    name: string
 }
 type Chat ={
-    name:string;
-    nombresDePattounes : number;
+    name:string
+    nombresDePattounes : number
 }
 
-const chien1 : Chien = {name:"Poupette"};
-const chat1 : Chat = {name : "Pisspouce", nombresDePattounes: 4};
+const chien1 : Chien = {name:"Poupette"}
+const chat1 : Chat = {name : "Pisspouce", nombresDePattounes: 4}
 const canard : {name : string} = {name: "Daffy"}
 
 const arrayTypée : Chien[] = [
@@ -199,9 +199,22 @@ const arrayTypée : Chien[] = [
     chien1,
     chat1,
     canard
-];
+]
+console.log(arrayTypée)
   ```
-
+compilera en :
+  ```
+const chien1 = { name: "Poupette" };
+const chat1 = { name: "Pisspouce", nombresDePattounes: 4 };
+const canard = { name: "Daffy" };
+const arrayTypée = [
+    { name: "Rocky" },
+    chien1,
+    chat1,
+    canard
+];
+console.log(arrayTypée);
+  ```
 
 ## F# 
 ### array
