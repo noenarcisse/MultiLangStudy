@@ -36,10 +36,11 @@ for _ in a..n do
     printfn "Salut"
   ```
 
-### expression list
+### expression collections
   ```fs
 let list1 = [1;2;3;4;5]
 let list2 = [ for res in list1 do if res % 2 <> 0 then yield res ] // yield peut etre enlevé en vrai mais c'est plus explicite comme "yield return" d'iterator
+let pairs = seq{for i in 1 .. 2 .. 10 do i} // les impairs jusqu'a 10, plus idomatique ecrit comme ca
   ```
 
 ## Python
@@ -48,6 +49,7 @@ let list2 = [ for res in list1 do if res % 2 <> 0 then yield res ] // yield peut
   ```py
 list1 = [1,2,3,4,5]
 list2 = [res for res in list1 if res%2 != 0] # liste d'impair
+list3 = [i for i in range(1,10,2)] # plus bete encore, tres declaratif
   ```
 ### generator
  blablabla
