@@ -2,7 +2,7 @@
 ## C#
 Il y a de tout: arrays, list, arraylist, hashset, ienum/seq, dictionnary, orderedlist/dict, etc.
 ### typage
-Fortement typé de base. On peut les rendre hétérogèe au forcing (object)
+Fortement typé de base. On peut les rendre hétérogènes au forcing (object)
   ```cs
 int[] array = [1,2,3,4]; // que des int
 object[] arrayBizarre = ["Salut", 'A', 2, new CompteBancaire("Titi", 90)]; 
