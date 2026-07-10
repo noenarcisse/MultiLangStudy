@@ -127,6 +127,12 @@ maDeuxiemeList[-1] = 5 # *[ptr1, ptr2, ptr3, ptr5] < tient les memes adresse + u
 
 maDeuxiexeList = maList # copie du ptr direct de la List 1, ca ecrase, c'est plus du shallow copy!
   ```
+### operateur * 
+On peut multiplier une liste
+ ```py
+list = ["text"] * 3
+print(list) # ['text', 'text', 'text']
+  ```
 ### *reste
 Le * dans les list permet de faire entre autre, un deballage (spread de JS), un tail plus fort (a la F#), un head aussi !
   ```py
