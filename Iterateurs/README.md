@@ -21,6 +21,8 @@ var resultat = suiteInfinie
   ```
 
 ## F#
+### range 0 .. n
+### range step 0 .. x .. n
 ### seq{}
 Ca permet de faire une liste lazy, des ranges / iterators en tout genre. Les range sont inclusives, si le step fait pas depasser l'itération suivante.
   ```fs
