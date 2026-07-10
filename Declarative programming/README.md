@@ -1,4 +1,6 @@
 # Declarative programming
+On déclare ce qu'on veut, on explique pas comment on arrive on résultat. :>
+
 ## F#
 First class, tout est une fonction.
 ### currying
