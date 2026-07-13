@@ -234,3 +234,82 @@ C'est une linked list en vrai, imut, tres naturel pour le langage.
 ```fs
 let list = [1;2;3]
   ```
+
+## Nim
+### array
+Array avec len definie
+```nim
+var montab : array[0..3, int] = [1,2,3,4]
+  ```
+### seq
+array variable / list (list a la py?)
+```nim
+# leur comprehension seq ressemble a ca
+var malist = collect(newSeq) :
+    for i in countdown(montab.high, montab.low) : 
+        montab[i]
+
+#seq (=list en py)
+var courses = @["Lait", "Chocolat", "Oranges"]
+courses.add("Bananes")
+
+var courses2 = courses[1..courses.high] #copie
+
+for i, elem in courses2 :
+    echo &"[{i}] {elem}"
+  ```
+
+### set / HashSet
+Tiens des val en bit directement sur des tres petites structs (byte, char, uint8 etc). <br>
+On peut faire des maths dessus :D
+```nim
+#affiche en unique et efface les doublons
+var monSet = ["un truc", "un truc", "un autre cette fois"].toHashSet()
+for i in monSet : echo &"mon set 1 = {i}" 
+
+var 
+    charset1 = {'a'..'d'}
+    charset2 = {'c'..'h'}
+
+echo charset1 - charset2 # exclusion
+echo charset1 + charset2 # union
+echo charset1 * charset2 # intersect
+echo (charset1 + charset2) - (charset1 * charset2) # ou exclusif ?
+  ```
+### Table / Critbit
+C'est les dictionnaires possibles de nim. <br>
+C'est un peu le bordel chez eux, y'en a qui trie pas (ordre d'insertion au pif), ceux qui trie fonctionnent pas du tout par comparaison mais par timing d'ajout ou ne compare que des strings (alphabetiquement)
+```nim
+
+# c'en est pas, c'est les pieges -> ca donne des array / seq de tuples
+# : coupe des tuple comme une , ici
+var dict1 = { 1 : "Salut" , 2 : "Je suis un string"}
+var dict2 = @{ 1 : "Salut" , 2 : "Je suis un string"}
+
+# hasard complet
+var vraiDict = [(1, "Salut"), (2, "Ca va ?")].toTable()
+# ordered par ordre d'ajout !
+var order = [(1, "Salut"), (2, "Ca va ?")].toOrderedTable()
+order.add(0, "Aie")
+order.add(4, "Aie2")
+order.add(3, "Aie3")
+# triée mais uniquement en k string ... ca trie par ordre alphabétique :x
+var orderCompare = toCritBitTree([
+    ("3", "Moi pas trop"),
+    ("1", "Salut"),
+    ("2", "Ca va ?"),
+    ("10", "Ca va ?") # passe entre 1 et 2 !
+    ])
+
+echo "Chaos"
+for k,v in vraiDict :
+    echo &"[{k}] {v}"
+
+echo "Order"
+for k,v in order :
+    echo &"[{k}] {v}"
+
+echo "Order (critbit)"
+for k,v in orderCompare :
+    echo &"[{k}] {v}"
+  ```
