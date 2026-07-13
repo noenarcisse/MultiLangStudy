@@ -32,3 +32,22 @@ func PlusUn(x int, y int) (x1 int, y1 int) {
 	return
 }
   ```
+
+## Nim
+### result return
+  Nim permet de faire un retour implicite sans annoncer return. Il tente de stocker la valeur de la derniere ligne dans une var interne "result" :><br>
+  On peut choisir de l'assigner manuellement aussi (tres proche de go dans ce principe-la)
+  ```nim
+proc testreturn() : string =
+    result = "Salut"
+
+    echo 2+2
+    var res = "hey"
+
+echo testreturn() # Salut
+
+proc boolToFrench(b : bool) : string =
+    if b : "Oui" else : "Non"
+
+echo (1 > 0).boolToFrench() # Oui
+  ```
