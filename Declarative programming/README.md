@@ -100,14 +100,21 @@ let test a  =
 
 [1;2;6;5;3;7;12;865;1] |> List.tryFind (fun e -> e = 7) |> test
   ```
+## Nim
+### Uniform Function Call Syntax
+Permet de chainer. Le premier arg est toujours le point d'entrée dans cette situation.
+  ```nim
+proc boolToFrench(b : bool) : string =
+    if b : "Oui" else : "Non"
+echo (1 > 0).boolToFrench()
+  ```
 ## C#
 ### this
 Permet de chainer. On passe this sur un des args pour cibler l'arg en premier contrairement a F#
   ```cs
-static int Additionner(this int value, int add) => value + add;
-static int Multiplier(this int value, int mul) => value*mul;
-int val = 5;
-Console.WriteLine(val.Additionner(1).Multiplier(2)); //12
+static int Additionner(this int value, int add) => value+add;
+static void PrintToConsole(this int i) => Console.WriteLine(i);
+5.Additionner(2).PrintToConsole();
   ```
 ### Lambda / delegates
 Func<argT, returnT> = (args) => { body };
