@@ -98,6 +98,52 @@ let maFonction =
     var // return 42
   ```
 
+## Nim
+
+### var 
+Variable mut
+  ```nim
+var text = "Ca roule par ici ?"
+var variable = if (len text) > 10 : "Yo" else : "Ciao"
+var c : char = 'a'
+  ```
+
+### let
+Variable imut, on peut l'attribuer en runtime mais elle ne bouge plus après.
+  ```nim
+type 
+    Character = ref object of RootObj
+        name: string
+    Balrog = ref object of Character
+    Hobbit = ref object of Character
+
+let chara = Hobbit(name:"Frodon")
+let dialogue = 
+    if chara of Hobbit : "Gardez bien l'anneau Frodon"
+    elif chara of Balrog : "Vous ne passerez pas"
+    else : "Qui etes vous ?"
+  ```
+### const
+Variable imut, elle est figée avant la compilation.
+  ```nim
+const
+	la_verite = 42
+	DOOM_PI = 3.141592657
+  ```
+### tuple
+Declaration proche de Python. Fonctionnement et ecriture classique
+  ```nim
+const
+#tuple
+var (hello, world) = ("Hello" , "World")
+let jim : tuple[name: string, age:int] = (name:"Jim", age:10)
+echo jim.name
+
+# deconstr
+let (name, age) = jim
+echo name," ", age
+  ```
+
 ## Python
 Typées, mutables. TOUT est un objet, les objets liés à des type primitif se comporte comme tel (copie et pas transfert d'addresse comme un array ou un obj).<br>
 Maintiens pas seulement une valeur mais aussi les références qui maintiennent une variable en RAM. Tout part en heap. <br>
