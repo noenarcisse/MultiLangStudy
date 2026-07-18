@@ -43,6 +43,16 @@ let list2 = [ for res in list1 do if res % 2 <> 0 then yield res ] // yield peut
 let pairs = seq{for i in 1 .. 2 .. 10 do i} // les impairs jusqu'a 10, plus idomatique ecrit comme ca
   ```
 
+## Nim
+
+### expression collections
+  ```nim
+  	var input = readLine(stdin)
+	# meme principe qu'en py ou F# mais on doit collect() ici en plus :<
+    var chars : seq[char] = collect(newSeq, for i in countdown(input.high, 0) : input[i])
+    echo chars.join("")
+  ```
+
 ## Python
 ### comprension list
  c'est un for mais ca retourne speicifiquement une liste. Ca n'est pas comparable a la version F# qui elle abuse d'un iterator passé dans une liste.
