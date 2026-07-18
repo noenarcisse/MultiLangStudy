@@ -172,7 +172,37 @@ func Calc[T Money](m T) {
 	fmt.Printf("%f\n", m)
 }
   ```
+## Nim
+Fort, déduit <br>
+Il peut etre tres pénible sur les type qui sont pas en alias et qui doivent etre castés
+### type
+  ```nim
+# alias d'un tuple(float, float) interchangeable
+type Point = tuple[x : float, y :float]
 
+#heritage
+type Animal = ref object of RootObj
+    name : string
+
+type Chien = ref object of Animal
+    nb_pattes:Natural
+
+# un chat est un dérivé de animal mais ne peux jamais etre confondu avec
+type Chat = distinct Animal
+
+proc SeLaver(c : Chat) =
+    echo "Chat dit Slurp"
+
+proc Manger(a : Animal) =
+    echo a.name, " dit Miam"
+
+var c = Chien(name:"Toutou", nb_pattes:4)
+var c2 : Chat
+c.Manger()
+# c2.Manger() # non
+c2.SeLaver()
+
+  ```
 ## TS
 ### type
   Typage non mergeable<br>
