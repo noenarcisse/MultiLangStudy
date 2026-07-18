@@ -127,6 +127,15 @@ maDeuxiemeList[-1] = 5 # *[ptr1, ptr2, ptr3, ptr5] < tient les memes adresse + u
 
 maDeuxiexeList = maList # copie du ptr direct de la List 1, ca ecrase, c'est plus du shallow copy!
   ```
+
+### slicing
+La version deluxe face aux autres lang. Y'a le classique [1:] ou [:-2] qui permettent de cadrer mais en plus python imite sa fonction range(start,end, step) <br>
+On peut donc aussi faire [start:end:step] ca permet de sauter des index ou meme de lire a l'envers avec un step -1
+ ```py
+def isitpalindromme(s) :
+    return s == s[::-1]
+  ```
+
 ### operateur * 
 On peut multiplier une liste
  ```py
@@ -312,4 +321,10 @@ for k,v in order :
 echo "Order (critbit)"
 for k,v in orderCompare :
     echo &"[{k}] {v}"
+  ```
+### slices
+On a des slicing classique [start .. end]
+Tres proche du C# niveau ecriture avec [0..^1] et obligé d'aller du debut vers la fin
+```nim
+var montab : array[0..3, int] = [1,2,3,4]
   ```
