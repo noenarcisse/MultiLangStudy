@@ -47,10 +47,10 @@ let pairs = seq{for i in 1 .. 2 .. 10 do i} // les impairs jusqu'a 10, plus idom
 
 ### expression collections
   ```nim
-  	var input = readLine(stdin)
-	# meme principe qu'en py ou F# mais on doit collect() ici en plus :<
-    var chars : seq[char] = collect(newSeq, for i in countdown(input.high, 0) : input[i])
-    echo chars.join("")
+var input = readLine(stdin)
+# meme principe qu'en py ou F# mais on doit collect() ici en plus :<
+var chars : seq[char] = collect(newSeq, for i in countdown(input.high, 0) : input[i])
+echo chars.join("")
   ```
 
 ## Python
