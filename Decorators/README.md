@@ -1,4 +1,9 @@
 # Decorator
+## Nim
+### pragmas
+  ```nim
+#code
+  ```
 ## C#
 Le roi ? Implique de la reflection (et donc aie aie aie l'AOT)
 ### [Attributes]
