@@ -6,8 +6,7 @@ proc formatMarkdown(dirname : string) : string =
     &"[{dirname}](https://github.com/noenarcisse/MultiLangStudy/tree/main/{encodeUrl dirname})<br>\n"
 
 var f : File = nil
-let ignored = @[".git", ".vscode", "bin", "obj", "_template"]
-var dirs : seq[string] = @[]
+let ignored = @[".git", ".vscode", "_template"]
 let readme_file = "README.md"
 let header = """
 # Index
