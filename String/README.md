@@ -1,7 +1,8 @@
 # String
 ## C#
 ### Simple string
-Un string est un char[] toujours accessible comme en C mais sans les désavantages<br>
+Un string est un char[] toujours accessible comme en C mais sans les désavantages<br> 
+Imut par défaut.
   ```cs
 string texte1 = "Hello";
 char lettre = texte1[0]; // H
