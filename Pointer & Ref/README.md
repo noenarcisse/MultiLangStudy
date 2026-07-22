@@ -21,6 +21,26 @@ unsafe
       Console.WriteLine(*pointer); // 42
 }
   ```
+C'est assez infame a écrire en vrai face a des langages bas niveaux et faut parfois chipoter (si la var est externe au scope unsafe ou capturée). <br>
+Y'a tous les défaut possibles des ptr de C on peut se deplacé hors d'un array notamment. <br>
+On doit fixed sur la heap pour empecher de GC de deplacer les ptr qu'on regardent. En sortie de scope free, le GC recupere et nettoie si besoin. Pour le reste, on doit évidemment les nettoyer de la heap soit meme avec un free :<
+  ```cs
+unsafe
+{
+	int n = 5;
+	int* pn = &n;
+	Console.WriteLine($"pointer :{(IntPtr)pn}");
+	Console.WriteLine($"value = {*pn}");
+
+	int* arr = stackalloc int[3] { 3, 20, 100 };
+
+	Console.WriteLine($"pointer :{(IntPtr)arr}");
+	Console.WriteLine($"value 1 = {arr[0]}");
+	Console.WriteLine($"value 2 = {*(arr + 1)}");
+	Console.WriteLine($"value 2 = {*(arr + 2)}");
+	Console.WriteLine($"value fausse = {*(arr - 1)}"); // <- buffer overflow, pas de segfault si on est encore dans notre zone
+}
+  ```
 
 ### Span<T> et ReadOnlySpan<T>
 C'est une ref struct. Elle vit sur la stack comme n'importe quelle struct mais un ref qui garde possiblement un elements coté heap : l'adresse et la longueur de l'info. <br>
