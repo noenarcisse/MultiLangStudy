@@ -26,6 +26,16 @@ foreach(var res in query) {
   ```
   //code
   ```
+### Channel
+  text)<br>
+  ```
+  //code
+  ```
+### lock{}
+  text)<br>
+  ```
+  //code
+  ```
 ## Go
 ### Go routines
   Green threads, fait du parallelism risqué (comparé a C#). Y'a beaucoup d'erreurs possibles qui peuvent entrainer des deadlocks (lecture d'un chan vide, ecriture d'un chan fermé etc)<br>
