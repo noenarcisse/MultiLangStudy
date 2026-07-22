@@ -140,17 +140,37 @@ f(7); // retourne false ! car il capture la référence, pas la valeur
 
   ```cs
 var funcs = new List<Func<int>>();
-
-for (int i = 0; i < 3; i++)
-{
-    funcs.Add(() => i); // ca stocke l'adresse de i qui est mutable dans le scope et va etre préservée dehors + modifiée
-}
+  for (int i = 0; i < 3; i++)
+  {
+      funcs.Add(() =>
+      {
+          Console.WriteLine(i);
+          unsafe
+          {
+              fixed (int* pn = &Unsafe.AsRef(ref i))
+              {
+                  Console.WriteLine((IntPtr)pn);
+              }
+          }
+          return i;
+      }); // ca stocke l'adresse de i qui est mutable dans le scope et va etre préservée dehors + modifiée
+  }
 
 //i est maintenu en mémoire ici!
 funcs[0](); // 3 aled
 funcs[1](); // 3 au secour
 funcs[2](); // 3 oskour !
 // i est relaché ici
+
+/* les adresses et val sont maintenu car on a récup le ptr de i de la boucle for
+le copier regle ce souci 
+3
+2042714181456
+3
+2042714181456
+3
+2042714181456
+*/
   ```
 
 
