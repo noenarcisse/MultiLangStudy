@@ -1,4 +1,4 @@
-# titre1
+# Parallelisme et concurrence
 ## C#
 ### Parrallel
   Multithreading, pareil à 100% que go func(a) {print(a)}. Ca résout dans un ordre au pif en fonction de la vitesse des threads.<br>
