@@ -2,14 +2,14 @@
 ## C#
 ### Parrallel
   Multithreading, pareil à 100% que go func(a) {print(a)}. Ca résout dans un ordre au pif en fonction de la vitesse des threads.<br>
-  ```
+  ```cs
 Action<string> f = a => Console.WriteLine(a);
 List<string> arr = ["Salut", "moi", "c'est", "Caillou"];
 Parallel.ForEach(arr, f);
   ```
 ### PLINQ
   Parallel LINQ :><br>
-  ```
+  ```cs
 List<string> arr = ["Salut", "moi", "c'est", "Caillou", "moi", "moi aussi"];
 var query = arr.AsParallel().Where(x => x.Length >= 5);
 foreach(var res in query) {
@@ -18,22 +18,22 @@ foreach(var res in query) {
   ```
 ### ConcurrentBag / Dict etc
   text)<br>
-  ```
+  ```cs
   //code
   ```
 ### CT
   text)<br>
-  ```
+  ```cs
   //code
   ```
 ### Channel
   text)<br>
-  ```
+  ```cs
   //code
   ```
 ### lock{}
   text)<br>
-  ```
+  ```cs
   //code
   ```
 ## Go
