@@ -109,15 +109,19 @@ proc boolToFrench(b : bool) : string =
 echo (1 > 0).boolToFrench()
   ```
 ## C#
+En dehors de LINQ, c'est vraiment pas le meilleur langage pour ce genre de chose. On peut le faire mais ca veut pas dire qu'on doit. <br>
+Le lang est quand meme assez permissif pour abusé et hacker son fonctionnement dans le cas d'ecriture tres specifique a coup de chainage, compo a la Go ou de pseudo fonctionnelle pour des rares cas ou des écritures funky.
 ### this
-Permet de chainer. On passe this sur un des args pour cibler l'arg en premier contrairement a F#
+Permet de chainer. On passe this sur un des args pour cibler l'arg en premier contrairement a F#. <br>
+Donne un coté très Nim.
   ```cs
 static int Additionner(this int value, int add) => value+add;
 static void PrintToConsole(this int i) => Console.WriteLine(i);
 5.Additionner(2).PrintToConsole();
   ```
 ### Lambda / delegates
-Func<argT, returnT> = (args) => { body };
+Func<argT, returnT> = (args) => { body }; <br>
+Action sert de "Func<arg, void>. On doit passer par Func<arg, Task> en cas d'async obligatoirement. <br>
 Ca s'accroche pas au top level statement "Program.cs" comme une static qui serait declaré "a la volée". <br>
 Ici C# crée un objet dummy pour l'accrocher comme une méthode de cette classe et l'exec. Surtout utilisé pour le coté procédural ou fonctionnel.<br>
 C'est la meme mécanique qui est utilisée sur les events pour faire de la prog reactive : on a une liste de delegate qu'on parcourre en .ForEach() et on resout de la FP sous le capot.
