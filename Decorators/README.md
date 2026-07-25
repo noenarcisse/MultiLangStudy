@@ -2,7 +2,23 @@
 ## Nim
 ### pragmas
   ```nim
-#code
+template jsonAttr(name : string) {.pragma.}
+
+#forcé de typedescr, le compile arrive pas a resoudre T sans
+template customJson[T : object](node : JsonNode, t: typedesc[T]) : T =
+    var res : T
+    for keyName, field in res.fieldPairs :
+        const key = 
+            when field.hasCustomPragma(jsonAttr) : field.getCustomPragmaVal(jsonAttr)
+            else : keyName
+        
+        if node.hasKey(key) :
+            when field is string : field = node[key].getStr()
+            elif field is bool : field = node[key].getBool()
+            elif field is int : field = node[key].getInt()
+            elif field is float : field = node[key].getFloat()
+            elif field is object : field = customJson(node[key], typeof field)
+    res
   ```
 ## C#
 Le roi ? Implique de la reflection (et donc aie aie aie l'AOT)
