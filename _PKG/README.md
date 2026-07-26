@@ -39,33 +39,26 @@
 ## Navigateur / Automation
 | Language | Package | Descr | CMD | Lien |
 |---|---|---|---|---|
+| C# | FlaUI | A test. Automation des fenetres windows, les plus classiques | `dotnet add package FlaUI.Core` | https://github.com/FlaUI/FlaUI |
 | Go | chromedp | Bas niveau, plutot évident en soi car il garde la même logique partout. Il utilise un chromium qu'il trouve sur la machine si possible | `go get github.com/chromedp/chromedp` | https://github.com/chromedp/chromedp |
 | Go | rod | Playwright-like en Go. Orienté composition. Faut chipoter pour l'empecher de DL un chromium en plus | `go get github.com/go-rod/rod` | https://github.com/go-rod/rod |
 | Python | Beautiful Soup | Permet un parours de DOM. Ne get pas le HTML de base. Faut soi même gérer le parcrours du site et le cache des liens | `uv add pdfplumber` | |
 
-# .NET NugGets
-## Good stuff
-## MAUI (+ Blazor Hybrid)
+## Hooks
+Permet d'acceder à des hooks windows simplifiés sans devoir faire du low level et approcher l'OS avec des risques de lock ou ralentissement.
+| Language | Package | Descr | CMD | Lien |
+|---|---|---|---|---|
+| C# | SharpHook | Permet de surveiller et de simuler des inputs  | `dotnet add package SharpHook` | https://sharphook.tolik.io/articles/native.html |
+| C# | MouseKeyHook | BLa | `cmd` |  |
 
+
+# .NET NugGets
 ### OCR wrapper MAUI
 Gere les OCR de base et offre une interface commune mutli support
 https://www.nuget.org/packages/Plugin.Maui.OCR
   ```
 dotnet add package Plugin.Maui.OCR --version 1.1.1
   ```
-
-## Automation
-
-### FlaUI
-  Automation des fenetres windows, les plus classiques<br>
-  https://github.com/FlaUI/FlaUI
-  ```
-dotnet add package FlaUI.Core --version 5.0.0
-  ```
-### LibreOffice
-
-## Automation IA
-
 ### Microsoft.ML (ML.NET)
 Y'a trop a dire dessus. Ca permet de lancer des modeles de base de MS ou de charger des modeles extérieur en plus.
 
@@ -79,19 +72,6 @@ dotnet add package Microsoft.ML
 dotnet add package Microsoft.ML.OnnxRuntime
   ```
 
-
-
-## Hooks
-Permet d'acceder à des hooks windows simplifiés sans devoir faire du low level et approcher l'OS avec des risques de lock ou ralentissement.
-### SharpHook
-Elle permet de surveiller et de simuler des inputs très facilement.
-https://sharphook.tolik.io/articles/native.html
-  ```
-dotnet add package SharpHook
-  ```
-
-### MouseKeyHook
-Une librairie très populaire et simple pour .NET qui encapsule toute la complexité des API Windows.
 
 
 ## Reseau
