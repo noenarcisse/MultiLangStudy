@@ -1,0 +1,142 @@
+# .NET NugGets
+
+## Good stuff
+### OneOf
+Type discrimination en C#
+https://github.com/mcintyre321/OneOf
+  ```
+dotnet add package OneOf --version 3.0.271
+  ```
+### Reversed Interpolation
+https://github.com/AntonBergaker/InterpolatedParser
+https://github.com/AntonBergaker/OutParser
+
+
+## MAUI (+ Blazor Hybrid)
+
+### ImageSharp
+Manipulation d'image, permet de crop correctement et offreun systeme plus proche des canvass JS et pas juste les resize et downsize() de MAUI.Graphics.IImage. <br>
+https://www.nuget.org/packages/sixlabors.imagesharp/ <br>
+https://docs.sixlabors.com/
+  ```
+dotnet add package SixLabors.ImageSharp --version 3.1.12
+  ```
+
+
+### OCR wrapper MAUI
+Gere les OCR de base et offre une interface commune mutli support
+https://www.nuget.org/packages/Plugin.Maui.OCR
+  ```
+dotnet add package Plugin.Maui.OCR --version 1.1.1
+  ```
+
+## Automation
+
+### FlaUI
+  Automation des fenetres windows, les plus classiques<br>
+  https://github.com/FlaUI/FlaUI
+  ```
+dotnet add package FlaUI.Core --version 5.0.0
+  ```
+
+### OpenXML / ClosedXML
+Opensource, permet de manipuler les doc, xls et ppt. XML complet (excel en particulier)<br>
+Possibilité d'ouvrir en stream et de passer node par node en cherchant .Elements<Cell> par ex pour parcourir toutes les cells de toutes les feuilles d'un fichier gigantesque.
+  ```
+dotnet add package DocumentFormat.OpenXml --version 3.4.1
+  ```
+Gere les fichiers de manière simplifiées (excel devient un vrai tab[,] plutot que des rows qui font ref par addresse a des data
+Ne permet pas le stream sur des trop gros fchiers
+  ```
+dotnet add package ClosedXML
+  ```
+
+### LibreOffice
+
+### PdfPig
+Ouvre les pdf, recupere les différentes infos dedans. Recupères les mots et leur positions dans les pages (un peu comme un OCR sans passer par des phrases).<br>
+Permet aussi de cropper pour ne cibler que des zones spécifiques de la page. <br>
+Peut aussi générer un document PDF :D
+  ```
+dotnet add package UglyToad.PdfPig
+  ```
+## Automation IA
+
+### Microsoft.ML (ML.NET)
+Y'a trop a dire dessus. Ca permet de lancer des modeles de base de MS ou de charger des modeles extérieur en plus.
+
+Détection d'email spam, Catégoriser automatiquement des tickets de support, Détecter la langue d'un texte, Analyser le sentiment (positif / négatif / neutre) d'un avis client
+Prédire un prix immobilier selon des critères, Estimer une durée de livraison, Prévoir un chiffre de vente
+Détecter des transactions bancaires frauduleuses, Repérer des pics anormaux dans des logs, Surveiller des métriques serveur
+"Les utilisateurs qui ont aimé X ont aussi aimé Y", Suggérer des produits dans un catalogue, Vision par ordinateur (avec ONNX)
+Classer des images, Détecter des objets dans une image, En important des modèles entraînés ailleurs (Python, etc.)
+  ```
+dotnet add package Microsoft.ML
+dotnet add package Microsoft.ML.OnnxRuntime
+  ```
+
+
+
+## Hooks
+Permet d'acceder à des hooks windows simplifiés sans devoir faire du low level et approcher l'OS avec des risques de lock ou ralentissement.
+### SharpHook
+Elle permet de surveiller et de simuler des inputs très facilement.
+https://sharphook.tolik.io/articles/native.html
+  ```
+dotnet add package SharpHook
+  ```
+
+### MouseKeyHook
+Une librairie très populaire et simple pour .NET qui encapsule toute la complexité des API Windows.
+
+
+## Reseau
+
+### InTheHand
+Bluetooth classic et LE
+https://inthehand.com/2023/07/07/bluetooth-classic-and-low-energy-different-approaches/
+https://github.com/inthehand/32feet
+https://inthehand.github.io/html/N_InTheHand_Net_Bluetooth.htm
+  ```
+dotnet add package InTheHand.Net.Bluetooth --version 4.2.3
+dotnet add package InTheHand.BluetoothLE --version 4.0.44
+  ```
+
+### Polly ?
+Rinse and repeat, retries reseaux
+  ```
+dotnet add package Polly
+  ```
+
+## unsorted
+
+### HtmlAgilityPack
+Parsing de html
+  ```
+dotnet add package HtmlAgilityPack --version 1.12.4
+  ```
+
+### OpenCVSharp4
+"Usage : Suivre un objet par couleur (CamShift), par flux optique (Lucas-Kanade) ou via des algorithmes de tracking dédiés (MOSSE, CSRT, KCF).
+Idéal pour : Projets desktop (WPF, WinForms, Console) nécessitant une analyse image par image."
+  ```
+OpenCvSharp4.Windows
+OpenCvSharp4.Extensions
+  ```
+
+### MediaPipe.NET 
+Usage : Tracking de points d'intérêt (landmarks) sur le corps humain en temps réel.
+
+### Wappers communautaires comme Hands.Net
+
+## Diagnostics
+### LibreHardwareMonitor
+Surveille l'os et le materiel
+  ```
+dotnet add package LibreHardwareMonitor
+  ```
+### System.Diagnostics.PerformanceCounter
+Lib windows externe, surveille le materiel, complexe, comme d'hab avec MS
+  ```
+dotnet add package System.Diagnostics.PerformanceCounter
+  ```
