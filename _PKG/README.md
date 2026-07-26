@@ -3,33 +3,37 @@
 | Language | Package | Descr | CMD | Lien |
 |---|---|---|---|---|
 | C# | OneOf | Type discrimination en C# | `dotnet add package OneOf --version 3.0.271` | https://github.com/mcintyre321/OneOf |
-| C# | DotNext | Result<T, Exception> | `dotnet add package DotNext` | https://dotnet.github.io/dotNext/features/core/result.html 
-| Nim | results | Result[T,E] | `nimble install results` | https://github.com/arnetheduck/nim-results
+| C# | DotNext | Result<T, Exception> | `dotnet add package DotNext` | https://dotnet.github.io/dotNext/features/core/result.html |
+| Nim | results | Result[T,E] | `nimble install results` | https://github.com/arnetheduck/nim-results |
+
+## Strings
+| Language | Package | Descr | CMD | Lien |
+|---|---|---|---|---|
+| C# | InterpolatedParser | Reversed Interpolation | `dotnet add ` | https://github.com/AntonBergaker/InterpolatedParser |
+| C# | OutParser | Reversed Interpolation | `dotnet add ` | https://github.com/AntonBergaker/OutParser |
+
+
+## Images
+| Language | Package | Descr | CMD | Lien |
+|---|---|---|---|---|
+| C# | ImageSharp | Manipulation d'image, permet de crop correctement et offre un systeme plus proche des canvas JS et pas juste les resize et downsize() de MAUI.Graphics.IImage. https://docs.sixlabors.com/ | `dotnet add package SixLabors.ImageSharp` | https://www.nuget.org/packages/sixlabors.imagesharp/ |
+
+## PDF
+| Language | Package | Descr | CMD | Lien |
+|---|---|---|---|---|
+| C# | ImageSharp | Manipulation d'image, permet de crop correctement et offre un systeme plus proche des canvas JS et pas juste les resize et downsize() de MAUI.Graphics.IImage. https://docs.sixlabors.com/ | `dotnet add package SixLabors.ImageSharp` | https://www.nuget.org/packages/sixlabors.imagesharp/ |
+
+## Word / Excel
+| Language | Package | Descr | CMD | Lien |
+|---|---|---|---|---|
+| C# | OpenXML | Opensource, permet de manipuler les doc, xls et ppt. XML complet (excel en particulier)<br>
+Possibilité d'ouvrir en stream et de passer node par node en cherchant .Elements<Cell> par ex pour parcourir toutes les cells de toutes les feuilles d'un fichier gigantesque. | `dotnet add package DocumentFormat.OpenXml --version 3.4.1` |  |
+| C# | ClosedXML | Gere les fichiers de manière simplifiées (excel devient un vrai tab[,] plutot que des rows qui font ref par addresse a des data
+Ne permet pas le stream sur des trop gros fchiers | `dotnet add package ClosedXML` | |
 
 # .NET NugGets
-
 ## Good stuff
-### OneOf
-Type discrimination en C#
-https://github.com/mcintyre321/OneOf
-  ```
-dotnet add package OneOf --version 3.0.271
-  ```
-### Reversed Interpolation
-https://github.com/AntonBergaker/InterpolatedParser
-https://github.com/AntonBergaker/OutParser
-
-
 ## MAUI (+ Blazor Hybrid)
-
-### ImageSharp
-Manipulation d'image, permet de crop correctement et offreun systeme plus proche des canvass JS et pas juste les resize et downsize() de MAUI.Graphics.IImage. <br>
-https://www.nuget.org/packages/sixlabors.imagesharp/ <br>
-https://docs.sixlabors.com/
-  ```
-dotnet add package SixLabors.ImageSharp --version 3.1.12
-  ```
-
 
 ### OCR wrapper MAUI
 Gere les OCR de base et offre une interface commune mutli support
