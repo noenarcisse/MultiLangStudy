@@ -2,7 +2,7 @@
 ## Result / DU
 | Language | Package | Descr | CMD | Lien |
 |---|---|---|---|---|
-| C# | OneOf | Type discrimination en C# | `dotnet add package OneOf --version 3.0.271` | https://github.com/mcintyre321/OneOf |
+| C# | OneOf | Type discrimination | `dotnet add package OneOf` | https://github.com/mcintyre321/OneOf |
 | C# | DotNext | Result<T, Exception> | `dotnet add package DotNext` | https://dotnet.github.io/dotNext/features/core/result.html |
 | Nim | results | Result[T,E] | `nimble install results` | https://github.com/arnetheduck/nim-results |
 
@@ -15,12 +15,12 @@
 ## Images
 | Language | Package | Descr | CMD | Lien |
 |---|---|---|---|---|
-| C# | ImageSharp | Manipulation d'image, permet de crop correctement et offre un systeme plus proche des canvas JS et pas juste les resize et downsize() de MAUI.Graphics.IImage. https://docs.sixlabors.com/ | `dotnet add package SixLabors.ImageSharp` | https://www.nuget.org/packages/sixlabors.imagesharp/ |
+| C# | ImageSharp | Manipulation d'images. https://docs.sixlabors.com/ | `dotnet add package SixLabors.ImageSharp` | https://www.nuget.org/packages/sixlabors.imagesharp/ |
 
 ## PDF
 | Language | Package | Descr | CMD | Lien |
 |---|---|---|---|---|
-| C# | PDF Pig | Ouvre les pdf. Recupères contenu.Permet aussi de cropper. | `dotnet add package UglyToad.PdfPig` | |
+| C# | PDF Pig | Ouvre les pdf. Recupère contenu.Permet aussi de cropper. | `dotnet add package UglyToad.PdfPig` | |
 | Go | ledongthuc/pdf | Limité, recupère les symbole et leur position | `go get -u github.com/ledongthuc/pdf` | |
 | Python | pdfplumber | Ouvre les pdf. Recupères contenu.Permet aussi de cropper. | `uv add pdfplumber` | |
 
