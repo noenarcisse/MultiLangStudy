@@ -1,3 +1,11 @@
+# Packages
+## Result / DU
+| Language | Package | Descr | CMD | Lien |
+|---|---|---|---|---|
+| C# | OneOf | Type discrimination en C# | `dotnet add package OneOf --version 3.0.271` | https://github.com/mcintyre321/OneOf |
+| C# | DotNext | Result<T, Exception> | `dotnet add package DotNext` | https://dotnet.github.io/dotNext/features/core/result.html 
+| Nim | results | Result[T,E] | `nimble install results` | https://github.com/arnetheduck/nim-results
+
 # .NET NugGets
 
 ## Good stuff
