@@ -21,15 +21,14 @@
 ## PDF
 | Language | Package | Descr | CMD | Lien |
 |---|---|---|---|---|
-| C# | ImageSharp | Manipulation d'image, permet de crop correctement et offre un systeme plus proche des canvas JS et pas juste les resize et downsize() de MAUI.Graphics.IImage. https://docs.sixlabors.com/ | `dotnet add package SixLabors.ImageSharp` | https://www.nuget.org/packages/sixlabors.imagesharp/ |
+| C# | PDF Pig | Ouvre les pdf. Recupères contenu.Permet aussi de cropper. | `dotnet add package UglyToad.PdfPig` | |
+| Python | pdfplumber | Ouvre les pdf. Recupères contenu.Permet aussi de cropper. | `uv add pdfplumber` | |
 
 ## Word / Excel
 | Language | Package | Descr | CMD | Lien |
 |---|---|---|---|---|
-| C# | OpenXML | Opensource, permet de manipuler les doc, xls et ppt. XML complet (excel en particulier)<br>
-Possibilité d'ouvrir en stream et de passer node par node en cherchant .Elements<Cell> par ex pour parcourir toutes les cells de toutes les feuilles d'un fichier gigantesque. | `dotnet add package DocumentFormat.OpenXml --version 3.4.1` |  |
-| C# | ClosedXML | Gere les fichiers de manière simplifiées (excel devient un vrai tab[,] plutot que des rows qui font ref par addresse a des data
-Ne permet pas le stream sur des trop gros fchiers | `dotnet add package ClosedXML` | |
+| C# | OpenXML | Opensource, permet de manipuler les doc, xls et ppt. XML complet (excel en particulier). Possibilité d'ouvrir en stream et de passer node par node en cherchant .Elements<Cell> par ex pour parcourir toutes les cells de toutes les feuilles d'un fichier gigantesque. | `dotnet add package DocumentFormat.OpenXml --version 3.4.1` |  |
+| C# | ClosedXML | Gere les fichiers de manière simplifiées (excel devient un vrai tab[,] plutot que des rows qui font ref par addresse a des data. Ne permet pas le stream sur des trop gros fchiers | `dotnet add package ClosedXML` | |
 
 # .NET NugGets
 ## Good stuff
@@ -50,28 +49,8 @@ dotnet add package Plugin.Maui.OCR --version 1.1.1
   ```
 dotnet add package FlaUI.Core --version 5.0.0
   ```
-
-### OpenXML / ClosedXML
-Opensource, permet de manipuler les doc, xls et ppt. XML complet (excel en particulier)<br>
-Possibilité d'ouvrir en stream et de passer node par node en cherchant .Elements<Cell> par ex pour parcourir toutes les cells de toutes les feuilles d'un fichier gigantesque.
-  ```
-dotnet add package DocumentFormat.OpenXml --version 3.4.1
-  ```
-Gere les fichiers de manière simplifiées (excel devient un vrai tab[,] plutot que des rows qui font ref par addresse a des data
-Ne permet pas le stream sur des trop gros fchiers
-  ```
-dotnet add package ClosedXML
-  ```
-
 ### LibreOffice
 
-### PdfPig
-Ouvre les pdf, recupere les différentes infos dedans. Recupères les mots et leur positions dans les pages (un peu comme un OCR sans passer par des phrases).<br>
-Permet aussi de cropper pour ne cibler que des zones spécifiques de la page. <br>
-Peut aussi générer un document PDF :D
-  ```
-dotnet add package UglyToad.PdfPig
-  ```
 ## Automation IA
 
 ### Microsoft.ML (ML.NET)
