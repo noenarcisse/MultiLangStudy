@@ -12,7 +12,6 @@
 | C# | InterpolatedParser | Reversed Interpolation | `dotnet add ` | https://github.com/AntonBergaker/InterpolatedParser |
 | C# | OutParser | Reversed Interpolation | `dotnet add ` | https://github.com/AntonBergaker/OutParser |
 
-
 ## Images
 | Language | Package | Descr | CMD | Lien |
 |---|---|---|---|---|
@@ -22,6 +21,7 @@
 | Language | Package | Descr | CMD | Lien |
 |---|---|---|---|---|
 | C# | PDF Pig | Ouvre les pdf. Recupères contenu.Permet aussi de cropper. | `dotnet add package UglyToad.PdfPig` | |
+| Go | ledongthuc/pdf | Limité, recupère les symbole et leur position | `go get -u github.com/ledongthuc/pdf` | |
 | Python | pdfplumber | Ouvre les pdf. Recupères contenu.Permet aussi de cropper. | `uv add pdfplumber` | |
 
 ## Word / Excel
@@ -29,6 +29,19 @@
 |---|---|---|---|---|
 | C# | OpenXML | Opensource, permet de manipuler les doc, xls et ppt. XML complet (excel en particulier). Possibilité d'ouvrir en stream et de passer node par node en cherchant .Elements<Cell> par ex pour parcourir toutes les cells de toutes les feuilles d'un fichier gigantesque. | `dotnet add package DocumentFormat.OpenXml --version 3.4.1` |  |
 | C# | ClosedXML | Gere les fichiers de manière simplifiées (excel devient un vrai tab[,] plutot que des rows qui font ref par addresse a des data. Ne permet pas le stream sur des trop gros fchiers | `dotnet add package ClosedXML` | |
+
+## Scraping
+| Language | Package | Descr | CMD | Lien |
+|---|---|---|---|---|
+| Go | Colly | Scraping + permet d'ouvrir les liens pour explorer, de garder ceux deja vu pour pas relancer x fois la meme page etc. | `go get github.com/gocolly/colly/v2` | https://github.com/gocolly/colly |
+| Python | Beautiful Soup | Permet un parours de DOM. Ne get pas le HTML de base | `uv add pdfplumber` | |
+
+## Navigateur / Automation
+| Language | Package | Descr | CMD | Lien |
+|---|---|---|---|---|
+| Go | chromedp | Bas niveau, plutot évident en soi car il garde la même logique partout. Il utilise un chromium qu'il trouve sur la machine si possible | `go get github.com/chromedp/chromedp` | https://github.com/chromedp/chromedp |
+| Go | rod | Playwright-like en Go. Orienté composition. Faut chipoter pour l'empecher de DL un chromium en plus | `go get github.com/go-rod/rod` | https://github.com/go-rod/rod |
+| Python | Beautiful Soup | Permet un parours de DOM. Ne get pas le HTML de base. Faut soi même gérer le parcrours du site et le cache des liens | `uv add pdfplumber` | |
 
 # .NET NugGets
 ## Good stuff
