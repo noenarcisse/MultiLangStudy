@@ -9,7 +9,8 @@ L’equivalent du variable JS de base, accepte tous les type sans jamais bloquer
 ### Tuple
 Principe de base d'un tuple, typage hétérogène. Peut etre déconstruit à la volée.
   ```cs
-  var unCharactere = 'A'; 
+  int million = 1_000_000;
+  var unCharactere = 'A'; // c'est un int16 sous le capot et ca peut etre additionné etc.
   var Text = "Du texte"; // string implicite
   string Text2; // string explicite
 
@@ -99,7 +100,6 @@ let maFonction =
   ```
 
 ## Nim
-
 ### var 
 Variable mut
   ```nim
@@ -107,7 +107,6 @@ var text = "Ca roule par ici ?"
 var variable = if (len text) > 10 : "Yo" else : "Ciao"
 var c : char = 'a'
   ```
-
 ### let
 Variable imut, on peut l'attribuer en runtime mais elle ne bouge plus après.
   ```nim
@@ -142,6 +141,16 @@ echo jim.name
 # deconstr
 let (name, age) = jim
 echo name," ", age
+  ```
+### nomenclature étrange
+nim accepte n'importe quel nombre de _ ou maj dans le nom de la var (sauf la première lettre) et sans trailing underscore. <br>
+On peut alterner monArray et monarray ou mon_array sans souci avec aucune consistance.
+  ```nim
+let uneVariable = "Hop"
+echo une_variable # Hop
+
+var same = "Salut"
+echo s_a_m_E # Salut
   ```
 
 ## Python
