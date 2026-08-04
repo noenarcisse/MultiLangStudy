@@ -243,6 +243,53 @@ C'est une linked list en vrai, imut, tres naturel pour le langage.
 ```fs
 let list = [1;2;3]
   ```
+## C
+### array
+Limité en taille, peu etre attribué dynamiquement au départ. <br>
+C'est un ptr, arr++ fait avancer vers l'element suivant (ou sortir de la mem selon ou on etait) <br>
+Y'a pas de string, on a des char[] et on doit passer des char* comme un buffer. Y'a des utility en string.h pour aider un peu quand meme.
+```c
+    int tab[] = {1,2,3};
+    printf("%d\n", tab[0]); // on prend ptr+index qu'on deref -> *(tab + index)
+    printf("%d\n", 0[tab]); // une addition etre permuttable, le code suivant compile donc
+
+    char tab2[] = {'a','b','c', '\0'};
+    printf("%c\n", 2[tab2]); // c, acces en char -> un char
+  	printf("%d\n", tab2[0]); // 97, acces en int -> le code du char ascii
+
+    char* p_tab2 = tab2; // on peut recup le ptr
+    while(*p_tab2 != '\0')
+    {
+        printf("%c", *p_tab2);
+        p_tab2++; // et l'avancer pour parcourir le tab
+    }
+    printf("\n");
+
+    printf("%c\n", "ABC"[2]); //direct C sur un string a la volée, acces comme un array a tout moment
+    printf("%s\n", "Il etait une fois" + 9); // une fois, tronque l'avant en poussant le cusreur et lit le %s -> \0
+
+  ```
+  ```c
+	int binarytoint2(char *b)
+	{
+	    int sum = 0;
+	    char *c = b;
+	    while (*c != '\0')
+	    {
+	        sum <<= 1;
+	        sum |= (*c == '1') ? 1 : 0;
+	        c++;
+	    }
+	    return sum;
+	}
+  ```
+
+## Gleam
+### List(T)
+Linkedlist, sur le model classque FP [head, ..tail]
+```gleam
+let maliste = [1,2,3,4]
+  ```
 
 ## Nim
 ### array
