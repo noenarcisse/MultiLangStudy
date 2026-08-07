@@ -97,7 +97,7 @@ $$var, @$array
 
 ## C
 Pointer
-  ```
+  ```c
 int variable = 42;
 int *pointer = &variable;
 
@@ -109,7 +109,7 @@ Ref
 Python prend tout comme un objet. TOUT passe par une ref ! Ca inclut les int etc. <br>
 Dans le cas des petits int (int8?) python les stocke en memmoire et les utilise comme références constante. <br>
 Dans le cas de nombres plus grands, python crée un emplacement qu'il va tenter de référencer autant que possible. Ca ne fonctionne que pour 1 meme fichier/module.
-  ```
+  ```py
 from numbers_mod import func3, func4
 
 i1 =  1_000_000_000
