@@ -103,3 +103,25 @@ int *pointer = &variable;
 
 printf("%p", pointer);
   ```
+
+## Python
+Ref
+Python prend tout comme un objet. TOUT passe par une ref ! Ca inclut les int etc. <br>
+Dans le cas des petits int (int8?) python les stocke en memmoire et les utilise comme références constante. <br>
+Dans le cas de nombres plus grands, python crée un emplacement qu'il va tenter de référencer autant que possible. Ca ne fonctionne que pour 1 meme fichier/module.
+  ```
+from numbers_mod import func3, func4
+
+i1 =  1_000_000_000
+def func2() -> int : 
+    i =  1_000_000_000
+    return i
+i2 =  1_000_000_000
+print(i1 is i2) #true
+
+i3 = func3()
+i4 = func4()
+print(i1 is i3) #false
+print(i3 is i4) #true, meme fichier, meme ref donc
+  ```
+
