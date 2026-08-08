@@ -100,6 +100,56 @@ let test a  =
 
 [1;2;6;5;3;7;12;865;1] |> List.tryFind (fun e -> e = 7) |> test
   ```
+
+### let!
+Deballe un monad Le type depend du bloc dans lequel le let! est fait. Ca peut etre Result, Async, Option, Task etc. <br>
+Dans le cadre d'un async, deballer veut evidemment faire un await en passant. <br>
+  ```fs
+code
+  ```
+
+### Result<T,E>
+Monad de Result. On peut le pattern match, le deballer ou le mapper en cours de process. <br>
+On peut aussi utiliser le default value, similaire au unwrap de gleam pour faire du recover.
+  ```fs
+let validateChar a =
+    match a with
+    | c when a >='A' && a <= 'Z' -> Ok c
+    | _ -> Error "Oops"
+
+let nextChar (a: char) = a |> int |> (+) 1 |> char
+
+//default value pattern
+'|'
+|> validateChar
+|> Result.defaultValue 'A'
+|> nextChar
+|> printfn "%c"
+
+'C' 
+|> validateChar
+|> Result.map nextChar
+|> fun e ->
+    match e with
+    | Ok c -> printfn "%c" c
+    | Error e -> printfn "%s" e
+  ```
+
+## Gleam
+### param injection
+Pas de currying, par default c'est le premier arg qui est considéré<br> 
+On peut injecter le param avec _ <br>
+On peut aussi utiliser les args nommés comme python pour forcer l'arg injecté
+  ```gleam
+  "!"
+  |> string.append(to: "Hey") //sans l'arg nommé, to = ! et suffitx = Hey 
+  |> io.println // Hey! 
+
+  "?"
+  |> string.append("Hey", _) // sans le _ positionné en 2e, ca donnerait ?Hey
+  |> io.println // Hey?
+  ```
+
 ## Nim
 ### Uniform Function Call Syntax
 Permet de chainer. Le premier arg est toujours le point d'entrée dans cette situation.
