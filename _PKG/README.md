@@ -41,8 +41,8 @@
 |---|---|---|---|---|
 | C# | FlaUI | A test. Automation des app windows, WPF, Winforms, etc. | `dotnet add package FlaUI.Core` | https://github.com/FlaUI/FlaUI |
 | C# | FlaUI Inspect | Inspection des fenetre windows | `code` | https://github.com/FlaUI/FlaUI |
-| C# | AccessibilityInsights | Inspection des fenetre windows | `code` | lien |
-| Typescript, Python, C# | Playwright | A test. Automation navigateur / chromium | `code` | lien |
+| | AccessibilityInsights | Inspection des fenetre windows | `code` | lien |
+| Typescript<br> Python<br> C# | Playwright | A test. Automation navigateur / chromium | `code` | lien |
 | Python | pywinauto | A test. App windows | `code` | lien |
 | Go | chromedp | Bas niveau, plutot évident en soi car il garde la même logique partout. Il utilise un chromium qu'il trouve sur la machine si possible | `go get github.com/chromedp/chromedp` | https://github.com/chromedp/chromedp |
 | Go | rod | Playwright-like en Go. Orienté composition. Faut chipoter pour l'empecher de DL un chromium en plus | `go get github.com/go-rod/rod` | https://github.com/go-rod/rod |
