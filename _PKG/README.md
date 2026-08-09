@@ -40,8 +40,8 @@
 | Language | Package | Descr | CMD | Lien |
 |---|---|---|---|---|
 | C# | FlaUI | A test. Automation des app windows, WPF, Winforms, etc. | `dotnet add package FlaUI.Core` | https://github.com/FlaUI/FlaUI |
-| C# | FlaUI Inspect | Inspection des fenetre windows | `code` | https://github.com/FlaUI/FlaUI |
-| | AccessibilityInsights | Inspection des fenetre windows | `code` | lien |
+| C# | FlaUI Inspect | Inspection des fenetres windows | `code` | https://github.com/FlaUI/FlaUI |
+| | AccessibilityInsights | Inspection des fenetres windows | `code` | lien |
 | Typescript<br> Python<br> C# | Playwright | A test. Automation navigateur / chromium | `code` | lien |
 | Python | pywinauto | A test. App windows | `code` | lien |
 | Go | chromedp | Bas niveau, plutot évident en soi car il garde la même logique partout. Il utilise un chromium qu'il trouve sur la machine si possible | `go get github.com/chromedp/chromedp` | https://github.com/chromedp/chromedp |
