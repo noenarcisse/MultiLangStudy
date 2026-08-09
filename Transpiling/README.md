@@ -12,11 +12,11 @@ Transpile dans beaucoup de lang. Nécéssite de l'interop et une bonne connaissa
 ## Nim
 | Language | Descr | CMD |
 |---|---|---|
-| Nim c | Transpile en C puis compile en bin | `Nim c file.nim` |
-| Nim js | Transpile en js indépendant | `Nim js file.nim` |
+| Nim c | Transpile en C puis compile en bin | `nim c file.nim` |
+| Nim js | Transpile en js indépendant | `nim js file.nim` |
 
 ## Gleam
 | Language | Descr | CMD |
 |---|---|---|
-| Erlang | Transpile erlang par defaut | `cmd` |
-| JS | Transpile en js indépendant, reste lisible | `cmd` |
+| Erlang | Transpile erlang par defaut | `gleam build -t erlang` |
+| JS | Transpile en js indépendant, reste lisible | `gleam build -t javascript` |
