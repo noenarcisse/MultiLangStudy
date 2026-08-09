@@ -55,14 +55,23 @@ Permet d'acceder à des hooks windows simplifiés sans devoir faire du low level
 | C# | SharpHook | Permet de surveiller et de simuler des inputs  | `dotnet add package SharpHook` | https://sharphook.tolik.io/articles/native.html |
 | C# | MouseKeyHook | BLa | `cmd` |  |
 
+## Bluetooth
+Permet d'acceder à des hooks windows simplifiés sans devoir faire du low level et approcher l'OS avec des risques de lock ou ralentissement.
+| Language | Package | Descr | CMD | Lien |
+|---|---|---|---|---|
+| C# | InTheHand | Bluetooth  | `dotnet add package InTheHand.Net.Bluetooth --version 4.2.3` | https://github.com/inthehand/32feet |
+| C# | InTheHand | BLE  | `dotnet add package InTheHand.BluetoothLE --version 4.0.44` | https://inthehand.com/2023/07/07/bluetooth-classic-and-low-energy-different-approaches/ |
+| Go | tinyGo/bluetooth |  | `go get github.com/tinygo-org/bluetooth ` | https://pkg.go.dev/tinygo.org/x/bluetooth |
+
+## OCR
+Permet d'acceder à des hooks windows simplifiés sans devoir faire du low level et approcher l'OS avec des risques de lock ou ralentissement.
+| Language | Package | Descr | CMD | Lien |
+|---|---|---|---|---|
+| C# | Windows OCR | OCR simple interne a Windows  | `using Windows.Media.Ocr.OcrEngine;` | https://learn.microsoft.com/fr-fr/uwp/api/windows.media.ocr.ocrengine?view=winrt-26100 |
+| C# | OCR wrapper MAUI | Gere les OCR de base et offre une interface commune multi support  | `dotnet add package Plugin.Maui.OCR` | https://www.nuget.org/packages/Plugin.Maui.OCR |
 
 # .NET NugGets
-### OCR wrapper MAUI
-Gere les OCR de base et offre une interface commune mutli support
-https://www.nuget.org/packages/Plugin.Maui.OCR
-  ```
-dotnet add package Plugin.Maui.OCR --version 1.1.1
-  ```
+
 ### Microsoft.ML (ML.NET)
 Y'a trop a dire dessus. Ca permet de lancer des modeles de base de MS ou de charger des modeles extérieur en plus.
 
@@ -79,16 +88,6 @@ dotnet add package Microsoft.ML.OnnxRuntime
 
 
 ## Reseau
-
-### InTheHand
-Bluetooth classic et LE
-https://inthehand.com/2023/07/07/bluetooth-classic-and-low-energy-different-approaches/
-https://github.com/inthehand/32feet
-https://inthehand.github.io/html/N_InTheHand_Net_Bluetooth.htm
-  ```
-dotnet add package InTheHand.Net.Bluetooth --version 4.2.3
-dotnet add package InTheHand.BluetoothLE --version 4.0.44
-  ```
 
 ### Polly ?
 Rinse and repeat, retries reseaux
