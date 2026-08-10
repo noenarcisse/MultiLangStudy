@@ -284,6 +284,12 @@ Y'a pas de string, on a des char[] et on doit passer des char* comme un buffer. 
 	}
   ```
 
+### array decay
+Les arrays passent en params en tant que pointeurs. En c on perd donc la taille du tab a parcourrir. On doit connaitre sa taille avant sauf pour un string (le char '\0' est forcément a la fin)
+  ```c
+code
+  ```
+
 ## Gleam
 ### List(T)
 Linkedlist, sur le model classque FP [head, ..tail]
