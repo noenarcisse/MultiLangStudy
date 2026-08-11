@@ -36,12 +36,17 @@
 | Go | Colly | Excellent | Scraping + permet d'ouvrir les liens pour explorer, de garder ceux deja vu pour pas relancer x fois la meme page etc. | `go get github.com/gocolly/colly/v2` | https://github.com/gocolly/colly |
 | Python | Beautiful Soup | Good | Permet un parours de DOM. Ne get pas le HTML de base | `uv add pdfplumber` | |
 
+## Bot
+| Language | Package | Etat | Descr | CMD | Lien |
+|---|---|---|---|---|---|
+| Go | DiscordGo | Good | Bot discord, c'est un wrapper geant sur de l'api rest ? Il fait aussi lui meme des retry et verifie le rate limiting | `go get github.com/bwmarrin/discordgo ` | https://github.com/bwmarrin/discordgo |
+
 ## Navigateur / Automation
 | Language | Package | Etat | Descr | CMD | Lien |
 |---|---|---|---|---|---|
-| C# | FlaUI | Good? | A test. Automation des app windows, WPF, Winforms, etc. | `dotnet add package FlaUI.Core` | https://github.com/FlaUI/FlaUI |
-| C# | FlaUI Inspect | Good | Inspection des fenetres windows | `code` | https://github.com/FlaUI/FlaUI |
-| | AccessibilityInsights | Good | Inspection des fenetres windows | `code` | lien |
+| C# | FlaUI | Good | Automation des app windows, WPF, Winforms, etc. Les fallback sont un peu traitre, parfois il passe au clic, parfois il passe en detourner par les inputs | `dotnet add package FlaUI.Core` | https://github.com/FlaUI/FlaUI |
+| C# | FlaUI Inspect | Good | Inspection des fenetres windows. Montre les automation id and co | `code` | https://github.com/FlaUI/FlaUI |
+| | AccessibilityInsights | Good? | Inspection des fenetres windows | `code` | lien |
 | Typescript<br> Python<br> C# | ? | Playwright | A test. Automation navigateur / chromium | `code` | lien |
 | Python | pywinauto |  | A test. App windows | `code` | lien |
 | Go | chromedp | Okay | Bas niveau, plutot évident en soi car il garde la même logique partout. Il utilise un chromium qu'il trouve sur la machine si possible | `go get github.com/chromedp/chromedp` | https://github.com/chromedp/chromedp |
