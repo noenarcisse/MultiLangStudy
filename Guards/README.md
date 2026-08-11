@@ -26,6 +26,51 @@ On doit traiter l'erreur volontairement sans _ malheureusement contrairement à 
             );
     }
   ```
+
+### Result<T>, Result<T,E>
+Nuget externe Dotnext : https://dotnet.github.io/dotNext/features/core/result.html <br>
+Simule vraiment bien un Result a la fonctionnelle, avec mutation sans deballer, default value etc.
+```cs
+    public static void Test()
+    {
+        var res = Test2();
+
+        if (res.IsSuccessful)
+        {
+            Console.WriteLine(res.Value);
+        }
+        else
+        {
+            var err = res.Error switch
+            {
+                TestError.NullInput => "Empty input",
+                TestError.IntParseFailed => "Error while parsing the number",
+                TestError.WrongNumber => "Wrong number must be between 1 and 9",
+                _ => "Unknwon error"
+            };
+            Console.WriteLine(err);
+        }
+    }
+    static Result<int, TestError> Test2()
+    {
+        string? s = Console.ReadLine();
+
+        if (s is null) return new Result<int, TestError>(TestError.NullInput);
+        if (!int.TryParse(s, out int n)) return new Result<int, TestError>(TestError.IntParseFailed);
+
+        return n switch
+        {
+            > 0 and < 10 => new Result<int, TestError>(n),
+            _ => new Result<int, TestError>(TestError.WrongNumber)
+        };
+    }
+public enum TestError
+{
+    NullInput,
+    IntParseFailed,
+    WrongNumber
+}
+  ```
 ### switch expression guard
 Principe hérité du FP, permet de guard facilement sur base de la valeur ou meme du type d'obj en combinant avec du pattern matching
 ```cs
