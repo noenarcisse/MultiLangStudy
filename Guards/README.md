@@ -27,7 +27,7 @@ On doit traiter l'erreur volontairement sans _ malheureusement contrairement à 
     }
   ```
 
-### Result<T>, Result<T,E>
+### Result<T,E>
 Nuget externe Dotnext : https://dotnet.github.io/dotNext/features/core/result.html <br>
 Simule vraiment bien un Result a la fonctionnelle, avec mutation sans deballer, default value etc.
 ```cs
