@@ -39,7 +39,7 @@
 ## Bot
 | Language | Package | Etat | Descr | CMD | Lien |
 |---|---|---|---|---|---|
-| Go | DiscordGo | Good | Bot discord, c'est un wrapper geant sur de l'api rest ? Il fait aussi lui meme des retry et verifie le rate limiting | `go get github.com/bwmarrin/discordgo ` | https://github.com/bwmarrin/discordgo |
+| Go | DiscordGo | Good | Bot discord, c'est un wrapper geant sur de l'api, les events discord et leur sockets. Il fait aussi lui meme des retry et verifie le rate limiting | `go get github.com/bwmarrin/discordgo ` | https://github.com/bwmarrin/discordgo |
 
 ## Navigateur / Automation
 | Language | Package | Etat | Descr | CMD | Lien |
