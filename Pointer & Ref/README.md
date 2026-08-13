@@ -83,19 +83,33 @@ func main() {
 En go les interfaces sont en soit des fat pointeurs deguisés. Elles tiennent la valeur de l'element et le type concret. Afficher %v ou %T donne donc deux résultats différents.
 Une interface remplit la demainde d'un *Truc sans préciser la ref avec & car elles sont le ptr.
 
+## Nim
+### Pointer
+Stack, pas de GC si passage en heap
+  ```nim
+let uneVariable = "Hop"
 
-## Perl
-Pas de pointer :> <br>
-References:<br>
+# unsafe
+let p1 = addr(uneVariable)
+let p2 = addr(p1)
+echo une_variable
+echo "ptr unevariable x2 = ", repr(p2)
+echo "deballé -> ", p2[][]
   ```
-\$var, \@array, \#hash
-  ```
-Dereferences : <br>
-  ```
-$$var, @$array
+### Ref
+Heap, GC
+  ```nim
+# safe
+
+let r1 = new(int) # on stocke d'abord un empl mem
+r1[] = 42 # on lui donne une val
+let r2 = r1 #apres on copie le ptr apres au lieu de var := 1 puis ref := &var
+echo r2[] #et la on peut recup la val de r1
+
   ```
 
 ## C
+Les strings sont des ptr, les arrays aussi
 Pointer
   ```c
 int variable = 42;
