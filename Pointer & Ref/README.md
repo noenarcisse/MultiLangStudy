@@ -36,6 +36,9 @@ unsafe
 
 	Console.WriteLine($"pointer :{(IntPtr)arr}");
 	Console.WriteLine($"value 1 = {arr[0]}");
+  	Console.WriteLine($"value 1 = {0[arr]}"); // impossible :<
+	Console.WriteLine($"value 2 = {*(1 + arr)}"); // ca oui par contre ?!
+
 	Console.WriteLine($"value 2 = {*(arr + 1)}");
 	Console.WriteLine($"value 2 = {*(arr + 2)}");
 	Console.WriteLine($"value fausse = {*(arr - 1)}"); // <- buffer overflow, pas de segfault si on est encore dans notre zone
@@ -109,8 +112,9 @@ echo r2[] #et la on peut recup la val de r1
   ```
 
 ## C
-Les strings sont des ptr, les arrays aussi
-Pointer
+Les strings sont des ptr, les arrays aussi <br>
+Ils subissent du decay quand on les passe par des functions :<
+### Pointer
   ```c
 int variable = 42;
 int *pointer = &variable;
@@ -119,7 +123,7 @@ printf("%p", pointer);
   ```
 
 ## Python
-Ref
+### Ref
 Python prend tout comme un objet. TOUT passe par une ref ! Ca inclut les int etc. <br>
 Dans le cas des petits int (int8?) python les stocke en memmoire et les utilise comme références constante. <br>
 Dans le cas de nombres plus grands, python crée un emplacement qu'il va tenter de référencer autant que possible. Ca ne fonctionne que pour 1 meme fichier/module.
