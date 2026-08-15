@@ -1,9 +1,10 @@
 # Jumps
 ## C#
-### titre
-  text)<br>
+### goto
+  Pour la nostalgie de l'asm je suppose ?
   ```
-  //code
+Unebouclette:
+if (Console.ReadKey().KeyChar != 'C') goto Unebouclette;
   ```
 
 ## JS
