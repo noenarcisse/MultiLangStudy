@@ -138,14 +138,40 @@ if( livre1 is Livre {titre: var titleBouquin } bouquin)
 }
   ```
 ### where
-blabla
+Check un respect d'héritage ou d'implementation. Equivalent du T extends chez TS mais peut etre implicite :D
   ```
-code
+public class Machin
+{
+    public string Truc = "";
+}
+public class PetitMachin : Machin { }
+
+// ...
+
+Machin m = new() { Truc = "Normal" };
+PetitMachin pm = new() { Truc = "Petit" };
+Truc t = new();
+static void Machiner<T>(T m) where T : Machin => Console.WriteLine(m.Truc);
+
+Machiner(m);
+Machiner(pm);
+Machiner(t); // non Truc hérite pas de Machin
+
   ```
  ### when
  blablabla
-  ```
-code
+  ```cs
+for (int i = 1; i <= 20; i++)
+{
+    string t = i switch
+    {
+        _ when i % 3 == 0 && i % 5 == 0 => "Fizzbuzz",
+        _ when i % 3 == 0 => "Fizz",
+        _ when i % 5 == 0 => "Buzz",
+        _ => $"{i}"
+    };
+    Console.WriteLine(t);
+}
   ```
  ### default
  blablabla
