@@ -2,7 +2,7 @@
 ## C#
 ### goto
   Pour la nostalgie de l'asm je suppose ?
-  ```
+  ```cs
 Unebouclette:
 if (Console.ReadKey().KeyChar != 'C') goto Unebouclette;
   ```
