@@ -2,8 +2,8 @@
 ## Result / DU
 | Language | Package | Etat | Descr | CMD | Lien |
 |---|---|---|---|---|---|
-| C# | OneOf | Excellent | Type discrimination | `dotnet add package OneOf` | https://github.com/mcintyre321/OneOf |
-| C# | DotNext | Good?<br>A tester plus | Result<T, Exception> | `dotnet add package DotNext` | https://dotnet.github.io/dotNext/features/core/result.html |
+| C# | OneOf | Excellent | Type discrimination, retours multiples avec DU | `dotnet add package OneOf` | https://github.com/mcintyre321/OneOf |
+| C# | DotNext | Excellent | Result<T, Exception> | `dotnet add package DotNext` | https://dotnet.github.io/dotNext/features/core/result.html |
 | Nim | results | Excellent? | Result[T,E] | `nimble install results` | https://github.com/arnetheduck/nim-results |
 
 ## Strings
@@ -46,7 +46,7 @@
 |---|---|---|---|---|---|
 | C# | FlaUI | Good | Automation des app windows, WPF, Winforms, etc. Les fallback sont un peu traitre, parfois il passe au clic, parfois il passe en detourner par les inputs | `dotnet add package FlaUI.Core` | https://github.com/FlaUI/FlaUI |
 | C# | FlaUI Inspect | Good | Inspection des fenetres windows. Montre les automation id and co | `code` | https://github.com/FlaUI/FlaUI |
-| | AccessibilityInsights | Good? | Inspection des fenetres windows | `code` | lien |
+| | AccessibilityInsights | Excellent | Inspection des fenetres windows | `code` | lien |
 | Typescript<br> Python<br> C# | ? | Playwright | A test. Automation navigateur / chromium | `code` | lien |
 | Python | pywinauto |  | A test. App windows | `code` | lien |
 | Go | chromedp | Okay | Bas niveau, plutot évident en soi car il garde la même logique partout. Il utilise un chromium qu'il trouve sur la machine si possible | `go get github.com/chromedp/chromedp` | https://github.com/chromedp/chromedp |
