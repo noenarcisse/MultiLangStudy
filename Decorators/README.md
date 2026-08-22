@@ -21,9 +21,8 @@ template customJson[T : object](node : JsonNode, t: typedesc[T]) : T =
     res
   ```
 ## C#
-Le roi ? Implique de la reflection (et donc aie aie aie l'AOT)
 ### [Attributes]
-  Différence de nom, meme principe, wrappe la classe pour lui donner des comportement bonus.<br>
+  Ca permet d'avoir des métadonnées accrochées à un élément<br>
   Courament vu chez ASP en MVC.
   ```cs
 [ApiController]
