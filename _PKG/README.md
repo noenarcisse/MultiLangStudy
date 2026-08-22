@@ -6,6 +6,12 @@
 | C# | DotNext | Excellent | Result<T, Exception> | `dotnet add package DotNext` | https://dotnet.github.io/dotNext/features/core/result.html |
 | Nim | results | Excellent? | Result[T,E] | `nimble install results` | https://github.com/arnetheduck/nim-results |
 
+## Testing
+| Language | Package | Etat | Descr | CMD | Lien |
+|---|---|---|---|---|---|
+| C# | xUnit | tbt | Unit test | `dotnet add ` |  |
+|  | Testing Library | Excellent | Testing pour les frameworks web JS/TS (component & integration) | `code ` | https://testing-library.com/ |
+
 ## Strings
 | Language | Package | Descr | CMD | Lien |
 |---|---|---|---|---|
