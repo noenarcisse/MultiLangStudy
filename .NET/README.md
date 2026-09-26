@@ -8,8 +8,8 @@ Solution
 |
 |  Projet/
 |  |       Projet.csproj
-|  Testing/
-|  |       Testing.csproj
+|  Project.Tests/
+|  |       Project.Tests.csproj
 |  Projet2/
 |  |      Projet2.fsproj
   ```
