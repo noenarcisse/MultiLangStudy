@@ -10,7 +10,13 @@
 | Language | Package | Etat | Descr | CMD | Lien |
 |---|---|---|---|---|---|
 | C# | xUnit | tbt | Unit test | `dotnet add ` |  |
+| C# | Moq | tbt | Mocking | `dotnet add ` |  |
+| C# | NSubstitute | Excellent | Mocking | `dotnet add package NSubstitute ` |  |
+| C# | Shouldly | Excellent | Unit test | `dotnet add Shouldly ` |  |
 |  | Testing Library | Excellent | Testing pour les frameworks web JS/TS (component & integration) | `code ` | https://testing-library.com/ |
+| Python | pytest | Good|  | `code ` |  |
+| Python | pytest-cov | Excellent |  | `code ` |  |
+| Python | pytest-rich | Excellent |  | `code ` |  |
 
 ## Strings
 | Language | Package | Descr | CMD | Lien |
