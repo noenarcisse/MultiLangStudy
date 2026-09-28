@@ -18,6 +18,12 @@
 | Python | pytest-cov | Excellent |  | `code ` |  |
 | Python | pytest-rich | Excellent |  | `code ` |  |
 
+## Formatter
+| Language | Package | Etat | Descr | CMD | Lien |
+|---|---|---|---|---|---|
+| Web | Prettier | tbt | Format | `cmd` | https://prettier.io/ |
+
+
 ## Strings
 | Language | Package | Descr | CMD | Lien |
 |---|---|---|---|---|
