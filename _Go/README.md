@@ -42,3 +42,24 @@ verifie les vulenrabilité présente dans le projet. Sépare les packages ou zon
   ```
   govulncheck -show verbose ./...
   ```
+
+### go fmt
+formatte le code d'un proj avec options
+https://go.dev/blog/gofix
+  ```
+cmd
+  ```
+### go fix
+fix le code go d'un projet, permet aussi de remplacer facilement d'ancienne ecriture en nouvelle (genre interface{} -> any)
+https://go.dev/blog/gofix
+  ```
+cmd
+  ```
+
+## pprof
+le profiler de go
+https://github.com/google/pprof
+
+## delve
+debugger
+https://github.com/go-delve/delve
