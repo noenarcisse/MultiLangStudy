@@ -12,7 +12,7 @@
 | C# | xUnit | tbt | Unit test | `dotnet add ` |  |
 | C# | Moq | tbt | Mocking | `dotnet add ` |  |
 | C# | NSubstitute | Excellent | Mocking | `dotnet add package NSubstitute ` |  |
-| C# | Shouldly | Excellent | Unit test | `dotnet add Shouldly ` |  |
+| C# | Shouldly | Excellent | Unit test | `dotnet add package Shouldly ` |  |
 |  | Testing Library | Excellent | Testing pour les frameworks web JS/TS (component & integration) | `code ` | https://testing-library.com/ |
 | Python | pytest | Good | Permet l’exécution de tests, utilise pas mal de magie (decorateurs, DI, etc) | `uv add --dev pytest` |  |
 | Python | pytest-cov | Excellent | Donne la couverture d'instructions | `yv add --dev pytest-cov` |  |
@@ -48,7 +48,7 @@
 |---|---|---|---|---|---|
 | C# | PDF Pig | Excellent | Ouvre les pdf. Recupère contenu.Permet aussi de cropper. | `dotnet add package UglyToad.PdfPig` | |
 | Python | pdfplumber | Excellent | Ouvre les pdf. Recupères contenu.Permet aussi de cropper. | `uv add pdfplumber` | |
-| Go | ledongthuc/pdf | Meh | Limité, recupère les symbole et leur position | `go get -u github.com/ledongthuc/pdf` | |
+| Go | ledongthuc/pdf | Meh | Limité, recupère les symbole et leur position | `go get github.com/ledongthuc/pdf` | |
 
 ## Word / Excel
 | Language | Package | Etat | Descr | CMD | Lien |
