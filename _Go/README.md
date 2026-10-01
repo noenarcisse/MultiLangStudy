@@ -37,6 +37,13 @@ met a jour l'ensemble des pkg du projet
   ```
   go get -u ./...
   ```
+
+### go test
+exec les tests
+  ```
+  go test ./...
+  ```
+
 ### vuln check
 verifie les vulenrabilité présente dans le projet. Sépare les packages ou zone de code utilisées vs les packages non appelé dans le code du projet
   ```
@@ -63,3 +70,7 @@ https://github.com/google/pprof
 ## delve
 debugger
 https://github.com/go-delve/delve
+
+## deadcode
+code non accessible (y'a pas de couv de branches en go test)
+https://go.dev/blog/deadcode
