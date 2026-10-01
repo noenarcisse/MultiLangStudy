@@ -14,15 +14,23 @@
 | C# | NSubstitute | Excellent | Mocking | `dotnet add package NSubstitute ` |  |
 | C# | Shouldly | Excellent | Unit test | `dotnet add Shouldly ` |  |
 |  | Testing Library | Excellent | Testing pour les frameworks web JS/TS (component & integration) | `code ` | https://testing-library.com/ |
-| Python | pytest | Good|  | `code ` |  |
-| Python | pytest-cov | Excellent |  | `code ` |  |
-| Python | pytest-rich | Excellent |  | `code ` |  |
+| Python | pytest | Good | Permet l’exécution de tests, utilise pas mal de magie (decorateurs, DI, etc) | `uv add --dev pytest` |  |
+| Python | pytest-cov | Excellent | Donne la couverture d'instructions | `yv add --dev pytest-cov` |  |
+| Python | pytest-rich | Excellent | Ameliore la présentation des rapports de tests en console | `uv add --dev pytest-rich ` |  |
 
 ## Formatter
 | Language | Package | Etat | Descr | CMD | Lien |
 |---|---|---|---|---|---|
 | Web | Prettier | tbt | Format | `cmd` | https://prettier.io/ |
+| Typescript | Deno | Excellent | Format | `cmd` |  |
+| Python | Ruff | tbt | Format | `cmd` |  |
 
+
+## Parsers
+| Language | Package | Etat | Descr | CMD | Lien |
+|---|---|---|---|---|---|
+| Go | Go Yaml | tbd | parsring de .yml | `cmd` | https://yaml.com/projects/go-yaml/ |
+| Go | Go GTFS | tbd | parsring de GTFS | `cmd` | https://github.com/artonge/go-gtfs |
 
 ## Strings
 | Language | Package | Descr | CMD | Lien |
@@ -43,16 +51,17 @@
 | Go | ledongthuc/pdf | Meh | Limité, recupère les symbole et leur position | `go get -u github.com/ledongthuc/pdf` | |
 
 ## Word / Excel
-| Language | Package | Descr | CMD | Lien |
+| Language | Package | Etat | Descr | CMD | Lien |
 |---|---|---|---|---|
-| C# | OpenXML | Opensource, permet de manipuler les doc, xls et ppt. XML complet (excel en particulier). Possibilité d'ouvrir en stream et de passer node par node en cherchant .Elements<Cell> par ex pour parcourir toutes les cells de toutes les feuilles d'un fichier gigantesque. | `dotnet add package DocumentFormat.OpenXml --version 3.4.1` |  |
-| C# | ClosedXML | Gere les fichiers de manière simplifiées (excel devient un vrai tab[,] plutot que des rows qui font ref par addresse a des data. Ne permet pas le stream sur des trop gros fchiers | `dotnet add package ClosedXML` | |
+| C# | OpenXML | Good | Opensource, permet de manipuler les doc, xls et ppt. XML complet (excel en particulier). Possibilité d'ouvrir en stream et de passer node par node en cherchant .Elements<Cell> par ex pour parcourir toutes les cells de toutes les feuilles d'un fichier gigantesque. | `dotnet add package DocumentFormat.OpenXml --version 3.4.1` |  |
+| C# | ClosedXML | Excellent | Gere les fichiers de manière simplifiées (excel devient un vrai tab[,] plutot que des rows qui font ref par addresse a des data. Ne permet pas le stream sur des trop gros fchiers | `dotnet add package ClosedXML` | |
+| Go | godocx | tdb| ? | `cmd` | https://github.com/gomutex/godocx |
 
 ## Scraping
 | Language | Package | Etat | Descr | CMD | Lien |
 |---|---|---|---|---|---|
 | Go | Colly | Excellent | Scraping + permet d'ouvrir les liens pour explorer, de garder ceux deja vu pour pas relancer x fois la meme page etc. | `go get github.com/gocolly/colly/v2` | https://github.com/gocolly/colly |
-| Python | Beautiful Soup | Good | Permet un parours de DOM. Ne get pas le HTML de base | `uv add pdfplumber` | |
+| Python | Beautiful Soup | Okay | Permet un parours de DOM. Ne get pas le HTML de base. Faut soi même gérer le parcours du site et le cache des liens | `uv add beautifulsoup4` | |
 
 ## Bot
 | Language | Package | Etat | Descr | CMD | Lien |
@@ -69,7 +78,6 @@
 | Python | pywinauto |  | A test. App windows | `code` | lien |
 | Go | chromedp | Okay | Bas niveau, plutot évident en soi car il garde la même logique partout. Il utilise un chromium qu'il trouve sur la machine si possible | `go get github.com/chromedp/chromedp` | https://github.com/chromedp/chromedp |
 | Go | rod | Okay | Playwright-like en Go. Orienté composition. Faut chipoter pour l'empecher de DL un chromium en plus | `go get github.com/go-rod/rod` | https://github.com/go-rod/rod |
-| Python | Beautiful Soup | Okay | Permet un parours de DOM. Ne get pas le HTML de base. Faut soi même gérer le parcours du site et le cache des liens | `uv add pdfplumber` | |
 
 ## Hooks
 Permet d'acceder à des hooks windows simplifiés sans devoir faire du low level et approcher l'OS avec des risques de lock ou ralentissement.
@@ -92,6 +100,12 @@ Permet d'acceder à des hooks windows simplifiés sans devoir faire du low level
 |---|---|---|---|---|
 | C# | Windows OCR | OCR simple interne a Windows  | `using Windows.Media.Ocr.OcrEngine;` | https://learn.microsoft.com/fr-fr/uwp/api/windows.media.ocr.ocrengine?view=winrt-26100 |
 | C# | OCR wrapper MAUI | Gere les OCR de base et offre une interface commune multi support  | `dotnet add package Plugin.Maui.OCR` | https://www.nuget.org/packages/Plugin.Maui.OCR |
+
+
+-----------------------
+
+# Go stuff
+go linq - https://github.com/ahmetb/go-linq
 
 # .NET NugGets
 
