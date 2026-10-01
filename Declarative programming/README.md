@@ -62,6 +62,7 @@ let doubleadd x y =
 // (=) fait une egalité comme une func
 y |> (=) x |> printfn "%b"
 (=) y <| ((+) x <| (doubleadd <|| (x, x))) |> printfn "%b"
+//ca revient a : y = 3*x |> printfn "%b" dans une version lisible ;d
 
 //on peut utiliser ca pour reduire des expr plus complexe comme (fun e -> e = 7) ici
 [1;2;6;5;3;7;12;865;1] |> List.tryFind ((=)7) |> test
